@@ -19,7 +19,7 @@ namespace QA_Projects
         string email;
         string name;
         LoginForm login;
-       // private string FileName = @"C:\data.xlsx"
+       
         public RegisterForm(LoginForm login)
         {
             this.login = login;
@@ -58,6 +58,11 @@ namespace QA_Projects
         }
 
         private void LabelUsername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
