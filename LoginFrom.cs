@@ -17,6 +17,8 @@ namespace QA_Projects
         RegisterForm register;
         Excel excel;
         const int UsernameCol = 2 , PasswordCol = 4;
+        //private string FileName = string.Format("{0}\\fileNameHere", System.IO.Path.GetDirectoryName("LoginInfo.xlsx"));
+        string FileName = System.IO.Path.GetFullPath("LoginInfo.xlsx");
         public LoginForm()
         {
             register = new RegisterForm(this);
@@ -35,7 +37,7 @@ namespace QA_Projects
 
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
-            excel = new Excel("C:\\Users\\ישראל\\Documents\\GitHub\\QA-projects\\Excel\\LoginInfo.xlsx", 1);
+            excel = new Excel(FileName, 1);
             username = TextboxUsername.Text;
             password = TextboxPassword.Text;
             if(username == string.Empty || password == string.Empty)
