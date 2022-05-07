@@ -20,7 +20,7 @@ namespace QA_Projects
         string name;
         LoginForm login;
         const int UsernameCol = 2, PasswordCol = 4 ,Namecol = 1, Emailcol = 3;
-        // private string FileName = @"C:\data.xlsx"
+        //private string FileName = @"C:\data.xlsx";
         public RegisterForm(LoginForm login)
         {
             this.login = login;
@@ -52,12 +52,12 @@ namespace QA_Projects
             string email = TextboxEmail.Text;
             string name = TextboxFname.Text;
             string passwCon = TextboxCpass.Text;
-            Excel excel = new Excel("C:\\Users\\Yam\\OneDrive\\מסמכים\\GitHub\\QA-project\\QA-project\\Excel\\LoginInfo.xlsx", 1);
+            Excel excel = new Excel("C:\\Users\\ישראל\\Documents\\GitHub\\QA-projects\\Excel\\LoginInfo.xlsx", 1);
             if (username == string.Empty || passw == string.Empty || email == string.Empty || name == string.Empty || passwCon == string.Empty)
             {
                 MessageBox.Show("The fields are empty please fill");
             }
-            else if (passw.Length > 16 || passw.Length < 8)
+            else if (passw.Length > 16 || passw.Length < 5)
             {
                 MessageBox.Show("The password must have between 8-16 characters");
             }

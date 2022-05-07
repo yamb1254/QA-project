@@ -35,7 +35,7 @@ namespace QA_Projects
 
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
-            excel = new Excel("C:\\Users\\Yam\\OneDrive\\מסמכים\\GitHub\\QA-project\\QA-project\\Excel\\LoginInfo.xlsx", 1);
+            excel = new Excel("C:\\Users\\ישראל\\Documents\\GitHub\\QA-projects\\Excel\\LoginInfo.xlsx", 1);
             username = TextboxUsername.Text;
             password = TextboxPassword.Text;
             if(username == string.Empty || password == string.Empty)

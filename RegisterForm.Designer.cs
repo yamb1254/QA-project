@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace QA_Projects
 {
     partial class RegisterForm
@@ -339,6 +341,11 @@ namespace QA_Projects
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

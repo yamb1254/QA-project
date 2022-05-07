@@ -12,6 +12,20 @@ namespace QA_Projects
 {
     public partial class DiagnosisForm : Form
     {
+        const int WBC = 1;
+        const int Neut = 2;
+        const int Lymph = 3;
+        const int RBC = 4;
+        const int HCT = 5;
+        const int Urea = 6;
+        const int Hb = 7;
+        const int Crtn = 8;
+        const int Iron = 9;
+        const int HDL = 10;
+        const int AP = 11;
+
+
+
         LoginForm login;
         string userName;
         public DiagnosisForm(string user,LoginForm login)
@@ -59,6 +73,15 @@ namespace QA_Projects
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonTestBlood_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if(openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                this.TextboxTestBlood.Text = openFileDialog.FileName;
+            }
         }
     }
 }

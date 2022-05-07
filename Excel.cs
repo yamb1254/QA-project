@@ -23,11 +23,12 @@ namespace QA_Projects
         }
         public bool CheckInExcel(int col,string name)
         {
+            
             bool flag = true;
             int i = 2;
             while (flag)
             {
-                    if(ws.Cells[i,col].Value == name)
+                    if(ws.Cells[i,col] == name)
                     {
                        return true;
                     }
