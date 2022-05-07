@@ -85,6 +85,7 @@ namespace QA_Projects
             this.groupBoxQ3 = new System.Windows.Forms.GroupBox();
             this.radioButtonNQ3 = new System.Windows.Forms.RadioButton();
             this.radioButtonYQ3 = new System.Windows.Forms.RadioButton();
+            this.TextboxTestBlood = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.ExitButton)).BeginInit();
             this.groupBoxGender.SuspendLayout();
             this.groupBoxQ1.SuspendLayout();
@@ -236,15 +237,15 @@ namespace QA_Projects
             this.TextboxBloodPre.HintForeColor = System.Drawing.Color.Empty;
             this.TextboxBloodPre.HintText = "";
             this.TextboxBloodPre.isPassword = false;
-            this.TextboxBloodPre.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextboxBloodPre.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxBloodPre.LineIdleColor = System.Drawing.Color.Gray;
-            this.TextboxBloodPre.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextboxBloodPre.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxBloodPre.LineThickness = 3;
             this.TextboxBloodPre.Location = new System.Drawing.Point(153, 396);
             this.TextboxBloodPre.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxBloodPre.Name = "TextboxBloodPre";
             this.TextboxBloodPre.Size = new System.Drawing.Size(202, 33);
-            this.TextboxBloodPre.TabIndex = 26;
+            this.TextboxBloodPre.TabIndex = 38;
             this.TextboxBloodPre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextboxID
@@ -255,15 +256,15 @@ namespace QA_Projects
             this.TextboxID.HintForeColor = System.Drawing.Color.Empty;
             this.TextboxID.HintText = "";
             this.TextboxID.isPassword = false;
-            this.TextboxID.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextboxID.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxID.LineIdleColor = System.Drawing.Color.Gray;
-            this.TextboxID.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextboxID.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxID.LineThickness = 3;
             this.TextboxID.Location = new System.Drawing.Point(153, 156);
             this.TextboxID.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxID.Name = "TextboxID";
             this.TextboxID.Size = new System.Drawing.Size(202, 33);
-            this.TextboxID.TabIndex = 28;
+            this.TextboxID.TabIndex = 32;
             this.TextboxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextBoxFname
@@ -274,15 +275,15 @@ namespace QA_Projects
             this.TextBoxFname.HintForeColor = System.Drawing.Color.Empty;
             this.TextBoxFname.HintText = "";
             this.TextBoxFname.isPassword = false;
-            this.TextBoxFname.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextBoxFname.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextBoxFname.LineIdleColor = System.Drawing.Color.Gray;
-            this.TextBoxFname.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextBoxFname.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextBoxFname.LineThickness = 3;
             this.TextBoxFname.Location = new System.Drawing.Point(153, 76);
             this.TextBoxFname.Margin = new System.Windows.Forms.Padding(4);
             this.TextBoxFname.Name = "TextBoxFname";
             this.TextBoxFname.Size = new System.Drawing.Size(202, 33);
-            this.TextBoxFname.TabIndex = 29;
+            this.TextBoxFname.TabIndex = 30;
             this.TextBoxFname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextboxLname
@@ -293,15 +294,15 @@ namespace QA_Projects
             this.TextboxLname.HintForeColor = System.Drawing.Color.Empty;
             this.TextboxLname.HintText = "";
             this.TextboxLname.isPassword = false;
-            this.TextboxLname.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextboxLname.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxLname.LineIdleColor = System.Drawing.Color.Gray;
-            this.TextboxLname.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextboxLname.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxLname.LineThickness = 3;
             this.TextboxLname.Location = new System.Drawing.Point(153, 115);
             this.TextboxLname.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxLname.Name = "TextboxLname";
             this.TextboxLname.Size = new System.Drawing.Size(202, 33);
-            this.TextboxLname.TabIndex = 30;
+            this.TextboxLname.TabIndex = 31;
             this.TextboxLname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextboxAge
@@ -312,15 +313,15 @@ namespace QA_Projects
             this.TextboxAge.HintForeColor = System.Drawing.Color.Empty;
             this.TextboxAge.HintText = "";
             this.TextboxAge.isPassword = false;
-            this.TextboxAge.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextboxAge.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxAge.LineIdleColor = System.Drawing.Color.Gray;
-            this.TextboxAge.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextboxAge.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxAge.LineThickness = 3;
             this.TextboxAge.Location = new System.Drawing.Point(153, 196);
             this.TextboxAge.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxAge.Name = "TextboxAge";
             this.TextboxAge.Size = new System.Drawing.Size(202, 33);
-            this.TextboxAge.TabIndex = 31;
+            this.TextboxAge.TabIndex = 33;
             this.TextboxAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextboxHeight
@@ -331,15 +332,15 @@ namespace QA_Projects
             this.TextboxHeight.HintForeColor = System.Drawing.Color.Empty;
             this.TextboxHeight.HintText = "";
             this.TextboxHeight.isPassword = false;
-            this.TextboxHeight.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextboxHeight.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxHeight.LineIdleColor = System.Drawing.Color.Gray;
-            this.TextboxHeight.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextboxHeight.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxHeight.LineThickness = 3;
             this.TextboxHeight.Location = new System.Drawing.Point(153, 236);
             this.TextboxHeight.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxHeight.Name = "TextboxHeight";
             this.TextboxHeight.Size = new System.Drawing.Size(202, 33);
-            this.TextboxHeight.TabIndex = 32;
+            this.TextboxHeight.TabIndex = 34;
             this.TextboxHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextboxWeight
@@ -350,15 +351,15 @@ namespace QA_Projects
             this.TextboxWeight.HintForeColor = System.Drawing.Color.Empty;
             this.TextboxWeight.HintText = "";
             this.TextboxWeight.isPassword = false;
-            this.TextboxWeight.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextboxWeight.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxWeight.LineIdleColor = System.Drawing.Color.Gray;
-            this.TextboxWeight.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextboxWeight.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxWeight.LineThickness = 3;
             this.TextboxWeight.Location = new System.Drawing.Point(153, 276);
             this.TextboxWeight.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxWeight.Name = "TextboxWeight";
             this.TextboxWeight.Size = new System.Drawing.Size(202, 33);
-            this.TextboxWeight.TabIndex = 33;
+            this.TextboxWeight.TabIndex = 35;
             this.TextboxWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextboxFever
@@ -369,15 +370,15 @@ namespace QA_Projects
             this.TextboxFever.HintForeColor = System.Drawing.Color.Empty;
             this.TextboxFever.HintText = "";
             this.TextboxFever.isPassword = false;
-            this.TextboxFever.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextboxFever.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxFever.LineIdleColor = System.Drawing.Color.Gray;
-            this.TextboxFever.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextboxFever.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxFever.LineThickness = 3;
             this.TextboxFever.Location = new System.Drawing.Point(153, 316);
             this.TextboxFever.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxFever.Name = "TextboxFever";
             this.TextboxFever.Size = new System.Drawing.Size(202, 33);
-            this.TextboxFever.TabIndex = 34;
+            this.TextboxFever.TabIndex = 36;
             this.TextboxFever.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextboxHeartBeat
@@ -388,15 +389,15 @@ namespace QA_Projects
             this.TextboxHeartBeat.HintForeColor = System.Drawing.Color.Empty;
             this.TextboxHeartBeat.HintText = "";
             this.TextboxHeartBeat.isPassword = false;
-            this.TextboxHeartBeat.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextboxHeartBeat.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxHeartBeat.LineIdleColor = System.Drawing.Color.Gray;
-            this.TextboxHeartBeat.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextboxHeartBeat.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxHeartBeat.LineThickness = 3;
             this.TextboxHeartBeat.Location = new System.Drawing.Point(153, 356);
             this.TextboxHeartBeat.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxHeartBeat.Name = "TextboxHeartBeat";
             this.TextboxHeartBeat.Size = new System.Drawing.Size(202, 33);
-            this.TextboxHeartBeat.TabIndex = 35;
+            this.TextboxHeartBeat.TabIndex = 37;
             this.TextboxHeartBeat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // buttonTestBlood
@@ -406,12 +407,13 @@ namespace QA_Projects
             this.buttonTestBlood.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonTestBlood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTestBlood.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTestBlood.Location = new System.Drawing.Point(147, 489);
+            this.buttonTestBlood.Location = new System.Drawing.Point(281, 485);
             this.buttonTestBlood.Name = "buttonTestBlood";
             this.buttonTestBlood.Size = new System.Drawing.Size(120, 38);
-            this.buttonTestBlood.TabIndex = 36;
+            this.buttonTestBlood.TabIndex = 40;
             this.buttonTestBlood.Text = "Upload";
             this.buttonTestBlood.UseVisualStyleBackColor = false;
+            this.buttonTestBlood.Click += new System.EventHandler(this.buttonTestBlood_Click);
             // 
             // LabelTestBlood
             // 
@@ -543,7 +545,7 @@ namespace QA_Projects
             this.buttonDiagnose.Location = new System.Drawing.Point(429, 537);
             this.buttonDiagnose.Name = "buttonDiagnose";
             this.buttonDiagnose.Size = new System.Drawing.Size(120, 38);
-            this.buttonDiagnose.TabIndex = 56;
+            this.buttonDiagnose.TabIndex = 41;
             this.buttonDiagnose.Text = "Diagnose";
             this.buttonDiagnose.UseVisualStyleBackColor = false;
             // 
@@ -715,12 +717,32 @@ namespace QA_Projects
             this.radioButtonYQ3.Text = "Yes";
             this.radioButtonYQ3.UseVisualStyleBackColor = true;
             // 
+            // TextboxTestBlood
+            // 
+            this.TextboxTestBlood.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxTestBlood.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextboxTestBlood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxTestBlood.HintForeColor = System.Drawing.Color.Empty;
+            this.TextboxTestBlood.HintText = "";
+            this.TextboxTestBlood.isPassword = false;
+            this.TextboxTestBlood.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
+            this.TextboxTestBlood.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextboxTestBlood.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
+            this.TextboxTestBlood.LineThickness = 3;
+            this.TextboxTestBlood.Location = new System.Drawing.Point(115, 484);
+            this.TextboxTestBlood.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxTestBlood.Name = "TextboxTestBlood";
+            this.TextboxTestBlood.Size = new System.Drawing.Size(159, 33);
+            this.TextboxTestBlood.TabIndex = 39;
+            this.TextboxTestBlood.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // DiagnosisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.TextboxTestBlood);
             this.Controls.Add(this.groupBoxQ4);
             this.Controls.Add(this.groupBoxQ3);
             this.Controls.Add(this.groupBoxQ5);
@@ -836,5 +858,6 @@ namespace QA_Projects
         private System.Windows.Forms.RadioButton radioButtonYQ2;
         private System.Windows.Forms.GroupBox groupBoxQ1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox TextboxTestBlood;
     }
 }
