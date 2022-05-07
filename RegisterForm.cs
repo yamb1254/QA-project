@@ -14,13 +14,9 @@ namespace QA_Projects
 {
     public partial class RegisterForm : Form
     {
-        string username;
-        string passw;
-        string email;
-        string name;
         LoginForm login;
         const int UsernameCol = 2, PasswordCol = 4 ,Namecol = 1, Emailcol = 3;
-        // private string FileName = @"C:\data.xlsx"
+        string FileName = System.IO.Path.GetFullPath("LoginInfo.xlsx");
         public RegisterForm(LoginForm login)
         {
             this.login = login;
@@ -52,7 +48,8 @@ namespace QA_Projects
             string email = TextboxEmail.Text;
             string name = TextboxFname.Text;
             string passwCon = TextboxCpass.Text;
-            Excel excel = new Excel("C:\\Users\\Yam\\OneDrive\\מסמכים\\GitHub\\QA-project\\QA-project\\Excel\\LoginInfo.xlsx", 1);
+            string[] vs = new string[] { name, username, email, passw };  
+            Excel excel = new Excel("FileName", 1);
             if (username == string.Empty || passw == string.Empty || email == string.Empty || name == string.Empty || passwCon == string.Empty)
             {
                 MessageBox.Show("The fields are empty please fill");
@@ -71,18 +68,12 @@ namespace QA_Projects
             }
             else
             {
-                excel.WriteInExcel(UsernameCol, username);
-                excel.WriteInExcel(PasswordCol, passw);
-                excel.WriteInExcel(Emailcol, email);
-                excel.WriteInExcel(Namecol, name);
-                excel.Save();
-                excel.Close();
+                excel.WriteRangeInExcel(4,vs);
                 login.Show();
                 this.Hide();
             }
-
-
-
+            excel.Save();
+            excel.Close();
         }
 
         private void LabelUsername_Click(object sender, EventArgs e)
