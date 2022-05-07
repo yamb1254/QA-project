@@ -65,9 +65,10 @@ namespace QA_Projects
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(971, 204);
+            this.label1.Location = new System.Drawing.Point(728, 166);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 21);
+            this.label1.Size = new System.Drawing.Size(192, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Get Start From Login Below";
             // 
@@ -76,9 +77,10 @@ namespace QA_Projects
             this.LabelUsername.AutoSize = true;
             this.LabelUsername.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelUsername.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.LabelUsername.Location = new System.Drawing.Point(972, 303);
+            this.LabelUsername.Location = new System.Drawing.Point(729, 246);
+            this.LabelUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelUsername.Name = "LabelUsername";
-            this.LabelUsername.Size = new System.Drawing.Size(83, 20);
+            this.LabelUsername.Size = new System.Drawing.Size(67, 17);
             this.LabelUsername.TabIndex = 3;
             this.LabelUsername.Text = "Username";
             // 
@@ -87,9 +89,10 @@ namespace QA_Projects
             this.LabelPassword.AutoSize = true;
             this.LabelPassword.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelPassword.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.LabelPassword.Location = new System.Drawing.Point(972, 390);
+            this.LabelPassword.Location = new System.Drawing.Point(729, 317);
+            this.LabelPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelPassword.Name = "LabelPassword";
-            this.LabelPassword.Size = new System.Drawing.Size(79, 20);
+            this.LabelPassword.Size = new System.Drawing.Size(63, 17);
             this.LabelPassword.TabIndex = 4;
             this.LabelPassword.Text = "Password";
             // 
@@ -100,9 +103,10 @@ namespace QA_Projects
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1010, 510);
+            this.button1.Location = new System.Drawing.Point(758, 414);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 44);
+            this.button1.Size = new System.Drawing.Size(125, 36);
             this.button1.TabIndex = 12;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
@@ -115,8 +119,7 @@ namespace QA_Projects
             this.CheckboxRemember.Checked = true;
             this.CheckboxRemember.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.CheckboxRemember.ForeColor = System.Drawing.Color.White;
-            this.CheckboxRemember.Location = new System.Drawing.Point(976, 474);
-            this.CheckboxRemember.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CheckboxRemember.Location = new System.Drawing.Point(732, 385);
             this.CheckboxRemember.Name = "CheckboxRemember";
             this.CheckboxRemember.Size = new System.Drawing.Size(20, 20);
             this.CheckboxRemember.TabIndex = 13;
@@ -126,9 +129,10 @@ namespace QA_Projects
             this.LabelRemember.AutoSize = true;
             this.LabelRemember.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelRemember.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.LabelRemember.Location = new System.Drawing.Point(1003, 474);
+            this.LabelRemember.Location = new System.Drawing.Point(752, 385);
+            this.LabelRemember.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelRemember.Name = "LabelRemember";
-            this.LabelRemember.Size = new System.Drawing.Size(135, 21);
+            this.LabelRemember.Size = new System.Drawing.Size(111, 19);
             this.LabelRemember.TabIndex = 14;
             this.LabelRemember.Text = "Keep Me Login";
             // 
@@ -137,9 +141,10 @@ namespace QA_Projects
             this.linkLabelRegister.AutoSize = true;
             this.linkLabelRegister.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelRegister.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
-            this.linkLabelRegister.Location = new System.Drawing.Point(1082, 587);
+            this.linkLabelRegister.Location = new System.Drawing.Point(812, 477);
+            this.linkLabelRegister.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabelRegister.Name = "linkLabelRegister";
-            this.linkLabelRegister.Size = new System.Drawing.Size(73, 19);
+            this.linkLabelRegister.Size = new System.Drawing.Size(61, 17);
             this.linkLabelRegister.TabIndex = 15;
             this.linkLabelRegister.TabStop = true;
             this.linkLabelRegister.Text = "Register";
@@ -150,18 +155,20 @@ namespace QA_Projects
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(992, 588);
+            this.label2.Location = new System.Drawing.Point(744, 478);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 18);
+            this.label2.Size = new System.Drawing.Size(69, 16);
             this.label2.TabIndex = 16;
             this.label2.Text = "New User?";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1103, 586);
+            this.label3.Location = new System.Drawing.Point(827, 476);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 17);
+            this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 17;
             // 
             // label4
@@ -169,9 +176,10 @@ namespace QA_Projects
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(1161, 587);
+            this.label4.Location = new System.Drawing.Point(871, 477);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 18);
+            this.label4.Size = new System.Drawing.Size(35, 16);
             this.label4.TabIndex = 18;
             this.label4.Text = "Here";
             // 
@@ -200,10 +208,10 @@ namespace QA_Projects
             this.TextboxPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextboxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextboxPassword.isPassword = true;
-            this.TextboxPassword.Location = new System.Drawing.Point(976, 414);
-            this.TextboxPassword.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxPassword.Location = new System.Drawing.Point(732, 336);
+            this.TextboxPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TextboxPassword.Name = "TextboxPassword";
-            this.TextboxPassword.Size = new System.Drawing.Size(238, 44);
+            this.TextboxPassword.Size = new System.Drawing.Size(178, 36);
             this.TextboxPassword.TabIndex = 21;
             this.TextboxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TextboxPassword.OnValueChanged += new System.EventHandler(this.bunifuMetroTextbox1_OnValueChanged);
@@ -223,19 +231,21 @@ namespace QA_Projects
             this.TextboxUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextboxUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextboxUsername.isPassword = false;
-            this.TextboxUsername.Location = new System.Drawing.Point(976, 324);
-            this.TextboxUsername.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxUsername.Location = new System.Drawing.Point(732, 263);
+            this.TextboxUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TextboxUsername.Name = "TextboxUsername";
-            this.TextboxUsername.Size = new System.Drawing.Size(238, 44);
+            this.TextboxUsername.Size = new System.Drawing.Size(178, 36);
             this.TextboxUsername.TabIndex = 22;
             this.TextboxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxUsername.OnValueChanged += new System.EventHandler(this.TextboxUsername_OnValueChanged);
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::QA_Projects.Properties.Resources.Key;
-            this.pictureBox4.Location = new System.Drawing.Point(941, 414);
+            this.pictureBox4.Location = new System.Drawing.Point(706, 336);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(37, 44);
+            this.pictureBox4.Size = new System.Drawing.Size(28, 36);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 24;
             this.pictureBox4.TabStop = false;
@@ -243,9 +253,10 @@ namespace QA_Projects
             // pictureBox3
             // 
             this.pictureBox3.Image = global::QA_Projects.Properties.Resources.User;
-            this.pictureBox3.Location = new System.Drawing.Point(941, 324);
+            this.pictureBox3.Location = new System.Drawing.Point(706, 263);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(37, 44);
+            this.pictureBox3.Size = new System.Drawing.Size(28, 36);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 23;
             this.pictureBox3.TabStop = false;
@@ -256,9 +267,10 @@ namespace QA_Projects
             this.ExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
             this.ExitButton.Image = ((System.Drawing.Image)(resources.GetObject("ExitButton.Image")));
             this.ExitButton.ImageActive = ((System.Drawing.Image)(resources.GetObject("ExitButton.ImageActive")));
-            this.ExitButton.Location = new System.Drawing.Point(1203, 12);
+            this.ExitButton.Location = new System.Drawing.Point(902, 10);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(65, 32);
+            this.ExitButton.Size = new System.Drawing.Size(49, 26);
             this.ExitButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ExitButton.TabIndex = 19;
             this.ExitButton.TabStop = false;
@@ -268,9 +280,10 @@ namespace QA_Projects
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1007, 80);
+            this.pictureBox2.Location = new System.Drawing.Point(755, 65);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(162, 121);
+            this.pictureBox2.Size = new System.Drawing.Size(122, 98);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
@@ -278,19 +291,20 @@ namespace QA_Projects
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-108, -102);
+            this.pictureBox1.Location = new System.Drawing.Point(-81, -83);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1013, 923);
+            this.pictureBox1.Size = new System.Drawing.Size(760, 750);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(960, 585);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.TextboxUsername);
@@ -309,6 +323,7 @@ namespace QA_Projects
             this.Controls.Add(this.LabelUsername);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
