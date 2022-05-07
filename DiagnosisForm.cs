@@ -47,5 +47,18 @@ namespace QA_Projects
             login.Close();
  
         }
+
+        private void LabelGender_Click(object sender, EventArgs e)
+        {
+            if(radioButtonM.Checked == true)
+            {
+
+            }
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
