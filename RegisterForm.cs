@@ -49,7 +49,7 @@ namespace QA_Projects
             string name = TextboxFname.Text;
             string passwCon = TextboxCpass.Text;
             string[] vs = new string[] { name, username, email, passw };  
-            Excel excel = new Excel("FileName", 1);
+            Excel excel = new Excel(FileName, 1);
             if (username == string.Empty || passw == string.Empty || email == string.Empty || name == string.Empty || passwCon == string.Empty)
             {
                 MessageBox.Show("The fields are empty please fill");
