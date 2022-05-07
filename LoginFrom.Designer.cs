@@ -44,11 +44,17 @@ namespace QA_Projects
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.TextboxPassword = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.TextboxUsername = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ExitButton = new Bunifu.Framework.UI.BunifuImageButton();
-            this.BoxPassword = new Bunifu.Framework.UI.BunifuTextbox();
-            this.BoxUsername = new Bunifu.Framework.UI.BunifuTextbox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -179,6 +185,72 @@ namespace QA_Projects
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 25;
+            this.bunifuElipse2.TargetControl = this;
+            // 
+            // TextboxPassword
+            // 
+            this.TextboxPassword.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxPassword.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxPassword.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxPassword.BorderThickness = 3;
+            this.TextboxPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextboxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxPassword.isPassword = true;
+            this.TextboxPassword.Location = new System.Drawing.Point(976, 414);
+            this.TextboxPassword.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxPassword.Name = "TextboxPassword";
+            this.TextboxPassword.Size = new System.Drawing.Size(238, 44);
+            this.TextboxPassword.TabIndex = 21;
+            this.TextboxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxPassword.OnValueChanged += new System.EventHandler(this.bunifuMetroTextbox1_OnValueChanged);
+            // 
+            // bunifuElipse3
+            // 
+            this.bunifuElipse3.ElipseRadius = 15;
+            this.bunifuElipse3.TargetControl = this;
+            // 
+            // TextboxUsername
+            // 
+            this.TextboxUsername.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxUsername.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxUsername.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxUsername.BorderThickness = 3;
+            this.TextboxUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextboxUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxUsername.isPassword = false;
+            this.TextboxUsername.Location = new System.Drawing.Point(976, 324);
+            this.TextboxUsername.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxUsername.Name = "TextboxUsername";
+            this.TextboxUsername.Size = new System.Drawing.Size(238, 44);
+            this.TextboxUsername.TabIndex = 22;
+            this.TextboxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::QA_Projects.Properties.Resources.Key;
+            this.pictureBox4.Location = new System.Drawing.Point(941, 414);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(37, 44);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 24;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::QA_Projects.Properties.Resources.User;
+            this.pictureBox3.Location = new System.Drawing.Point(941, 324);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(37, 44);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 23;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // ExitButton
             // 
             this.ExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
@@ -192,35 +264,6 @@ namespace QA_Projects
             this.ExitButton.TabStop = false;
             this.ExitButton.Zoom = 10;
             this.ExitButton.Click += new System.EventHandler(this.ExitButtonReg_Click);
-            // 
-            // BoxPassword
-            // 
-            this.BoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
-            this.BoxPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BoxPassword.BackgroundImage")));
-            this.BoxPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BoxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
-            this.BoxPassword.Icon = ((System.Drawing.Image)(resources.GetObject("BoxPassword.Icon")));
-            this.BoxPassword.Location = new System.Drawing.Point(975, 415);
-            this.BoxPassword.Margin = new System.Windows.Forms.Padding(5);
-            this.BoxPassword.Name = "BoxPassword";
-            this.BoxPassword.Size = new System.Drawing.Size(239, 35);
-            this.BoxPassword.TabIndex = 11;
-            this.BoxPassword.text = "";
-            // 
-            // BoxUsername
-            // 
-            this.BoxUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
-            this.BoxUsername.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BoxUsername.BackgroundImage")));
-            this.BoxUsername.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BoxUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
-            this.BoxUsername.Icon = ((System.Drawing.Image)(resources.GetObject("BoxUsername.Icon")));
-            this.BoxUsername.Location = new System.Drawing.Point(976, 327);
-            this.BoxUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BoxUsername.Name = "BoxUsername";
-            this.BoxUsername.Size = new System.Drawing.Size(238, 32);
-            this.BoxUsername.TabIndex = 10;
-            this.BoxUsername.text = "";
-            this.BoxUsername.OnTextChange += new System.EventHandler(this.BoxUsername_OnTextChange);
             // 
             // pictureBox2
             // 
@@ -248,6 +291,10 @@ namespace QA_Projects
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.TextboxUsername);
+            this.Controls.Add(this.TextboxPassword);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -256,8 +303,6 @@ namespace QA_Projects
             this.Controls.Add(this.LabelRemember);
             this.Controls.Add(this.CheckboxRemember);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.BoxPassword);
-            this.Controls.Add(this.BoxUsername);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LabelPassword);
@@ -266,6 +311,9 @@ namespace QA_Projects
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.Text = "LoginForm";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -282,8 +330,6 @@ namespace QA_Projects
         private System.Windows.Forms.Label LabelPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Bunifu.Framework.UI.BunifuTextbox BoxUsername;
-        private Bunifu.Framework.UI.BunifuTextbox BoxPassword;
         private System.Windows.Forms.Button button1;
         private Bunifu.Framework.UI.BunifuCheckbox CheckboxRemember;
         private System.Windows.Forms.Label LabelRemember;
@@ -294,6 +340,12 @@ namespace QA_Projects
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuImageButton ExitButton;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private Bunifu.Framework.UI.BunifuMetroTextbox TextboxPassword;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
+        private Bunifu.Framework.UI.BunifuMetroTextbox TextboxUsername;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
 

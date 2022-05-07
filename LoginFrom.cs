@@ -12,6 +12,7 @@ namespace QA_Projects
 {
     public partial class LoginForm : Form
     {
+        string username, password;
         DiagnosisForm diagnose;
         RegisterForm register;
         public LoginForm()
@@ -32,25 +33,31 @@ namespace QA_Projects
 
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
-            string username = BoxUsername.text;
-            string password = BoxPassword.text;
+            username = TextboxUsername.Text;
+            password = TextboxPassword.Text;
             if(username == string.Empty || password == string.Empty)
             {
-                MessageBox.Show("The fields are empty please fill");
+                MessageBox.Show("The fields is empty please fill");
             }
+
             diagnose = new DiagnosisForm(username,this);
             this.Hide();
             diagnose.Show();
         }
 
-        private void BoxUsername_OnTextChange(object sender, EventArgs e)
+        private void bunifuMetroTextbox1_OnValueChanged(object sender, EventArgs e)
         {
-            string userN = BoxUsername.text;
-            if (userN.ToLower().Trim().Equals("username"))
-            {
-                BoxUsername.text = "";
-            }
-            
+
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

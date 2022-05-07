@@ -32,11 +32,6 @@ namespace QA_Projects
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BoxPassword = new Bunifu.Framework.UI.BunifuTextbox();
-            this.BoxEmail = new Bunifu.Framework.UI.BunifuTextbox();
-            this.BoxUsername1 = new Bunifu.Framework.UI.BunifuTextbox();
-            this.BoxFullName = new Bunifu.Framework.UI.BunifuTextbox();
-            this.BoxConPassword = new Bunifu.Framework.UI.BunifuTextbox();
             this.LabelName = new System.Windows.Forms.Label();
             this.LabelUsername = new System.Windows.Forms.Label();
             this.LabelEmail = new System.Windows.Forms.Label();
@@ -48,8 +43,17 @@ namespace QA_Projects
             this.label2 = new System.Windows.Forms.Label();
             this.ExitButtonReg = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.TextboxPassword = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.TextboxCpass = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.TextboxEmail = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.TextboxFname = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.TextboxUser = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitButtonReg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -62,81 +66,11 @@ namespace QA_Projects
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // BoxPassword
-            // 
-            this.BoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
-            this.BoxPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BoxPassword.BackgroundImage")));
-            this.BoxPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BoxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
-            this.BoxPassword.Icon = ((System.Drawing.Image)(resources.GetObject("BoxPassword.Icon")));
-            this.BoxPassword.Location = new System.Drawing.Point(1029, 360);
-            this.BoxPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BoxPassword.Name = "BoxPassword";
-            this.BoxPassword.Size = new System.Drawing.Size(238, 32);
-            this.BoxPassword.TabIndex = 11;
-            this.BoxPassword.text = "";
-            // 
-            // BoxEmail
-            // 
-            this.BoxEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
-            this.BoxEmail.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BoxEmail.BackgroundImage")));
-            this.BoxEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BoxEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
-            this.BoxEmail.Icon = ((System.Drawing.Image)(resources.GetObject("BoxEmail.Icon")));
-            this.BoxEmail.Location = new System.Drawing.Point(1029, 300);
-            this.BoxEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BoxEmail.Name = "BoxEmail";
-            this.BoxEmail.Size = new System.Drawing.Size(238, 32);
-            this.BoxEmail.TabIndex = 12;
-            this.BoxEmail.text = "";
-            // 
-            // BoxUsername1
-            // 
-            this.BoxUsername1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
-            this.BoxUsername1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BoxUsername1.BackgroundImage")));
-            this.BoxUsername1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BoxUsername1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
-            this.BoxUsername1.Icon = ((System.Drawing.Image)(resources.GetObject("BoxUsername1.Icon")));
-            this.BoxUsername1.Location = new System.Drawing.Point(1029, 240);
-            this.BoxUsername1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BoxUsername1.Name = "BoxUsername1";
-            this.BoxUsername1.Size = new System.Drawing.Size(238, 32);
-            this.BoxUsername1.TabIndex = 13;
-            this.BoxUsername1.text = "";
-            // 
-            // BoxFullName
-            // 
-            this.BoxFullName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
-            this.BoxFullName.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BoxFullName.BackgroundImage")));
-            this.BoxFullName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BoxFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
-            this.BoxFullName.Icon = ((System.Drawing.Image)(resources.GetObject("BoxFullName.Icon")));
-            this.BoxFullName.Location = new System.Drawing.Point(1029, 180);
-            this.BoxFullName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BoxFullName.Name = "BoxFullName";
-            this.BoxFullName.Size = new System.Drawing.Size(238, 32);
-            this.BoxFullName.TabIndex = 14;
-            this.BoxFullName.text = "";
-            // 
-            // BoxConPassword
-            // 
-            this.BoxConPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
-            this.BoxConPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BoxConPassword.BackgroundImage")));
-            this.BoxConPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BoxConPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
-            this.BoxConPassword.Icon = ((System.Drawing.Image)(resources.GetObject("BoxConPassword.Icon")));
-            this.BoxConPassword.Location = new System.Drawing.Point(1029, 420);
-            this.BoxConPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BoxConPassword.Name = "BoxConPassword";
-            this.BoxConPassword.Size = new System.Drawing.Size(238, 32);
-            this.BoxConPassword.TabIndex = 15;
-            this.BoxConPassword.text = "";
-            // 
             // LabelName
             // 
             this.LabelName.AutoSize = true;
             this.LabelName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelName.Location = new System.Drawing.Point(915, 180);
+            this.LabelName.Location = new System.Drawing.Point(895, 180);
             this.LabelName.Name = "LabelName";
             this.LabelName.Size = new System.Drawing.Size(91, 19);
             this.LabelName.TabIndex = 16;
@@ -146,17 +80,18 @@ namespace QA_Projects
             // 
             this.LabelUsername.AutoSize = true;
             this.LabelUsername.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelUsername.Location = new System.Drawing.Point(910, 240);
+            this.LabelUsername.Location = new System.Drawing.Point(890, 240);
             this.LabelUsername.Name = "LabelUsername";
             this.LabelUsername.Size = new System.Drawing.Size(96, 19);
             this.LabelUsername.TabIndex = 17;
             this.LabelUsername.Text = "Username:";
+            this.LabelUsername.Click += new System.EventHandler(this.LabelUsername_Click);
             // 
             // LabelEmail
             // 
             this.LabelEmail.AutoSize = true;
             this.LabelEmail.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelEmail.Location = new System.Drawing.Point(876, 300);
+            this.LabelEmail.Location = new System.Drawing.Point(856, 300);
             this.LabelEmail.Name = "LabelEmail";
             this.LabelEmail.Size = new System.Drawing.Size(130, 19);
             this.LabelEmail.TabIndex = 18;
@@ -166,7 +101,7 @@ namespace QA_Projects
             // 
             this.LabelPasswordRe.AutoSize = true;
             this.LabelPasswordRe.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelPasswordRe.Location = new System.Drawing.Point(914, 360);
+            this.LabelPasswordRe.Location = new System.Drawing.Point(894, 360);
             this.LabelPasswordRe.Name = "LabelPasswordRe";
             this.LabelPasswordRe.Size = new System.Drawing.Size(92, 19);
             this.LabelPasswordRe.TabIndex = 19;
@@ -176,7 +111,7 @@ namespace QA_Projects
             // 
             this.LabelConPassword.AutoSize = true;
             this.LabelConPassword.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelConPassword.Location = new System.Drawing.Point(845, 420);
+            this.LabelConPassword.Location = new System.Drawing.Point(825, 420);
             this.LabelConPassword.Name = "LabelConPassword";
             this.LabelConPassword.Size = new System.Drawing.Size(161, 19);
             this.LabelConPassword.TabIndex = 20;
@@ -250,12 +185,124 @@ namespace QA_Projects
             this.bunifuElipse1.ElipseRadius = 15;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // TextboxPassword
+            // 
+            this.TextboxPassword.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxPassword.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxPassword.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxPassword.BorderThickness = 3;
+            this.TextboxPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextboxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxPassword.isPassword = true;
+            this.TextboxPassword.Location = new System.Drawing.Point(1029, 360);
+            this.TextboxPassword.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxPassword.Name = "TextboxPassword";
+            this.TextboxPassword.Size = new System.Drawing.Size(238, 36);
+            this.TextboxPassword.TabIndex = 26;
+            this.TextboxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // TextboxCpass
+            // 
+            this.TextboxCpass.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxCpass.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxCpass.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxCpass.BorderThickness = 3;
+            this.TextboxCpass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxCpass.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextboxCpass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxCpass.isPassword = true;
+            this.TextboxCpass.Location = new System.Drawing.Point(1028, 420);
+            this.TextboxCpass.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxCpass.Name = "TextboxCpass";
+            this.TextboxCpass.Size = new System.Drawing.Size(238, 36);
+            this.TextboxCpass.TabIndex = 27;
+            this.TextboxCpass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // TextboxEmail
+            // 
+            this.TextboxEmail.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxEmail.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxEmail.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxEmail.BorderThickness = 3;
+            this.TextboxEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextboxEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxEmail.isPassword = false;
+            this.TextboxEmail.Location = new System.Drawing.Point(1029, 300);
+            this.TextboxEmail.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxEmail.Name = "TextboxEmail";
+            this.TextboxEmail.Size = new System.Drawing.Size(238, 36);
+            this.TextboxEmail.TabIndex = 28;
+            this.TextboxEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // TextboxFname
+            // 
+            this.TextboxFname.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxFname.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxFname.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxFname.BorderThickness = 3;
+            this.TextboxFname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxFname.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextboxFname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxFname.isPassword = false;
+            this.TextboxFname.Location = new System.Drawing.Point(1028, 180);
+            this.TextboxFname.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxFname.Name = "TextboxFname";
+            this.TextboxFname.Size = new System.Drawing.Size(238, 36);
+            this.TextboxFname.TabIndex = 29;
+            this.TextboxFname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // TextboxUser
+            // 
+            this.TextboxUser.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxUser.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxUser.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxUser.BorderThickness = 3;
+            this.TextboxUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxUser.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextboxUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxUser.isPassword = false;
+            this.TextboxUser.Location = new System.Drawing.Point(1029, 240);
+            this.TextboxUser.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxUser.Name = "TextboxUser";
+            this.TextboxUser.Size = new System.Drawing.Size(238, 36);
+            this.TextboxUser.TabIndex = 30;
+            this.TextboxUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::QA_Projects.Properties.Resources.Key;
+            this.pictureBox4.Location = new System.Drawing.Point(992, 420);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 31;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::QA_Projects.Properties.Resources.Key;
+            this.pictureBox2.Location = new System.Drawing.Point(992, 360);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 32;
+            this.pictureBox2.TabStop = false;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.TextboxUser);
+            this.Controls.Add(this.TextboxFname);
+            this.Controls.Add(this.TextboxEmail);
+            this.Controls.Add(this.TextboxCpass);
+            this.Controls.Add(this.TextboxPassword);
             this.Controls.Add(this.ExitButtonReg);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -266,17 +313,14 @@ namespace QA_Projects
             this.Controls.Add(this.LabelEmail);
             this.Controls.Add(this.LabelUsername);
             this.Controls.Add(this.LabelName);
-            this.Controls.Add(this.BoxConPassword);
-            this.Controls.Add(this.BoxFullName);
-            this.Controls.Add(this.BoxUsername1);
-            this.Controls.Add(this.BoxEmail);
-            this.Controls.Add(this.BoxPassword);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitButtonReg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,11 +329,6 @@ namespace QA_Projects
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuTextbox BoxPassword;
-        private Bunifu.Framework.UI.BunifuTextbox BoxEmail;
-        private Bunifu.Framework.UI.BunifuTextbox BoxUsername1;
-        private Bunifu.Framework.UI.BunifuTextbox BoxFullName;
-        private Bunifu.Framework.UI.BunifuTextbox BoxConPassword;
         private System.Windows.Forms.Label LabelName;
         private System.Windows.Forms.Label LabelUsername;
         private System.Windows.Forms.Label LabelEmail;
@@ -301,5 +340,12 @@ namespace QA_Projects
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuImageButton ExitButtonReg;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuMetroTextbox TextboxUser;
+        private Bunifu.Framework.UI.BunifuMetroTextbox TextboxFname;
+        private Bunifu.Framework.UI.BunifuMetroTextbox TextboxEmail;
+        private Bunifu.Framework.UI.BunifuMetroTextbox TextboxCpass;
+        private Bunifu.Framework.UI.BunifuMetroTextbox TextboxPassword;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
