@@ -6,9 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using Excel = Microsoft.Office.Interop.Excel;
+using System.Windows.Forms; 
 
 namespace QA_Projects
 {
@@ -17,6 +15,8 @@ namespace QA_Projects
         string username, password;
         DiagnosisForm diagnose;
         RegisterForm register;
+        Excel excel;
+        const int UsernameCol = 2 , PasswordCol = 4;
         public LoginForm()
         {
             register = new RegisterForm(this);
@@ -35,16 +35,25 @@ namespace QA_Projects
 
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
+            excel = new Excel("C:\\Users\\Yam\\OneDrive\\מסמכים\\GitHub\\QA-project\\QA-project\\Excel\\LoginInfo.xlsx", 1);
             username = TextboxUsername.Text;
             password = TextboxPassword.Text;
-            if (username == string.Empty || password == string.Empty)
+            if(username == string.Empty || password == string.Empty)
             {
                 MessageBox.Show("The fields is empty please fill");
             }
-
-            diagnose = new DiagnosisForm(username,this);
-            this.Hide();
-            diagnose.Show();
+            else if (!excel.CheckInExcel(UsernameCol, username) || !excel.CheckInExcel(PasswordCol, password))
+            {
+                MessageBox.Show("The Username or Password incorrect !!");
+                excel.Close();
+            }
+            else
+            {
+                diagnose = new DiagnosisForm(username, this);
+                this.Hide();
+                excel.Close();
+                diagnose.Show();
+            }
         }
 
         private void bunifuMetroTextbox1_OnValueChanged(object sender, EventArgs e)
@@ -53,6 +62,11 @@ namespace QA_Projects
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextboxUsername_OnValueChanged(object sender, EventArgs e)
         {
 
         }

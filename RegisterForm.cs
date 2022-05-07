@@ -19,7 +19,8 @@ namespace QA_Projects
         string email;
         string name;
         LoginForm login;
-       
+        const int UsernameCol = 2, PasswordCol = 4 ,Namecol = 1, Emailcol = 3;
+        // private string FileName = @"C:\data.xlsx"
         public RegisterForm(LoginForm login)
         {
             this.login = login;
@@ -50,19 +51,41 @@ namespace QA_Projects
             string passw = TextboxPassword.Text;
             string email = TextboxEmail.Text;
             string name = TextboxFname.Text;
-            if (username == string.Empty || passw == string.Empty || email == string.Empty || name == string.Empty)
+            string passwCon = TextboxCpass.Text;
+            Excel excel = new Excel("C:\\Users\\Yam\\OneDrive\\מסמכים\\GitHub\\QA-project\\QA-project\\Excel\\LoginInfo.xlsx", 1);
+            if (username == string.Empty || passw == string.Empty || email == string.Empty || name == string.Empty || passwCon == string.Empty)
             {
                 MessageBox.Show("The fields are empty please fill");
             }
+            else if (passw.Length > 16 || passw.Length < 8)
+            {
+                MessageBox.Show("The password must have between 8-16 characters");
+            }
+            else if (passwCon != passw)
+            {
+                MessageBox.Show("The passwords are not matched");
+            }
+            else if (excel.CheckInExcel(UsernameCol, username))
+            {
+                MessageBox.Show("The username is already use ");
+            }
+            else
+            {
+                excel.WriteInExcel(UsernameCol, username);
+                excel.WriteInExcel(PasswordCol, passw);
+                excel.WriteInExcel(Emailcol, email);
+                excel.WriteInExcel(Namecol, name);
+                excel.Save();
+                excel.Close();
+                login.Show();
+                this.Hide();
+            }
+
+
 
         }
 
         private void LabelUsername_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
