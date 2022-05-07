@@ -44,15 +44,15 @@ namespace QA_Projects
             this.LabelLastN = new System.Windows.Forms.Label();
             this.radioButtonM = new System.Windows.Forms.RadioButton();
             this.radioButtonF = new System.Windows.Forms.RadioButton();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.TextboxBloodPre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.TextboxID = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.TextBoxFname = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox5 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox6 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox7 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox8 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox9 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox10 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.TextboxLname = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.TextboxAge = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.TextboxHeight = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.TextboxWeight = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.TextboxFever = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.TextboxHeartBeat = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.buttonTestBlood = new System.Windows.Forms.Button();
             this.LabelTestBlood = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,25 +60,38 @@ namespace QA_Projects
             this.Diagnosis = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Treatment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label3 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonYQ1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonNQ1 = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.buttonDiagnose = new System.Windows.Forms.Button();
             this.ExitButton = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.groupBoxGender = new System.Windows.Forms.GroupBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.groupBoxQ1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxQ2 = new System.Windows.Forms.GroupBox();
+            this.radioButtonNQ2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonYQ2 = new System.Windows.Forms.RadioButton();
+            this.groupBoxQ5 = new System.Windows.Forms.GroupBox();
+            this.radioButtonNQ5 = new System.Windows.Forms.RadioButton();
+            this.radioButtonYQ5 = new System.Windows.Forms.RadioButton();
+            this.groupBoxQ4 = new System.Windows.Forms.GroupBox();
+            this.radioButtonNQ4 = new System.Windows.Forms.RadioButton();
+            this.radioButtonYQ4 = new System.Windows.Forms.RadioButton();
+            this.groupBoxQ3 = new System.Windows.Forms.GroupBox();
+            this.radioButtonNQ3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonYQ3 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.ExitButton)).BeginInit();
+            this.groupBoxGender.SuspendLayout();
+            this.groupBoxQ1.SuspendLayout();
+            this.groupBoxQ2.SuspendLayout();
+            this.groupBoxQ5.SuspendLayout();
+            this.groupBoxQ4.SuspendLayout();
+            this.groupBoxQ3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -151,6 +164,7 @@ namespace QA_Projects
             this.LabelGender.Size = new System.Drawing.Size(76, 19);
             this.LabelGender.TabIndex = 9;
             this.LabelGender.Text = "Gender:";
+            this.LabelGender.Click += new System.EventHandler(this.LabelGender_Click);
             // 
             // LabelBlood
             // 
@@ -195,7 +209,7 @@ namespace QA_Projects
             // radioButtonM
             // 
             this.radioButtonM.AutoSize = true;
-            this.radioButtonM.Location = new System.Drawing.Point(153, 451);
+            this.radioButtonM.Location = new System.Drawing.Point(12, 8);
             this.radioButtonM.Name = "radioButtonM";
             this.radioButtonM.Size = new System.Drawing.Size(59, 21);
             this.radioButtonM.TabIndex = 24;
@@ -206,7 +220,7 @@ namespace QA_Projects
             // radioButtonF
             // 
             this.radioButtonF.AutoSize = true;
-            this.radioButtonF.Location = new System.Drawing.Point(239, 451);
+            this.radioButtonF.Location = new System.Drawing.Point(98, 8);
             this.radioButtonF.Name = "radioButtonF";
             this.radioButtonF.Size = new System.Drawing.Size(75, 21);
             this.radioButtonF.TabIndex = 25;
@@ -214,43 +228,43 @@ namespace QA_Projects
             this.radioButtonF.Text = "Female";
             this.radioButtonF.UseVisualStyleBackColor = true;
             // 
-            // bunifuMaterialTextbox1
+            // TextboxBloodPre
             // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(153, 396);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(202, 33);
-            this.bunifuMaterialTextbox1.TabIndex = 26;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxBloodPre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxBloodPre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextboxBloodPre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxBloodPre.HintForeColor = System.Drawing.Color.Empty;
+            this.TextboxBloodPre.HintText = "";
+            this.TextboxBloodPre.isPassword = false;
+            this.TextboxBloodPre.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextboxBloodPre.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextboxBloodPre.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextboxBloodPre.LineThickness = 3;
+            this.TextboxBloodPre.Location = new System.Drawing.Point(153, 396);
+            this.TextboxBloodPre.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxBloodPre.Name = "TextboxBloodPre";
+            this.TextboxBloodPre.Size = new System.Drawing.Size(202, 33);
+            this.TextboxBloodPre.TabIndex = 26;
+            this.TextboxBloodPre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox3
+            // TextboxID
             // 
-            this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox3.HintText = "";
-            this.bunifuMaterialTextbox3.isPassword = false;
-            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox3.LineThickness = 3;
-            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(153, 156);
-            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
-            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(202, 33);
-            this.bunifuMaterialTextbox3.TabIndex = 28;
-            this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxID.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextboxID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxID.HintForeColor = System.Drawing.Color.Empty;
+            this.TextboxID.HintText = "";
+            this.TextboxID.isPassword = false;
+            this.TextboxID.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextboxID.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextboxID.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextboxID.LineThickness = 3;
+            this.TextboxID.Location = new System.Drawing.Point(153, 156);
+            this.TextboxID.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxID.Name = "TextboxID";
+            this.TextboxID.Size = new System.Drawing.Size(202, 33);
+            this.TextboxID.TabIndex = 28;
+            this.TextboxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextBoxFname
             // 
@@ -271,119 +285,119 @@ namespace QA_Projects
             this.TextBoxFname.TabIndex = 29;
             this.TextBoxFname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox5
+            // TextboxLname
             // 
-            this.bunifuMaterialTextbox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox5.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox5.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox5.HintText = "";
-            this.bunifuMaterialTextbox5.isPassword = false;
-            this.bunifuMaterialTextbox5.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox5.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox5.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox5.LineThickness = 3;
-            this.bunifuMaterialTextbox5.Location = new System.Drawing.Point(153, 115);
-            this.bunifuMaterialTextbox5.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox5.Name = "bunifuMaterialTextbox5";
-            this.bunifuMaterialTextbox5.Size = new System.Drawing.Size(202, 33);
-            this.bunifuMaterialTextbox5.TabIndex = 30;
-            this.bunifuMaterialTextbox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxLname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxLname.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextboxLname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxLname.HintForeColor = System.Drawing.Color.Empty;
+            this.TextboxLname.HintText = "";
+            this.TextboxLname.isPassword = false;
+            this.TextboxLname.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextboxLname.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextboxLname.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextboxLname.LineThickness = 3;
+            this.TextboxLname.Location = new System.Drawing.Point(153, 115);
+            this.TextboxLname.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxLname.Name = "TextboxLname";
+            this.TextboxLname.Size = new System.Drawing.Size(202, 33);
+            this.TextboxLname.TabIndex = 30;
+            this.TextboxLname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox6
+            // TextboxAge
             // 
-            this.bunifuMaterialTextbox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox6.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox6.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox6.HintText = "";
-            this.bunifuMaterialTextbox6.isPassword = false;
-            this.bunifuMaterialTextbox6.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox6.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox6.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox6.LineThickness = 3;
-            this.bunifuMaterialTextbox6.Location = new System.Drawing.Point(153, 196);
-            this.bunifuMaterialTextbox6.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox6.Name = "bunifuMaterialTextbox6";
-            this.bunifuMaterialTextbox6.Size = new System.Drawing.Size(202, 33);
-            this.bunifuMaterialTextbox6.TabIndex = 31;
-            this.bunifuMaterialTextbox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxAge.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxAge.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextboxAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxAge.HintForeColor = System.Drawing.Color.Empty;
+            this.TextboxAge.HintText = "";
+            this.TextboxAge.isPassword = false;
+            this.TextboxAge.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextboxAge.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextboxAge.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextboxAge.LineThickness = 3;
+            this.TextboxAge.Location = new System.Drawing.Point(153, 196);
+            this.TextboxAge.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxAge.Name = "TextboxAge";
+            this.TextboxAge.Size = new System.Drawing.Size(202, 33);
+            this.TextboxAge.TabIndex = 31;
+            this.TextboxAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox7
+            // TextboxHeight
             // 
-            this.bunifuMaterialTextbox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox7.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox7.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox7.HintText = "";
-            this.bunifuMaterialTextbox7.isPassword = false;
-            this.bunifuMaterialTextbox7.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox7.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox7.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox7.LineThickness = 3;
-            this.bunifuMaterialTextbox7.Location = new System.Drawing.Point(153, 236);
-            this.bunifuMaterialTextbox7.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox7.Name = "bunifuMaterialTextbox7";
-            this.bunifuMaterialTextbox7.Size = new System.Drawing.Size(202, 33);
-            this.bunifuMaterialTextbox7.TabIndex = 32;
-            this.bunifuMaterialTextbox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxHeight.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxHeight.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextboxHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxHeight.HintForeColor = System.Drawing.Color.Empty;
+            this.TextboxHeight.HintText = "";
+            this.TextboxHeight.isPassword = false;
+            this.TextboxHeight.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextboxHeight.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextboxHeight.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextboxHeight.LineThickness = 3;
+            this.TextboxHeight.Location = new System.Drawing.Point(153, 236);
+            this.TextboxHeight.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxHeight.Name = "TextboxHeight";
+            this.TextboxHeight.Size = new System.Drawing.Size(202, 33);
+            this.TextboxHeight.TabIndex = 32;
+            this.TextboxHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox8
+            // TextboxWeight
             // 
-            this.bunifuMaterialTextbox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox8.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox8.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox8.HintText = "";
-            this.bunifuMaterialTextbox8.isPassword = false;
-            this.bunifuMaterialTextbox8.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox8.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox8.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox8.LineThickness = 3;
-            this.bunifuMaterialTextbox8.Location = new System.Drawing.Point(153, 276);
-            this.bunifuMaterialTextbox8.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox8.Name = "bunifuMaterialTextbox8";
-            this.bunifuMaterialTextbox8.Size = new System.Drawing.Size(202, 33);
-            this.bunifuMaterialTextbox8.TabIndex = 33;
-            this.bunifuMaterialTextbox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxWeight.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxWeight.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextboxWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxWeight.HintForeColor = System.Drawing.Color.Empty;
+            this.TextboxWeight.HintText = "";
+            this.TextboxWeight.isPassword = false;
+            this.TextboxWeight.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextboxWeight.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextboxWeight.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextboxWeight.LineThickness = 3;
+            this.TextboxWeight.Location = new System.Drawing.Point(153, 276);
+            this.TextboxWeight.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxWeight.Name = "TextboxWeight";
+            this.TextboxWeight.Size = new System.Drawing.Size(202, 33);
+            this.TextboxWeight.TabIndex = 33;
+            this.TextboxWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox9
+            // TextboxFever
             // 
-            this.bunifuMaterialTextbox9.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox9.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox9.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox9.HintText = "";
-            this.bunifuMaterialTextbox9.isPassword = false;
-            this.bunifuMaterialTextbox9.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox9.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox9.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox9.LineThickness = 3;
-            this.bunifuMaterialTextbox9.Location = new System.Drawing.Point(153, 316);
-            this.bunifuMaterialTextbox9.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox9.Name = "bunifuMaterialTextbox9";
-            this.bunifuMaterialTextbox9.Size = new System.Drawing.Size(202, 33);
-            this.bunifuMaterialTextbox9.TabIndex = 34;
-            this.bunifuMaterialTextbox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxFever.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxFever.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextboxFever.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxFever.HintForeColor = System.Drawing.Color.Empty;
+            this.TextboxFever.HintText = "";
+            this.TextboxFever.isPassword = false;
+            this.TextboxFever.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextboxFever.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextboxFever.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextboxFever.LineThickness = 3;
+            this.TextboxFever.Location = new System.Drawing.Point(153, 316);
+            this.TextboxFever.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxFever.Name = "TextboxFever";
+            this.TextboxFever.Size = new System.Drawing.Size(202, 33);
+            this.TextboxFever.TabIndex = 34;
+            this.TextboxFever.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox10
+            // TextboxHeartBeat
             // 
-            this.bunifuMaterialTextbox10.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox10.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox10.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox10.HintText = "";
-            this.bunifuMaterialTextbox10.isPassword = false;
-            this.bunifuMaterialTextbox10.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox10.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox10.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox10.LineThickness = 3;
-            this.bunifuMaterialTextbox10.Location = new System.Drawing.Point(153, 356);
-            this.bunifuMaterialTextbox10.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox10.Name = "bunifuMaterialTextbox10";
-            this.bunifuMaterialTextbox10.Size = new System.Drawing.Size(202, 33);
-            this.bunifuMaterialTextbox10.TabIndex = 35;
-            this.bunifuMaterialTextbox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxHeartBeat.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxHeartBeat.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextboxHeartBeat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextboxHeartBeat.HintForeColor = System.Drawing.Color.Empty;
+            this.TextboxHeartBeat.HintText = "";
+            this.TextboxHeartBeat.isPassword = false;
+            this.TextboxHeartBeat.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextboxHeartBeat.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextboxHeartBeat.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextboxHeartBeat.LineThickness = 3;
+            this.TextboxHeartBeat.Location = new System.Drawing.Point(153, 356);
+            this.TextboxHeartBeat.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxHeartBeat.Name = "TextboxHeartBeat";
+            this.TextboxHeartBeat.Size = new System.Drawing.Size(202, 33);
+            this.TextboxHeartBeat.TabIndex = 35;
+            this.TextboxHeartBeat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // buttonTestBlood
             // 
@@ -445,27 +459,27 @@ namespace QA_Projects
             this.label3.TabIndex = 40;
             this.label3.Text = "Patient Questions:";
             // 
-            // radioButton1
+            // radioButtonYQ1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(429, 131);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(53, 21);
-            this.radioButton1.TabIndex = 41;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Yes";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonYQ1.AutoSize = true;
+            this.radioButtonYQ1.Location = new System.Drawing.Point(7, 16);
+            this.radioButtonYQ1.Name = "radioButtonYQ1";
+            this.radioButtonYQ1.Size = new System.Drawing.Size(53, 21);
+            this.radioButtonYQ1.TabIndex = 41;
+            this.radioButtonYQ1.TabStop = true;
+            this.radioButtonYQ1.Text = "Yes";
+            this.radioButtonYQ1.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonNQ1
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(488, 131);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(47, 21);
-            this.radioButton2.TabIndex = 42;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "No";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonNQ1.AutoSize = true;
+            this.radioButtonNQ1.Location = new System.Drawing.Point(66, 16);
+            this.radioButtonNQ1.Name = "radioButtonNQ1";
+            this.radioButtonNQ1.Size = new System.Drawing.Size(47, 21);
+            this.radioButtonNQ1.TabIndex = 42;
+            this.radioButtonNQ1.TabStop = true;
+            this.radioButtonNQ1.Text = "No";
+            this.radioButtonNQ1.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -506,94 +520,6 @@ namespace QA_Projects
             this.label7.Size = new System.Drawing.Size(319, 19);
             this.label7.TabIndex = 46;
             this.label7.Text = "Are you pregnant?(For male press no)";
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(429, 211);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(53, 21);
-            this.radioButton3.TabIndex = 47;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Yes";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(429, 291);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(53, 21);
-            this.radioButton4.TabIndex = 48;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Yes";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(429, 371);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(53, 21);
-            this.radioButton5.TabIndex = 49;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Yes";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(429, 451);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(53, 21);
-            this.radioButton6.TabIndex = 50;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Yes";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(488, 451);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(47, 21);
-            this.radioButton7.TabIndex = 51;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "No";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(488, 371);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(47, 21);
-            this.radioButton8.TabIndex = 52;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "No";
-            this.radioButton8.UseVisualStyleBackColor = true;
-            // 
-            // radioButton9
-            // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(488, 291);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(47, 21);
-            this.radioButton9.TabIndex = 53;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "No";
-            this.radioButton9.UseVisualStyleBackColor = true;
-            // 
-            // radioButton10
-            // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(488, 211);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(47, 21);
-            this.radioButton10.TabIndex = 54;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "No";
-            this.radioButton10.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -640,45 +566,188 @@ namespace QA_Projects
             this.bunifuElipse1.ElipseRadius = 15;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // groupBoxGender
+            // 
+            this.groupBoxGender.Controls.Add(this.radioButtonF);
+            this.groupBoxGender.Controls.Add(this.radioButtonM);
+            this.groupBoxGender.Location = new System.Drawing.Point(153, 443);
+            this.groupBoxGender.Name = "groupBoxGender";
+            this.groupBoxGender.Size = new System.Drawing.Size(200, 40);
+            this.groupBoxGender.TabIndex = 58;
+            this.groupBoxGender.TabStop = false;
+            // 
+            // groupBoxQ1
+            // 
+            this.groupBoxQ1.Controls.Add(this.radioButtonNQ1);
+            this.groupBoxQ1.Controls.Add(this.radioButtonYQ1);
+            this.groupBoxQ1.Location = new System.Drawing.Point(429, 116);
+            this.groupBoxQ1.Name = "groupBoxQ1";
+            this.groupBoxQ1.Size = new System.Drawing.Size(132, 43);
+            this.groupBoxQ1.TabIndex = 59;
+            this.groupBoxQ1.TabStop = false;
+            // 
+            // groupBoxQ2
+            // 
+            this.groupBoxQ2.Controls.Add(this.radioButtonNQ2);
+            this.groupBoxQ2.Controls.Add(this.radioButtonYQ2);
+            this.groupBoxQ2.Location = new System.Drawing.Point(429, 196);
+            this.groupBoxQ2.Name = "groupBoxQ2";
+            this.groupBoxQ2.Size = new System.Drawing.Size(132, 43);
+            this.groupBoxQ2.TabIndex = 60;
+            this.groupBoxQ2.TabStop = false;
+            // 
+            // radioButtonNQ2
+            // 
+            this.radioButtonNQ2.AutoSize = true;
+            this.radioButtonNQ2.Location = new System.Drawing.Point(66, 16);
+            this.radioButtonNQ2.Name = "radioButtonNQ2";
+            this.radioButtonNQ2.Size = new System.Drawing.Size(47, 21);
+            this.radioButtonNQ2.TabIndex = 42;
+            this.radioButtonNQ2.TabStop = true;
+            this.radioButtonNQ2.Text = "No";
+            this.radioButtonNQ2.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonYQ2
+            // 
+            this.radioButtonYQ2.AutoSize = true;
+            this.radioButtonYQ2.Location = new System.Drawing.Point(7, 16);
+            this.radioButtonYQ2.Name = "radioButtonYQ2";
+            this.radioButtonYQ2.Size = new System.Drawing.Size(53, 21);
+            this.radioButtonYQ2.TabIndex = 41;
+            this.radioButtonYQ2.TabStop = true;
+            this.radioButtonYQ2.Text = "Yes";
+            this.radioButtonYQ2.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxQ5
+            // 
+            this.groupBoxQ5.Controls.Add(this.radioButtonNQ5);
+            this.groupBoxQ5.Controls.Add(this.radioButtonYQ5);
+            this.groupBoxQ5.Location = new System.Drawing.Point(429, 436);
+            this.groupBoxQ5.Name = "groupBoxQ5";
+            this.groupBoxQ5.Size = new System.Drawing.Size(132, 43);
+            this.groupBoxQ5.TabIndex = 61;
+            this.groupBoxQ5.TabStop = false;
+            // 
+            // radioButtonNQ5
+            // 
+            this.radioButtonNQ5.AutoSize = true;
+            this.radioButtonNQ5.Location = new System.Drawing.Point(66, 16);
+            this.radioButtonNQ5.Name = "radioButtonNQ5";
+            this.radioButtonNQ5.Size = new System.Drawing.Size(47, 21);
+            this.radioButtonNQ5.TabIndex = 42;
+            this.radioButtonNQ5.TabStop = true;
+            this.radioButtonNQ5.Text = "No";
+            this.radioButtonNQ5.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonYQ5
+            // 
+            this.radioButtonYQ5.AutoSize = true;
+            this.radioButtonYQ5.Location = new System.Drawing.Point(7, 16);
+            this.radioButtonYQ5.Name = "radioButtonYQ5";
+            this.radioButtonYQ5.Size = new System.Drawing.Size(53, 21);
+            this.radioButtonYQ5.TabIndex = 41;
+            this.radioButtonYQ5.TabStop = true;
+            this.radioButtonYQ5.Text = "Yes";
+            this.radioButtonYQ5.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxQ4
+            // 
+            this.groupBoxQ4.Controls.Add(this.radioButtonNQ4);
+            this.groupBoxQ4.Controls.Add(this.radioButtonYQ4);
+            this.groupBoxQ4.Location = new System.Drawing.Point(429, 356);
+            this.groupBoxQ4.Name = "groupBoxQ4";
+            this.groupBoxQ4.Size = new System.Drawing.Size(132, 43);
+            this.groupBoxQ4.TabIndex = 60;
+            this.groupBoxQ4.TabStop = false;
+            // 
+            // radioButtonNQ4
+            // 
+            this.radioButtonNQ4.AutoSize = true;
+            this.radioButtonNQ4.Location = new System.Drawing.Point(66, 16);
+            this.radioButtonNQ4.Name = "radioButtonNQ4";
+            this.radioButtonNQ4.Size = new System.Drawing.Size(47, 21);
+            this.radioButtonNQ4.TabIndex = 42;
+            this.radioButtonNQ4.TabStop = true;
+            this.radioButtonNQ4.Text = "No";
+            this.radioButtonNQ4.UseVisualStyleBackColor = true;
+            this.radioButtonNQ4.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
+            // 
+            // radioButtonYQ4
+            // 
+            this.radioButtonYQ4.AutoSize = true;
+            this.radioButtonYQ4.Location = new System.Drawing.Point(7, 16);
+            this.radioButtonYQ4.Name = "radioButtonYQ4";
+            this.radioButtonYQ4.Size = new System.Drawing.Size(53, 21);
+            this.radioButtonYQ4.TabIndex = 41;
+            this.radioButtonYQ4.TabStop = true;
+            this.radioButtonYQ4.Text = "Yes";
+            this.radioButtonYQ4.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxQ3
+            // 
+            this.groupBoxQ3.Controls.Add(this.radioButtonNQ3);
+            this.groupBoxQ3.Controls.Add(this.radioButtonYQ3);
+            this.groupBoxQ3.Location = new System.Drawing.Point(429, 276);
+            this.groupBoxQ3.Name = "groupBoxQ3";
+            this.groupBoxQ3.Size = new System.Drawing.Size(132, 43);
+            this.groupBoxQ3.TabIndex = 60;
+            this.groupBoxQ3.TabStop = false;
+            // 
+            // radioButtonNQ3
+            // 
+            this.radioButtonNQ3.AutoSize = true;
+            this.radioButtonNQ3.Location = new System.Drawing.Point(66, 16);
+            this.radioButtonNQ3.Name = "radioButtonNQ3";
+            this.radioButtonNQ3.Size = new System.Drawing.Size(47, 21);
+            this.radioButtonNQ3.TabIndex = 42;
+            this.radioButtonNQ3.TabStop = true;
+            this.radioButtonNQ3.Text = "No";
+            this.radioButtonNQ3.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonYQ3
+            // 
+            this.radioButtonYQ3.AutoSize = true;
+            this.radioButtonYQ3.Location = new System.Drawing.Point(7, 16);
+            this.radioButtonYQ3.Name = "radioButtonYQ3";
+            this.radioButtonYQ3.Size = new System.Drawing.Size(53, 21);
+            this.radioButtonYQ3.TabIndex = 41;
+            this.radioButtonYQ3.TabStop = true;
+            this.radioButtonYQ3.Text = "Yes";
+            this.radioButtonYQ3.UseVisualStyleBackColor = true;
+            // 
             // DiagnosisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.groupBoxQ4);
+            this.Controls.Add(this.groupBoxQ3);
+            this.Controls.Add(this.groupBoxQ5);
+            this.Controls.Add(this.groupBoxQ2);
+            this.Controls.Add(this.groupBoxQ1);
+            this.Controls.Add(this.groupBoxGender);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.buttonDiagnose);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.radioButton10);
-            this.Controls.Add(this.radioButton9);
-            this.Controls.Add(this.radioButton8);
-            this.Controls.Add(this.radioButton7);
-            this.Controls.Add(this.radioButton6);
-            this.Controls.Add(this.radioButton5);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LabelTestBlood);
             this.Controls.Add(this.buttonTestBlood);
-            this.Controls.Add(this.bunifuMaterialTextbox10);
-            this.Controls.Add(this.bunifuMaterialTextbox9);
-            this.Controls.Add(this.bunifuMaterialTextbox8);
-            this.Controls.Add(this.bunifuMaterialTextbox7);
-            this.Controls.Add(this.bunifuMaterialTextbox6);
-            this.Controls.Add(this.bunifuMaterialTextbox5);
+            this.Controls.Add(this.TextboxHeartBeat);
+            this.Controls.Add(this.TextboxFever);
+            this.Controls.Add(this.TextboxWeight);
+            this.Controls.Add(this.TextboxHeight);
+            this.Controls.Add(this.TextboxAge);
+            this.Controls.Add(this.TextboxLname);
             this.Controls.Add(this.TextBoxFname);
-            this.Controls.Add(this.bunifuMaterialTextbox3);
-            this.Controls.Add(this.bunifuMaterialTextbox1);
-            this.Controls.Add(this.radioButtonF);
-            this.Controls.Add(this.radioButtonM);
+            this.Controls.Add(this.TextboxID);
+            this.Controls.Add(this.TextboxBloodPre);
             this.Controls.Add(this.LabelLastN);
             this.Controls.Add(this.LabelFever);
             this.Controls.Add(this.LabelHeart);
@@ -694,6 +763,18 @@ namespace QA_Projects
             this.Name = "DiagnosisForm";
             this.Text = "DiagnosisForm";
             ((System.ComponentModel.ISupportInitialize)(this.ExitButton)).EndInit();
+            this.groupBoxGender.ResumeLayout(false);
+            this.groupBoxGender.PerformLayout();
+            this.groupBoxQ1.ResumeLayout(false);
+            this.groupBoxQ1.PerformLayout();
+            this.groupBoxQ2.ResumeLayout(false);
+            this.groupBoxQ2.PerformLayout();
+            this.groupBoxQ5.ResumeLayout(false);
+            this.groupBoxQ5.PerformLayout();
+            this.groupBoxQ4.ResumeLayout(false);
+            this.groupBoxQ4.PerformLayout();
+            this.groupBoxQ3.ResumeLayout(false);
+            this.groupBoxQ3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -714,15 +795,15 @@ namespace QA_Projects
         private System.Windows.Forms.Label LabelLastN;
         private System.Windows.Forms.RadioButton radioButtonM;
         private System.Windows.Forms.RadioButton radioButtonF;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox TextboxBloodPre;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox TextboxID;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBoxFname;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox5;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox6;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox7;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox8;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox9;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox10;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox TextboxLname;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox TextboxAge;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox TextboxHeight;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox TextboxWeight;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox TextboxFever;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox TextboxHeartBeat;
         private System.Windows.Forms.Button buttonTestBlood;
         private System.Windows.Forms.Label LabelTestBlood;
         private System.Windows.Forms.Label label2;
@@ -730,23 +811,30 @@ namespace QA_Projects
         private System.Windows.Forms.ColumnHeader Diagnosis;
         private System.Windows.Forms.ColumnHeader Treatment;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButtonYQ1;
+        private System.Windows.Forms.RadioButton radioButtonNQ1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button buttonDiagnose;
         private Bunifu.Framework.UI.BunifuImageButton ExitButton;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.GroupBox groupBoxGender;
+        private System.Windows.Forms.GroupBox groupBoxQ4;
+        private System.Windows.Forms.RadioButton radioButtonNQ4;
+        private System.Windows.Forms.RadioButton radioButtonYQ4;
+        private System.Windows.Forms.GroupBox groupBoxQ3;
+        private System.Windows.Forms.RadioButton radioButtonNQ3;
+        private System.Windows.Forms.RadioButton radioButtonYQ3;
+        private System.Windows.Forms.GroupBox groupBoxQ5;
+        private System.Windows.Forms.RadioButton radioButtonNQ5;
+        private System.Windows.Forms.RadioButton radioButtonYQ5;
+        private System.Windows.Forms.GroupBox groupBoxQ2;
+        private System.Windows.Forms.RadioButton radioButtonNQ2;
+        private System.Windows.Forms.RadioButton radioButtonYQ2;
+        private System.Windows.Forms.GroupBox groupBoxQ1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
