@@ -245,7 +245,7 @@ namespace QA_Projects
             this.TextboxBloodPre.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxBloodPre.Name = "TextboxBloodPre";
             this.TextboxBloodPre.Size = new System.Drawing.Size(202, 33);
-            this.TextboxBloodPre.TabIndex = 26;
+            this.TextboxBloodPre.TabIndex = 38;
             this.TextboxBloodPre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextboxID
@@ -264,7 +264,7 @@ namespace QA_Projects
             this.TextboxID.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxID.Name = "TextboxID";
             this.TextboxID.Size = new System.Drawing.Size(202, 33);
-            this.TextboxID.TabIndex = 28;
+            this.TextboxID.TabIndex = 32;
             this.TextboxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextBoxFname
@@ -283,7 +283,7 @@ namespace QA_Projects
             this.TextBoxFname.Margin = new System.Windows.Forms.Padding(4);
             this.TextBoxFname.Name = "TextBoxFname";
             this.TextBoxFname.Size = new System.Drawing.Size(202, 33);
-            this.TextBoxFname.TabIndex = 29;
+            this.TextBoxFname.TabIndex = 30;
             this.TextBoxFname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextboxLname
@@ -302,7 +302,7 @@ namespace QA_Projects
             this.TextboxLname.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxLname.Name = "TextboxLname";
             this.TextboxLname.Size = new System.Drawing.Size(202, 33);
-            this.TextboxLname.TabIndex = 30;
+            this.TextboxLname.TabIndex = 31;
             this.TextboxLname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextboxAge
@@ -321,7 +321,7 @@ namespace QA_Projects
             this.TextboxAge.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxAge.Name = "TextboxAge";
             this.TextboxAge.Size = new System.Drawing.Size(202, 33);
-            this.TextboxAge.TabIndex = 31;
+            this.TextboxAge.TabIndex = 33;
             this.TextboxAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextboxHeight
@@ -340,7 +340,7 @@ namespace QA_Projects
             this.TextboxHeight.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxHeight.Name = "TextboxHeight";
             this.TextboxHeight.Size = new System.Drawing.Size(202, 33);
-            this.TextboxHeight.TabIndex = 32;
+            this.TextboxHeight.TabIndex = 34;
             this.TextboxHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextboxWeight
@@ -359,7 +359,7 @@ namespace QA_Projects
             this.TextboxWeight.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxWeight.Name = "TextboxWeight";
             this.TextboxWeight.Size = new System.Drawing.Size(202, 33);
-            this.TextboxWeight.TabIndex = 33;
+            this.TextboxWeight.TabIndex = 35;
             this.TextboxWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextboxFever
@@ -378,7 +378,7 @@ namespace QA_Projects
             this.TextboxFever.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxFever.Name = "TextboxFever";
             this.TextboxFever.Size = new System.Drawing.Size(202, 33);
-            this.TextboxFever.TabIndex = 34;
+            this.TextboxFever.TabIndex = 36;
             this.TextboxFever.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextboxHeartBeat
@@ -397,7 +397,7 @@ namespace QA_Projects
             this.TextboxHeartBeat.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxHeartBeat.Name = "TextboxHeartBeat";
             this.TextboxHeartBeat.Size = new System.Drawing.Size(202, 33);
-            this.TextboxHeartBeat.TabIndex = 35;
+            this.TextboxHeartBeat.TabIndex = 37;
             this.TextboxHeartBeat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // buttonTestBlood
@@ -410,7 +410,7 @@ namespace QA_Projects
             this.buttonTestBlood.Location = new System.Drawing.Point(281, 485);
             this.buttonTestBlood.Name = "buttonTestBlood";
             this.buttonTestBlood.Size = new System.Drawing.Size(120, 38);
-            this.buttonTestBlood.TabIndex = 36;
+            this.buttonTestBlood.TabIndex = 40;
             this.buttonTestBlood.Text = "Upload";
             this.buttonTestBlood.UseVisualStyleBackColor = false;
             this.buttonTestBlood.Click += new System.EventHandler(this.buttonTestBlood_Click);
@@ -545,7 +545,7 @@ namespace QA_Projects
             this.buttonDiagnose.Location = new System.Drawing.Point(429, 537);
             this.buttonDiagnose.Name = "buttonDiagnose";
             this.buttonDiagnose.Size = new System.Drawing.Size(120, 38);
-            this.buttonDiagnose.TabIndex = 56;
+            this.buttonDiagnose.TabIndex = 41;
             this.buttonDiagnose.Text = "Diagnose";
             this.buttonDiagnose.UseVisualStyleBackColor = false;
             // 
@@ -733,7 +733,7 @@ namespace QA_Projects
             this.TextboxTestBlood.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxTestBlood.Name = "TextboxTestBlood";
             this.TextboxTestBlood.Size = new System.Drawing.Size(159, 33);
-            this.TextboxTestBlood.TabIndex = 62;
+            this.TextboxTestBlood.TabIndex = 39;
             this.TextboxTestBlood.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // DiagnosisForm
