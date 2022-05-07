@@ -7,12 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace QA_Projects
 {
     public partial class RegisterForm : Form
     {
+        string username;
+        string passw;
+        string email;
+        string name;
         LoginForm login;
+       // private string FileName = @"C:\data.xlsx"
         public RegisterForm(LoginForm login)
         {
             this.login = login;
@@ -39,14 +46,19 @@ namespace QA_Projects
 
         private void ButtonRegister_Click(object sender, EventArgs e)
         {
-            string username = BoxUsername1.text;
-            string passw = BoxPassword.text;
-            string email = BoxEmail.text;
-            string name = BoxFullName.text;
+            string username = TextboxUser.Text;
+            string passw = TextboxPassword.Text;
+            string email = TextboxEmail.Text;
+            string name = TextboxFname.Text;
             if (username == string.Empty || passw == string.Empty || email == string.Empty || name == string.Empty)
             {
                 MessageBox.Show("The fields are empty please fill");
             }
+
+        }
+
+        private void LabelUsername_Click(object sender, EventArgs e)
+        {
 
         }
     }
