@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace QA_Projects
 {
@@ -27,11 +28,13 @@ namespace QA_Projects
 
 
         LoginForm login;
+        ManualTestBlood manual;
         string userName;
         public DiagnosisForm(string user,LoginForm login)
         {
             this.login = login;
             this.userName = user;
+            manual = new ManualTestBlood(this);
             InitializeComponent();
         }
 
@@ -82,6 +85,19 @@ namespace QA_Projects
             {
                 this.TextboxTestBlood.Text = openFileDialog.FileName;
             }
+        }
+
+        private void ButtonManual_Click(object sender, EventArgs e)
+        {
+           DialogResult dr = MessageBox.Show("You want to enter the patient's blood tests manually?", "Manual blood tests", MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+
+            if(dr == DialogResult.Yes)
+            {
+                manual.Show();
+                this.Hide();
+
+            }
+
         }
     }
 }
