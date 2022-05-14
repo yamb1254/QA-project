@@ -65,9 +65,10 @@ namespace QA_Projects
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QA_Projects.Properties.Resources.pic_From;
-            this.pictureBox1.Location = new System.Drawing.Point(-108, -102);
+            this.pictureBox1.Location = new System.Drawing.Point(-81, -83);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1013, 923);
+            this.pictureBox1.Size = new System.Drawing.Size(760, 750);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -77,9 +78,10 @@ namespace QA_Projects
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
-            this.label2.Location = new System.Drawing.Point(744, 57);
+            this.label2.Location = new System.Drawing.Point(558, 46);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(454, 46);
+            this.label2.Size = new System.Drawing.Size(357, 38);
             this.label2.TabIndex = 29;
             this.label2.Text = "Please Insert Test Blood:";
             // 
@@ -93,12 +95,13 @@ namespace QA_Projects
             this.TextboxWBC.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextboxWBC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextboxWBC.isPassword = false;
-            this.TextboxWBC.Location = new System.Drawing.Point(1010, 108);
-            this.TextboxWBC.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxWBC.Location = new System.Drawing.Point(758, 88);
+            this.TextboxWBC.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxWBC.Name = "TextboxWBC";
-            this.TextboxWBC.Size = new System.Drawing.Size(188, 36);
+            this.TextboxWBC.Size = new System.Drawing.Size(141, 29);
             this.TextboxWBC.TabIndex = 30;
             this.TextboxWBC.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxWBC.OnValueChanged += new System.EventHandler(this.TextboxWBC_OnValueChanged);
             // 
             // TextboxAP
             // 
@@ -110,12 +113,13 @@ namespace QA_Projects
             this.TextboxAP.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextboxAP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextboxAP.isPassword = false;
-            this.TextboxAP.Location = new System.Drawing.Point(1010, 568);
-            this.TextboxAP.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxAP.Location = new System.Drawing.Point(758, 462);
+            this.TextboxAP.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxAP.Name = "TextboxAP";
-            this.TextboxAP.Size = new System.Drawing.Size(188, 36);
+            this.TextboxAP.Size = new System.Drawing.Size(141, 29);
             this.TextboxAP.TabIndex = 32;
             this.TextboxAP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxAP.OnValueChanged += new System.EventHandler(this.TextboxAP_OnValueChanged);
             // 
             // TextboxHDL
             // 
@@ -127,12 +131,13 @@ namespace QA_Projects
             this.TextboxHDL.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextboxHDL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextboxHDL.isPassword = false;
-            this.TextboxHDL.Location = new System.Drawing.Point(1010, 522);
-            this.TextboxHDL.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxHDL.Location = new System.Drawing.Point(758, 424);
+            this.TextboxHDL.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxHDL.Name = "TextboxHDL";
-            this.TextboxHDL.Size = new System.Drawing.Size(188, 36);
+            this.TextboxHDL.Size = new System.Drawing.Size(141, 29);
             this.TextboxHDL.TabIndex = 33;
             this.TextboxHDL.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxHDL.OnValueChanged += new System.EventHandler(this.TextboxHDL_OnValueChanged);
             // 
             // TextBoxIron
             // 
@@ -144,12 +149,13 @@ namespace QA_Projects
             this.TextBoxIron.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextBoxIron.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextBoxIron.isPassword = false;
-            this.TextBoxIron.Location = new System.Drawing.Point(1010, 476);
-            this.TextBoxIron.Margin = new System.Windows.Forms.Padding(5);
+            this.TextBoxIron.Location = new System.Drawing.Point(758, 387);
+            this.TextBoxIron.Margin = new System.Windows.Forms.Padding(4);
             this.TextBoxIron.Name = "TextBoxIron";
-            this.TextBoxIron.Size = new System.Drawing.Size(188, 36);
+            this.TextBoxIron.Size = new System.Drawing.Size(141, 29);
             this.TextBoxIron.TabIndex = 34;
             this.TextBoxIron.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBoxIron.OnValueChanged += new System.EventHandler(this.TextBoxIron_OnValueChanged);
             // 
             // TextboxCrtn
             // 
@@ -161,12 +167,13 @@ namespace QA_Projects
             this.TextboxCrtn.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextboxCrtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextboxCrtn.isPassword = false;
-            this.TextboxCrtn.Location = new System.Drawing.Point(1010, 430);
-            this.TextboxCrtn.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxCrtn.Location = new System.Drawing.Point(758, 349);
+            this.TextboxCrtn.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxCrtn.Name = "TextboxCrtn";
-            this.TextboxCrtn.Size = new System.Drawing.Size(188, 36);
+            this.TextboxCrtn.Size = new System.Drawing.Size(141, 29);
             this.TextboxCrtn.TabIndex = 35;
             this.TextboxCrtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxCrtn.OnValueChanged += new System.EventHandler(this.TextboxCrtn_OnValueChanged);
             // 
             // TextboxHb
             // 
@@ -178,12 +185,13 @@ namespace QA_Projects
             this.TextboxHb.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextboxHb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextboxHb.isPassword = false;
-            this.TextboxHb.Location = new System.Drawing.Point(1010, 384);
-            this.TextboxHb.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxHb.Location = new System.Drawing.Point(758, 312);
+            this.TextboxHb.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxHb.Name = "TextboxHb";
-            this.TextboxHb.Size = new System.Drawing.Size(188, 36);
+            this.TextboxHb.Size = new System.Drawing.Size(141, 29);
             this.TextboxHb.TabIndex = 36;
             this.TextboxHb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxHb.OnValueChanged += new System.EventHandler(this.TextboxHb_OnValueChanged);
             // 
             // TextboxUrea
             // 
@@ -195,12 +203,13 @@ namespace QA_Projects
             this.TextboxUrea.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextboxUrea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextboxUrea.isPassword = false;
-            this.TextboxUrea.Location = new System.Drawing.Point(1010, 338);
-            this.TextboxUrea.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxUrea.Location = new System.Drawing.Point(758, 275);
+            this.TextboxUrea.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxUrea.Name = "TextboxUrea";
-            this.TextboxUrea.Size = new System.Drawing.Size(188, 36);
+            this.TextboxUrea.Size = new System.Drawing.Size(141, 29);
             this.TextboxUrea.TabIndex = 37;
             this.TextboxUrea.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxUrea.OnValueChanged += new System.EventHandler(this.TextboxUrea_OnValueChanged);
             // 
             // TextBoxHCT
             // 
@@ -212,12 +221,13 @@ namespace QA_Projects
             this.TextBoxHCT.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextBoxHCT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextBoxHCT.isPassword = false;
-            this.TextBoxHCT.Location = new System.Drawing.Point(1010, 292);
-            this.TextBoxHCT.Margin = new System.Windows.Forms.Padding(5);
+            this.TextBoxHCT.Location = new System.Drawing.Point(758, 237);
+            this.TextBoxHCT.Margin = new System.Windows.Forms.Padding(4);
             this.TextBoxHCT.Name = "TextBoxHCT";
-            this.TextBoxHCT.Size = new System.Drawing.Size(188, 36);
+            this.TextBoxHCT.Size = new System.Drawing.Size(141, 29);
             this.TextBoxHCT.TabIndex = 38;
             this.TextBoxHCT.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBoxHCT.OnValueChanged += new System.EventHandler(this.TextBoxHCT_OnValueChanged);
             // 
             // TextboxRBC
             // 
@@ -229,12 +239,13 @@ namespace QA_Projects
             this.TextboxRBC.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextboxRBC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextboxRBC.isPassword = false;
-            this.TextboxRBC.Location = new System.Drawing.Point(1010, 246);
-            this.TextboxRBC.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxRBC.Location = new System.Drawing.Point(758, 200);
+            this.TextboxRBC.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxRBC.Name = "TextboxRBC";
-            this.TextboxRBC.Size = new System.Drawing.Size(188, 36);
+            this.TextboxRBC.Size = new System.Drawing.Size(141, 29);
             this.TextboxRBC.TabIndex = 39;
             this.TextboxRBC.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxRBC.OnValueChanged += new System.EventHandler(this.TextboxRBC_OnValueChanged);
             // 
             // TextboxLymph
             // 
@@ -246,12 +257,13 @@ namespace QA_Projects
             this.TextboxLymph.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextboxLymph.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextboxLymph.isPassword = false;
-            this.TextboxLymph.Location = new System.Drawing.Point(1010, 200);
-            this.TextboxLymph.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxLymph.Location = new System.Drawing.Point(758, 162);
+            this.TextboxLymph.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxLymph.Name = "TextboxLymph";
-            this.TextboxLymph.Size = new System.Drawing.Size(188, 36);
+            this.TextboxLymph.Size = new System.Drawing.Size(141, 29);
             this.TextboxLymph.TabIndex = 40;
             this.TextboxLymph.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxLymph.OnValueChanged += new System.EventHandler(this.TextboxLymph_OnValueChanged);
             // 
             // TextBoxNeut
             // 
@@ -263,20 +275,22 @@ namespace QA_Projects
             this.TextBoxNeut.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextBoxNeut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextBoxNeut.isPassword = false;
-            this.TextBoxNeut.Location = new System.Drawing.Point(1010, 154);
-            this.TextBoxNeut.Margin = new System.Windows.Forms.Padding(5);
+            this.TextBoxNeut.Location = new System.Drawing.Point(758, 125);
+            this.TextBoxNeut.Margin = new System.Windows.Forms.Padding(4);
             this.TextBoxNeut.Name = "TextBoxNeut";
-            this.TextBoxNeut.Size = new System.Drawing.Size(188, 36);
+            this.TextBoxNeut.Size = new System.Drawing.Size(141, 29);
             this.TextBoxNeut.TabIndex = 41;
             this.TextBoxNeut.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBoxNeut.OnValueChanged += new System.EventHandler(this.TextBoxNeut_OnValueChanged);
             // 
             // labelAP
             // 
             this.labelAP.AutoSize = true;
             this.labelAP.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAP.Location = new System.Drawing.Point(911, 568);
+            this.labelAP.Location = new System.Drawing.Point(683, 462);
+            this.labelAP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAP.Name = "labelAP";
-            this.labelAP.Size = new System.Drawing.Size(37, 19);
+            this.labelAP.Size = new System.Drawing.Size(30, 17);
             this.labelAP.TabIndex = 42;
             this.labelAP.Text = "AP:";
             // 
@@ -284,9 +298,10 @@ namespace QA_Projects
             // 
             this.labelHDL.AutoSize = true;
             this.labelHDL.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHDL.Location = new System.Drawing.Point(911, 522);
+            this.labelHDL.Location = new System.Drawing.Point(683, 424);
+            this.labelHDL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelHDL.Name = "labelHDL";
-            this.labelHDL.Size = new System.Drawing.Size(45, 19);
+            this.labelHDL.Size = new System.Drawing.Size(38, 17);
             this.labelHDL.TabIndex = 43;
             this.labelHDL.Text = "HDL:";
             // 
@@ -294,9 +309,10 @@ namespace QA_Projects
             // 
             this.labelIron.AutoSize = true;
             this.labelIron.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIron.Location = new System.Drawing.Point(911, 476);
+            this.labelIron.Location = new System.Drawing.Point(683, 387);
+            this.labelIron.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIron.Name = "labelIron";
-            this.labelIron.Size = new System.Drawing.Size(45, 19);
+            this.labelIron.Size = new System.Drawing.Size(37, 17);
             this.labelIron.TabIndex = 44;
             this.labelIron.Text = "Iron:";
             // 
@@ -304,9 +320,10 @@ namespace QA_Projects
             // 
             this.labelCrtn.AutoSize = true;
             this.labelCrtn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCrtn.Location = new System.Drawing.Point(911, 430);
+            this.labelCrtn.Location = new System.Drawing.Point(683, 349);
+            this.labelCrtn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCrtn.Name = "labelCrtn";
-            this.labelCrtn.Size = new System.Drawing.Size(46, 19);
+            this.labelCrtn.Size = new System.Drawing.Size(39, 17);
             this.labelCrtn.TabIndex = 45;
             this.labelCrtn.Text = "Crtn:";
             // 
@@ -314,9 +331,10 @@ namespace QA_Projects
             // 
             this.labelHb.AutoSize = true;
             this.labelHb.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHb.Location = new System.Drawing.Point(911, 384);
+            this.labelHb.Location = new System.Drawing.Point(683, 312);
+            this.labelHb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelHb.Name = "labelHb";
-            this.labelHb.Size = new System.Drawing.Size(37, 19);
+            this.labelHb.Size = new System.Drawing.Size(31, 17);
             this.labelHb.TabIndex = 46;
             this.labelHb.Text = "Hb:";
             // 
@@ -324,9 +342,10 @@ namespace QA_Projects
             // 
             this.labelUrea.AutoSize = true;
             this.labelUrea.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUrea.Location = new System.Drawing.Point(911, 338);
+            this.labelUrea.Location = new System.Drawing.Point(683, 275);
+            this.labelUrea.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUrea.Name = "labelUrea";
-            this.labelUrea.Size = new System.Drawing.Size(51, 19);
+            this.labelUrea.Size = new System.Drawing.Size(43, 17);
             this.labelUrea.TabIndex = 47;
             this.labelUrea.Text = "Urea:";
             // 
@@ -334,9 +353,10 @@ namespace QA_Projects
             // 
             this.labelHCT.AutoSize = true;
             this.labelHCT.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHCT.Location = new System.Drawing.Point(911, 292);
+            this.labelHCT.Location = new System.Drawing.Point(683, 237);
+            this.labelHCT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelHCT.Name = "labelHCT";
-            this.labelHCT.Size = new System.Drawing.Size(46, 19);
+            this.labelHCT.Size = new System.Drawing.Size(39, 17);
             this.labelHCT.TabIndex = 48;
             this.labelHCT.Text = "HCT:";
             // 
@@ -344,9 +364,10 @@ namespace QA_Projects
             // 
             this.labelRBC.AutoSize = true;
             this.labelRBC.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRBC.Location = new System.Drawing.Point(911, 246);
+            this.labelRBC.Location = new System.Drawing.Point(683, 200);
+            this.labelRBC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRBC.Name = "labelRBC";
-            this.labelRBC.Size = new System.Drawing.Size(47, 19);
+            this.labelRBC.Size = new System.Drawing.Size(39, 17);
             this.labelRBC.TabIndex = 49;
             this.labelRBC.Text = "RBC:";
             // 
@@ -354,9 +375,10 @@ namespace QA_Projects
             // 
             this.labelLymph.AutoSize = true;
             this.labelLymph.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLymph.Location = new System.Drawing.Point(911, 200);
+            this.labelLymph.Location = new System.Drawing.Point(683, 162);
+            this.labelLymph.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelLymph.Name = "labelLymph";
-            this.labelLymph.Size = new System.Drawing.Size(68, 19);
+            this.labelLymph.Size = new System.Drawing.Size(56, 17);
             this.labelLymph.TabIndex = 50;
             this.labelLymph.Text = "Lymph:";
             // 
@@ -364,9 +386,10 @@ namespace QA_Projects
             // 
             this.labelNeut.AutoSize = true;
             this.labelNeut.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNeut.Location = new System.Drawing.Point(911, 154);
+            this.labelNeut.Location = new System.Drawing.Point(683, 125);
+            this.labelNeut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNeut.Name = "labelNeut";
-            this.labelNeut.Size = new System.Drawing.Size(52, 19);
+            this.labelNeut.Size = new System.Drawing.Size(43, 17);
             this.labelNeut.TabIndex = 51;
             this.labelNeut.Text = "Neut:";
             // 
@@ -374,9 +397,10 @@ namespace QA_Projects
             // 
             this.labelWBC.AutoSize = true;
             this.labelWBC.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWBC.Location = new System.Drawing.Point(911, 108);
+            this.labelWBC.Location = new System.Drawing.Point(683, 88);
+            this.labelWBC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelWBC.Name = "labelWBC";
-            this.labelWBC.Size = new System.Drawing.Size(52, 19);
+            this.labelWBC.Size = new System.Drawing.Size(44, 17);
             this.labelWBC.TabIndex = 52;
             this.labelWBC.Text = "WBC:";
             // 
@@ -387,10 +411,10 @@ namespace QA_Projects
             this.ButtonUplodTestBlood.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonUplodTestBlood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonUplodTestBlood.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonUplodTestBlood.Location = new System.Drawing.Point(958, 641);
-            this.ButtonUplodTestBlood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ButtonUplodTestBlood.Location = new System.Drawing.Point(718, 521);
+            this.ButtonUplodTestBlood.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonUplodTestBlood.Name = "ButtonUplodTestBlood";
-            this.ButtonUplodTestBlood.Size = new System.Drawing.Size(281, 44);
+            this.ButtonUplodTestBlood.Size = new System.Drawing.Size(211, 36);
             this.ButtonUplodTestBlood.TabIndex = 53;
             this.ButtonUplodTestBlood.Text = "Uplod Test Blood";
             this.ButtonUplodTestBlood.UseVisualStyleBackColor = false;
@@ -401,10 +425,10 @@ namespace QA_Projects
             this.ExitButtonManualTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
             this.ExitButtonManualTest.Image = ((System.Drawing.Image)(resources.GetObject("ExitButtonManualTest.Image")));
             this.ExitButtonManualTest.ImageActive = ((System.Drawing.Image)(resources.GetObject("ExitButtonManualTest.ImageActive")));
-            this.ExitButtonManualTest.Location = new System.Drawing.Point(1203, 11);
-            this.ExitButtonManualTest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ExitButtonManualTest.Location = new System.Drawing.Point(902, 9);
+            this.ExitButtonManualTest.Margin = new System.Windows.Forms.Padding(2);
             this.ExitButtonManualTest.Name = "ExitButtonManualTest";
-            this.ExitButtonManualTest.Size = new System.Drawing.Size(65, 32);
+            this.ExitButtonManualTest.Size = new System.Drawing.Size(49, 26);
             this.ExitButtonManualTest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ExitButtonManualTest.TabIndex = 54;
             this.ExitButtonManualTest.TabStop = false;
@@ -418,10 +442,10 @@ namespace QA_Projects
             // 
             // ManualTestBlood
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(960, 585);
             this.Controls.Add(this.ExitButtonManualTest);
             this.Controls.Add(this.ButtonUplodTestBlood);
             this.Controls.Add(this.labelWBC);
@@ -449,6 +473,7 @@ namespace QA_Projects
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ManualTestBlood";
             this.Text = "ManualTestBlood";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
