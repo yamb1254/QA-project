@@ -61,10 +61,10 @@ namespace QA_Projects
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-108, -102);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(-81, -83);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1013, 923);
+            this.pictureBox1.Size = new System.Drawing.Size(760, 750);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -73,9 +73,10 @@ namespace QA_Projects
             // 
             this.LabelName.AutoSize = true;
             this.LabelName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelName.Location = new System.Drawing.Point(895, 180);
+            this.LabelName.Location = new System.Drawing.Point(671, 146);
+            this.LabelName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelName.Name = "LabelName";
-            this.LabelName.Size = new System.Drawing.Size(91, 19);
+            this.LabelName.Size = new System.Drawing.Size(77, 17);
             this.LabelName.TabIndex = 16;
             this.LabelName.Text = "FullName:";
             // 
@@ -83,9 +84,10 @@ namespace QA_Projects
             // 
             this.LabelUsername.AutoSize = true;
             this.LabelUsername.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelUsername.Location = new System.Drawing.Point(891, 240);
+            this.LabelUsername.Location = new System.Drawing.Point(668, 195);
+            this.LabelUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelUsername.Name = "LabelUsername";
-            this.LabelUsername.Size = new System.Drawing.Size(96, 19);
+            this.LabelUsername.Size = new System.Drawing.Size(80, 17);
             this.LabelUsername.TabIndex = 17;
             this.LabelUsername.Text = "Username:";
             this.LabelUsername.Click += new System.EventHandler(this.LabelUsername_Click);
@@ -94,9 +96,10 @@ namespace QA_Projects
             // 
             this.LabelEmail.AutoSize = true;
             this.LabelEmail.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelEmail.Location = new System.Drawing.Point(856, 300);
+            this.LabelEmail.Location = new System.Drawing.Point(642, 244);
+            this.LabelEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelEmail.Name = "LabelEmail";
-            this.LabelEmail.Size = new System.Drawing.Size(130, 19);
+            this.LabelEmail.Size = new System.Drawing.Size(107, 17);
             this.LabelEmail.TabIndex = 18;
             this.LabelEmail.Text = "Email Address:";
             // 
@@ -104,9 +107,10 @@ namespace QA_Projects
             // 
             this.LabelPasswordRe.AutoSize = true;
             this.LabelPasswordRe.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelPasswordRe.Location = new System.Drawing.Point(893, 359);
+            this.LabelPasswordRe.Location = new System.Drawing.Point(670, 292);
+            this.LabelPasswordRe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelPasswordRe.Name = "LabelPasswordRe";
-            this.LabelPasswordRe.Size = new System.Drawing.Size(92, 19);
+            this.LabelPasswordRe.Size = new System.Drawing.Size(74, 17);
             this.LabelPasswordRe.TabIndex = 19;
             this.LabelPasswordRe.Text = "Password:";
             // 
@@ -114,9 +118,10 @@ namespace QA_Projects
             // 
             this.LabelConPassword.AutoSize = true;
             this.LabelConPassword.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelConPassword.Location = new System.Drawing.Point(825, 420);
+            this.LabelConPassword.Location = new System.Drawing.Point(619, 341);
+            this.LabelConPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelConPassword.Name = "LabelConPassword";
-            this.LabelConPassword.Size = new System.Drawing.Size(161, 19);
+            this.LabelConPassword.Size = new System.Drawing.Size(132, 17);
             this.LabelConPassword.TabIndex = 20;
             this.LabelConPassword.Text = "Confirm Password:";
             // 
@@ -127,10 +132,10 @@ namespace QA_Projects
             this.ButtonRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonRegister.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonRegister.Location = new System.Drawing.Point(957, 491);
-            this.ButtonRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ButtonRegister.Location = new System.Drawing.Point(718, 399);
+            this.ButtonRegister.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonRegister.Name = "ButtonRegister";
-            this.ButtonRegister.Size = new System.Drawing.Size(167, 44);
+            this.ButtonRegister.Size = new System.Drawing.Size(125, 36);
             this.ButtonRegister.TabIndex = 25;
             this.ButtonRegister.Text = "Register";
             this.ButtonRegister.UseVisualStyleBackColor = false;
@@ -141,9 +146,10 @@ namespace QA_Projects
             this.LinkLabelHaveAcc.AutoSize = true;
             this.LinkLabelHaveAcc.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinkLabelHaveAcc.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
-            this.LinkLabelHaveAcc.Location = new System.Drawing.Point(1131, 556);
+            this.LinkLabelHaveAcc.Location = new System.Drawing.Point(848, 452);
+            this.LinkLabelHaveAcc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LinkLabelHaveAcc.Name = "LinkLabelHaveAcc";
-            this.LinkLabelHaveAcc.Size = new System.Drawing.Size(59, 23);
+            this.LinkLabelHaveAcc.Size = new System.Drawing.Size(48, 18);
             this.LinkLabelHaveAcc.TabIndex = 26;
             this.LinkLabelHaveAcc.TabStop = true;
             this.LinkLabelHaveAcc.Text = "Login";
@@ -153,9 +159,10 @@ namespace QA_Projects
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(876, 560);
+            this.label1.Location = new System.Drawing.Point(657, 455);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 19);
+            this.label1.Size = new System.Drawing.Size(189, 17);
             this.label1.TabIndex = 27;
             this.label1.Text = "Already Have an Account?";
             // 
@@ -164,9 +171,10 @@ namespace QA_Projects
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
-            this.label2.Location = new System.Drawing.Point(803, 57);
+            this.label2.Location = new System.Drawing.Point(602, 46);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(408, 46);
+            this.label2.Size = new System.Drawing.Size(323, 38);
             this.label2.TabIndex = 28;
             this.label2.Text = "Create Your Account";
             // 
@@ -175,10 +183,10 @@ namespace QA_Projects
             this.ExitButtonReg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
             this.ExitButtonReg.Image = ((System.Drawing.Image)(resources.GetObject("ExitButtonReg.Image")));
             this.ExitButtonReg.ImageActive = ((System.Drawing.Image)(resources.GetObject("ExitButtonReg.ImageActive")));
-            this.ExitButtonReg.Location = new System.Drawing.Point(1212, 2);
-            this.ExitButtonReg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ExitButtonReg.Location = new System.Drawing.Point(909, 2);
+            this.ExitButtonReg.Margin = new System.Windows.Forms.Padding(2);
             this.ExitButtonReg.Name = "ExitButtonReg";
-            this.ExitButtonReg.Size = new System.Drawing.Size(65, 32);
+            this.ExitButtonReg.Size = new System.Drawing.Size(49, 26);
             this.ExitButtonReg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ExitButtonReg.TabIndex = 25;
             this.ExitButtonReg.TabStop = false;
@@ -200,12 +208,13 @@ namespace QA_Projects
             this.TextboxPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextboxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextboxPassword.isPassword = true;
-            this.TextboxPassword.Location = new System.Drawing.Point(1029, 359);
-            this.TextboxPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextboxPassword.Location = new System.Drawing.Point(772, 292);
+            this.TextboxPassword.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxPassword.Name = "TextboxPassword";
-            this.TextboxPassword.Size = new System.Drawing.Size(237, 36);
+            this.TextboxPassword.Size = new System.Drawing.Size(178, 29);
             this.TextboxPassword.TabIndex = 23;
             this.TextboxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxPassword.OnValueChanged += new System.EventHandler(this.TextboxPassword_OnValueChanged);
             // 
             // TextboxCpass
             // 
@@ -217,12 +226,13 @@ namespace QA_Projects
             this.TextboxCpass.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextboxCpass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextboxCpass.isPassword = true;
-            this.TextboxCpass.Location = new System.Drawing.Point(1028, 420);
-            this.TextboxCpass.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextboxCpass.Location = new System.Drawing.Point(771, 341);
+            this.TextboxCpass.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxCpass.Name = "TextboxCpass";
-            this.TextboxCpass.Size = new System.Drawing.Size(237, 36);
+            this.TextboxCpass.Size = new System.Drawing.Size(178, 29);
             this.TextboxCpass.TabIndex = 24;
             this.TextboxCpass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxCpass.OnValueChanged += new System.EventHandler(this.TextboxCpass_OnValueChanged);
             // 
             // TextboxEmail
             // 
@@ -234,10 +244,10 @@ namespace QA_Projects
             this.TextboxEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextboxEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextboxEmail.isPassword = false;
-            this.TextboxEmail.Location = new System.Drawing.Point(1029, 300);
-            this.TextboxEmail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextboxEmail.Location = new System.Drawing.Point(772, 244);
+            this.TextboxEmail.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxEmail.Name = "TextboxEmail";
-            this.TextboxEmail.Size = new System.Drawing.Size(237, 36);
+            this.TextboxEmail.Size = new System.Drawing.Size(178, 29);
             this.TextboxEmail.TabIndex = 22;
             this.TextboxEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -251,10 +261,10 @@ namespace QA_Projects
             this.TextboxFname.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextboxFname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextboxFname.isPassword = false;
-            this.TextboxFname.Location = new System.Drawing.Point(1028, 180);
-            this.TextboxFname.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextboxFname.Location = new System.Drawing.Point(771, 146);
+            this.TextboxFname.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxFname.Name = "TextboxFname";
-            this.TextboxFname.Size = new System.Drawing.Size(237, 36);
+            this.TextboxFname.Size = new System.Drawing.Size(178, 29);
             this.TextboxFname.TabIndex = 20;
             this.TextboxFname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -268,20 +278,20 @@ namespace QA_Projects
             this.TextboxUser.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextboxUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextboxUser.isPassword = false;
-            this.TextboxUser.Location = new System.Drawing.Point(1029, 240);
-            this.TextboxUser.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextboxUser.Location = new System.Drawing.Point(772, 195);
+            this.TextboxUser.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxUser.Name = "TextboxUser";
-            this.TextboxUser.Size = new System.Drawing.Size(237, 36);
+            this.TextboxUser.Size = new System.Drawing.Size(178, 29);
             this.TextboxUser.TabIndex = 21;
             this.TextboxUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::QA_Projects.Properties.Resources.Key;
-            this.pictureBox4.Location = new System.Drawing.Point(992, 420);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(744, 341);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox4.Size = new System.Drawing.Size(28, 29);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 31;
             this.pictureBox4.TabStop = false;
@@ -289,20 +299,20 @@ namespace QA_Projects
             // pictureBox2
             // 
             this.pictureBox2.Image = global::QA_Projects.Properties.Resources.Key;
-            this.pictureBox2.Location = new System.Drawing.Point(992, 359);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(744, 292);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox2.Size = new System.Drawing.Size(28, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 32;
             this.pictureBox2.TabStop = false;
             // 
             // RegisterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(960, 585);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.TextboxUser);
@@ -322,7 +332,7 @@ namespace QA_Projects
             this.Controls.Add(this.LabelName);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
