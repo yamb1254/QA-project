@@ -7,17 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace QA_Projects
 {
     public partial class DiagnosisForm : Form
     {
+        const int WBC = 1;
+        const int Neut = 2;
+        const int Lymph = 3;
+        const int RBC = 4;
+        const int HCT = 5;
+        const int Urea = 6;
+        const int Hb = 7;
+        const int Crtn = 8;
+        const int Iron = 9;
+        const int HDL = 10;
+        const int AP = 11;
+
+
+
         LoginForm login;
+        ManualTestBlood manual;
         string userName;
         public DiagnosisForm(string user,LoginForm login)
         {
             this.login = login;
             this.userName = user;
+            manual = new ManualTestBlood(this);
             InitializeComponent();
         }
 
@@ -58,6 +75,28 @@ namespace QA_Projects
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void buttonTestBlood_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if(openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                this.TextboxTestBlood.Text = openFileDialog.FileName;
+            }
+        }
+
+        private void ButtonManual_Click(object sender, EventArgs e)
+        {
+           DialogResult dr = MessageBox.Show("You want to enter the patient's blood tests manually?", "Manual blood tests", MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+
+            if(dr == DialogResult.Yes)
+            {
+                manual.Show();
+                this.Hide();
+
+            }
 
         }
     }

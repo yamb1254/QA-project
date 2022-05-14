@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ExitButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ExitButtonManualTest.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAOppJREFUeF7t3QnYbnO9//FtntnmeSZjISmVKalDESnN6XSEo4GQNDiaUTRQKTnN
+        wwAADsMBx2+oZAAAOppJREFUeF7t3QnYbnO9//FtntnmeSZjISmVKalDESnN6XSEo4GQNDiaUTRQKTnN
         g0glpKIjU9jGZEhEhswzmeP8P5//4zl772d/n+e5p3Wv3/B+X9frurrE3utea91rrXsNvzWFiIiIiIiI
         iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiCjT
         5pNVZFN5newqe8vB8iX5jpwoZ8jZcon8RW6Qe+X+GTwt/zuG/9mM/47/G/+314j/LP+Z/rP9d/jv8t/p
@@ -374,10 +374,10 @@
         ERERERERERERUWZNmfL/AFjHEdxoetuZAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="ExitButton.ImageActive" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ExitButtonManualTest.ImageActive" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAOppJREFUeF7t3QnYbnO9//FtntnmeSZjISmVKalDESnN6XSEo4GQNDiaUTRQKTnN
+        wwAADsMBx2+oZAAAOppJREFUeF7t3QnYbnO9//FtntnmeSZjISmVKalDESnN6XSEo4GQNDiaUTRQKTnN
         g0glpKIjU9jGZEhEhswzmeP8P5//4zl772d/n+e5p3Wv3/B+X9frurrE3utea91rrXsNvzWFiIiIiIiI
         iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiCjT
         5pNVZFN5newqe8vB8iX5jpwoZ8jZcon8RW6Qe+X+GTwt/zuG/9mM/47/G/+314j/LP+Z/rP9d/jv8t/p
@@ -632,11 +632,5 @@
   </data>
   <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>102</value>
-  </metadata>
-  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>161, 17</value>
   </metadata>
 </root>

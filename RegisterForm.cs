@@ -54,10 +54,23 @@ namespace QA_Projects
             {
                 MessageBox.Show("The fields are empty please fill");
             }
-            else if (passw.Length > 16 || passw.Length < 8)
+            else if(username.Length < 8 || username.Length > 10)
+            {
+                MessageBox.Show("The username must have between 8-16 characters and max two numbers");
+            }
+            else if (checkUsername(username) == false)
+            {
+                MessageBox.Show("Too much digit! maximum 2 digit in Username");
+            }
+            else if (passw.Length > 10 || passw.Length < 8)
             {
                 MessageBox.Show("The password must have between 8-16 characters");
             }
+           else if(checkPassword(passw) == false)
+            {
+                MessageBox.Show("You need a lest one letter, one number and one special char");
+            }
+           
             else if (passwCon != passw)
             {
                 MessageBox.Show("The passwords are not matched");
@@ -68,7 +81,7 @@ namespace QA_Projects
             }
             else
             {
-                excel.WriteRangeInExcel(4,vs);
+                excel.WriteRangeInExcel(4, vs);
                 login.Show();
                 this.Hide();
             }
@@ -79,6 +92,49 @@ namespace QA_Projects
         private void LabelUsername_Click(object sender, EventArgs e)
         {
 
+        }
+        public Boolean checkPassword(string password)
+        {
+          
+            string specialChar = "!~`@#$%^&*()-=+*/?.><';:][|{}";
+            int digit = 0, letters = 0, special = 0;
+            foreach(char c in password)
+            {
+                if (char.IsDigit(c))
+                {
+                    digit++;
+                }
+                if (char.IsLetter(c))
+                {
+                    letters++;
+                }
+                if (specialChar.Contains(c))
+                {
+                    special++;
+                }
+            }
+            if(digit == 0 || letters == 0 || special == 0)
+            {
+                return false;
+            }
+            return true;
+        }
+        public Boolean checkUsername(string username)
+        {
+            
+            int digit = 0;
+            foreach(char c in username)
+            {
+                if (char.IsDigit(c))
+                {
+                    digit++;
+                }
+            }
+            if(digit > 2)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
