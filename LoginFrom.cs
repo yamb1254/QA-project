@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,10 +18,11 @@ namespace QA_Projects
         RegisterForm register;
         Excel excel;
         const int UsernameCol = 2 , PasswordCol = 4;
-        //private string FileName = string.Format("{0}\\fileNameHere", System.IO.Path.GetDirectoryName("LoginInfo.xlsx"));
-        string FileName = System.IO.Path.GetFullPath("LoginInfo.xlsx");
+        string FileName = Path.GetFullPath("LoginInfo.xlsx");
         public LoginForm()
         {
+            FileName = FileName.Substring(0, FileName.Length - 24);
+            FileName = FileName + "LoginInfo.xlsx";
             register = new RegisterForm(this);
             InitializeComponent();
         }

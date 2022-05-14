@@ -19,6 +19,8 @@ namespace QA_Projects
         string FileName = System.IO.Path.GetFullPath("LoginInfo.xlsx");
         public RegisterForm(LoginForm login)
         {
+            FileName = FileName.Substring(0, FileName.Length - 24);
+            FileName = FileName + "LoginInfo.xlsx";
             this.login = login;
             InitializeComponent();
         }
@@ -48,7 +50,7 @@ namespace QA_Projects
             string email = TextboxEmail.Text;
             string name = TextboxFname.Text;
             string passwCon = TextboxCpass.Text;
-            string[] vs = new string[] { name, username, email, passw };  
+            string[] vs = new string[] { name, username, email, passw };
             Excel excel = new Excel(FileName, 1);
             if (username == string.Empty || passw == string.Empty || email == string.Empty || name == string.Empty || passwCon == string.Empty)
             {
@@ -87,6 +89,16 @@ namespace QA_Projects
             }
             excel.Save();
             excel.Close();
+        }
+
+        private void TextboxCpass_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextboxPassword_OnValueChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void LabelUsername_Click(object sender, EventArgs e)
