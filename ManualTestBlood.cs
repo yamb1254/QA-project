@@ -20,7 +20,15 @@ namespace QA_Projects
 
         private void TextboxRBC_OnValueChanged(object sender, EventArgs e)
         {
-            RBC = Convert.ToDouble(this.TextboxRBC.Text);
+            if(TextboxRBC.Text == null)
+            {
+                RBC = 0;
+            }
+            else
+            {
+                RBC = Convert.ToDouble(this.TextboxRBC.Text);
+            }
+           
         }
 
         private void TextboxUrea_OnValueChanged(object sender, EventArgs e)
