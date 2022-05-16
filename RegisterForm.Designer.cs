@@ -90,7 +90,6 @@ namespace QA_Projects
             this.LabelUsername.Size = new System.Drawing.Size(80, 17);
             this.LabelUsername.TabIndex = 17;
             this.LabelUsername.Text = "Username:";
-            this.LabelUsername.Click += new System.EventHandler(this.LabelUsername_Click);
             // 
             // LabelEmail
             // 
@@ -214,7 +213,6 @@ namespace QA_Projects
             this.TextboxPassword.Size = new System.Drawing.Size(178, 29);
             this.TextboxPassword.TabIndex = 23;
             this.TextboxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TextboxPassword.OnValueChanged += new System.EventHandler(this.TextboxPassword_OnValueChanged);
             // 
             // TextboxCpass
             // 
@@ -232,7 +230,6 @@ namespace QA_Projects
             this.TextboxCpass.Size = new System.Drawing.Size(178, 29);
             this.TextboxCpass.TabIndex = 24;
             this.TextboxCpass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TextboxCpass.OnValueChanged += new System.EventHandler(this.TextboxCpass_OnValueChanged);
             // 
             // TextboxEmail
             // 

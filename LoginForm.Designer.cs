@@ -207,7 +207,6 @@ namespace QA_Projects
             this.TextboxPassword.Size = new System.Drawing.Size(237, 44);
             this.TextboxPassword.TabIndex = 11;
             this.TextboxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TextboxPassword.OnValueChanged += new System.EventHandler(this.bunifuMetroTextbox1_OnValueChanged);
             // 
             // bunifuElipse3
             // 
@@ -230,7 +229,6 @@ namespace QA_Projects
             this.TextboxUsername.Size = new System.Drawing.Size(237, 44);
             this.TextboxUsername.TabIndex = 10;
             this.TextboxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TextboxUsername.OnValueChanged += new System.EventHandler(this.TextboxUsername_OnValueChanged);
             // 
             // pictureBox4
             // 
@@ -253,7 +251,6 @@ namespace QA_Projects
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 23;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // ExitButton
             // 
