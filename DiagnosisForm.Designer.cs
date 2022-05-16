@@ -405,7 +405,6 @@ namespace QA_Projects
             this.TextboxHeartBeat.Size = new System.Drawing.Size(203, 33);
             this.TextboxHeartBeat.TabIndex = 37;
             this.TextboxHeartBeat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TextboxHeartBeat.OnValueChanged += new System.EventHandler(this.TextboxHeartBeat_OnValueChanged);
             // 
             // buttonTestBlood
             // 
@@ -465,6 +464,7 @@ namespace QA_Projects
             this.radioButtonYQ1.TabStop = true;
             this.radioButtonYQ1.Text = "Yes";
             this.radioButtonYQ1.UseVisualStyleBackColor = true;
+            this.radioButtonYQ1.CheckedChanged += new System.EventHandler(this.radioButtonYQ1_CheckedChanged);
             // 
             // radioButtonNQ1
             // 
@@ -477,6 +477,7 @@ namespace QA_Projects
             this.radioButtonNQ1.TabStop = true;
             this.radioButtonNQ1.Text = "No";
             this.radioButtonNQ1.UseVisualStyleBackColor = true;
+            this.radioButtonNQ1.CheckedChanged += new System.EventHandler(this.radioButtonNQ1_CheckedChanged);
             // 
             // label4
             // 
@@ -600,7 +601,6 @@ namespace QA_Projects
             this.groupBoxQ2.Size = new System.Drawing.Size(132, 43);
             this.groupBoxQ2.TabIndex = 60;
             this.groupBoxQ2.TabStop = false;
-            this.groupBoxQ2.Enter += new System.EventHandler(this.groupBoxQ2_Enter);
             // 
             // radioButtonNQ2
             // 
@@ -689,6 +689,7 @@ namespace QA_Projects
             this.radioButtonNQ4.TabStop = true;
             this.radioButtonNQ4.Text = "No";
             this.radioButtonNQ4.UseVisualStyleBackColor = true;
+            this.radioButtonNQ4.CheckedChanged += new System.EventHandler(this.radioButtonNQ4_CheckedChanged);
             // 
             // radioButtonYQ4
             // 
@@ -701,6 +702,7 @@ namespace QA_Projects
             this.radioButtonYQ4.TabStop = true;
             this.radioButtonYQ4.Text = "Yes";
             this.radioButtonYQ4.UseVisualStyleBackColor = true;
+            this.radioButtonYQ4.CheckedChanged += new System.EventHandler(this.radioButtonYQ4_CheckedChanged);
             // 
             // groupBoxQ3
             // 
@@ -725,6 +727,7 @@ namespace QA_Projects
             this.radioButtonNQ3.TabStop = true;
             this.radioButtonNQ3.Text = "No";
             this.radioButtonNQ3.UseVisualStyleBackColor = true;
+            this.radioButtonNQ3.CheckedChanged += new System.EventHandler(this.radioButtonNQ3_CheckedChanged);
             // 
             // radioButtonYQ3
             // 
@@ -737,6 +740,7 @@ namespace QA_Projects
             this.radioButtonYQ3.TabStop = true;
             this.radioButtonYQ3.Text = "Yes";
             this.radioButtonYQ3.UseVisualStyleBackColor = true;
+            this.radioButtonYQ3.CheckedChanged += new System.EventHandler(this.radioButtonYQ3_CheckedChanged);
             // 
             // TextboxTestBlood
             // 
@@ -808,7 +812,6 @@ namespace QA_Projects
             this.ListviewRecommendation.TabIndex = 66;
             this.ListviewRecommendation.UseCompatibleStateImageBehavior = false;
             this.ListviewRecommendation.View = System.Windows.Forms.View.Details;
-            this.ListviewRecommendation.SelectedIndexChanged += new System.EventHandler(this.ListviewRecommendation_SelectedIndexChanged);
             // 
             // Diagnosis
             // 
