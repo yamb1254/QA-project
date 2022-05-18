@@ -30,6 +30,9 @@ namespace QA_Projects
         LoginForm login;
         ManualTestBlood manual;
         string userName;
+        string Gender;
+        bool Eastern, Ethiopian,Smokers, Pregnant, Diarrhea;
+        //A department builder who receives a login object and uses it to know which doctor to refer to each use of the software. In addition, a database is created which keeps the patient's details and the doctor's diagnosis.
         public DiagnosisForm(string user,LoginForm login)
         {
             PaitientForm = PaitientForm.Substring(0, PaitientForm.Length - 27);
@@ -40,47 +43,8 @@ namespace QA_Projects
             manual = new ManualTestBlood(this);
             InitializeComponent();
         }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            Close();
-            login.Close();
- 
-        }
-
-        private void LabelGender_Click(object sender, EventArgs e)
-        {
-            if(radioButtonM.Checked == true)
-            {
-
-            }
-        }
-
-        private void radioButton5_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        //A function that creates a dialogue with the user and opens a window for him so that he can raise the patient's blood tests.
+        //In addition, it keeps the results in the cells that we have defined.
         private void buttonTestBlood_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -92,18 +56,426 @@ namespace QA_Projects
             manual.Filltextbox(test.ReadExcel(WBC,2), test.ReadExcel(Neut, 2), test.ReadExcel(Lymph, 2), test.ReadExcel(RBC, 2),test.ReadExcel(HCT, 2), test.ReadExcel(Urea, 2), test.ReadExcel(Hb, 2), test.ReadExcel(Crtn, 2), test.ReadExcel(Iron, 2), test.ReadExcel(HDL, 2), test.ReadExcel(AP, 2));
             test.Close();
         }
-
+        //A function that asks the user if he wants to enter blood tests manually in case the user gets wet he will be taken to the details page.
+        //If not the message will be closed
         private void ButtonManual_Click(object sender, EventArgs e)
         {
            DialogResult dr = MessageBox.Show("You want to enter the patient's blood tests manually?", "Manual blood tests", MessageBoxButtons.YesNo,MessageBoxIcon.Information);
 
-            if(dr == DialogResult.Yes)
+            if (dr == DialogResult.Yes)
             {
                 manual.Show();
                 this.Hide();
+            }
+        }
 
+        private void buttonDiagnose_Click(object sender, EventArgs e)
+        {
+            List<string> Diagnosis = new List<string> { };
+            List<string> Recommendation = new List<string> { };
+            double[] vsI = manual.GetVsdouble();
+            if (
+                (vsI[RBC-1] < 4.5)
+                ||
+                (vsI[HCT-1] < 37 && Gender == "Male")
+                ||
+                (vsI[HCT-1] < 33 && Gender == "Female")
+                ||
+                (vsI[Hb-1]<12 && Age > 17)
+                || 
+                (vsI[Hb-1] < 11.5 && Age < 17)
+                )
+            {
+                Diagnosis.Add("Anemia");
+                Recommendation.Add("Two 10 mg B12 pills a day for a month");
+            }
+            if(
+                (vsI[Urea-1] > 43)
+                ||
+               ( vsI[Urea-1] >46.3 && Eastern)
+                ||
+               ( vsI[Urea-1] < 17 )
+                ||
+               ( vsI[Urea-1] < 18.7 && Eastern)
+                )
+            {
+                Diagnosis.Add("Diet");
+                Recommendation.Add("Schedule an appointment with a nutritionist");
+            }
+            if (
+                (vsI[RBC-1] < 4.5)
+                ||
+                (vsI[HCT-1] < 37 && Gender == "Male")
+                ||
+                (vsI[HCT-1] < 33 && Gender == "Female")
+                ||
+                (vsI[Hb-1] < 12 && Age > 17)
+                ||
+                (vsI[Hb-1] < 11.5 && Age <= 17)
+                ||
+                (vsI[Iron-1] < 60 && Gender == "Male")
+                 ||
+                (vsI[Iron-1] < 48 && Gender == "Female")
+                )
+            {
+                Diagnosis.Add("Bleeding");
+                Recommendation.Add("To be rushed to the hospital urgently");
             }
 
+            if (
+                (vsI[HDL-1] < 29 && Gender == "Male")
+                ||
+                (vsI[HDL-1] < 34 && Gender == "Female")
+                ||
+                (vsI[HDL-1] < 34.8 && Gender == "Male" && Ethiopian)
+                ||
+                (vsI[HDL-1] < 40.8 && Gender == "Female" && Ethiopian)
+                )
+            {
+                Diagnosis.Add("Hyperlipidemia (lipids in the blood)");
+                Recommendation.Add("Schedule an appointment with a nutritionist, a 5 mg pill of Simobil daily for a week");
+            }
+            if (
+                (vsI[Neut-1] < (vsI[WBC] * 0.28)) 
+                ||
+                (vsI[Lymph-1] < (vsI[WBC] * 0.36))
+                )
+            {
+                Diagnosis.Add("Disruption of blood / blood cell formation");
+                Recommendation.Add("10 mg pill of B12 a day for a month");
+                Recommendation.Add("5 mg pill of folic acid a day for a monthmobil daily for a week");
+            }
+            if(
+                (vsI[Hb-1] < 12 && Age > 17)
+                ||
+                (vsI[Hb-1] < 11.5 && Age < 17)
+                )
+            {
+                Diagnosis.Add("Hematological disorder");
+                Recommendation.Add("An injection of a hormone to encourage red blood cell production");
+            }
+            if (
+                (vsI[Iron-1] > 160 && Gender == "Male")
+                ||
+                (vsI[Iron] > 128 && Gender == "Female")
+                )
+            {
+                Diagnosis.Add("Iron poisoning");
+                Recommendation.Add("To be evacuated to hospital");
+            }
+            if(
+                (vsI[Urea-1] > 43)
+                ||
+                (vsI[Urea-1] > 47.3 && Eastern)
+                )
+            {
+                Diagnosis.Add("Dehydration");
+                Recommendation.Add("Complete rest when lying down, returning fluids in drinking");
+            }
+            if (
+                (vsI[WBC-1] > 11000 && Age > 18)
+                ||
+                (vsI[WBC-1] > 15500 && Age <= 17 && Age >= 4)
+                ||
+                (vsI[WBC-1] > 17500 && Age > 0 && Age <= 3)
+                ||
+                (vsI[Neut-1] < (vsI[WBC] * 0.28))
+                ||
+                (vsI[Neut-1] > (vsI[WBC] * 0.54))
+                ||
+                (vsI[Lymph-1] < (vsI[WBC] * 0.52))
+                )              
+            {
+                Diagnosis.Add("Infection");
+                Recommendation.Add("Dedicated antibiotics");
+            }
+            if (
+                (vsI[AP-1] < 60 && Eastern)
+                ||
+                (vsI[AP-1] < 30)
+              )
+            {
+                Diagnosis.Add("Vitamin deficiency");
+                Recommendation.Add("Referral for a blood test to identify the missing vitamins");
+            }
+            if(
+                (vsI[WBC-1] < 4500 && Age > 18)
+                ||
+                (vsI[WBC-1] < 5500 && Age <= 17 && Age >= 4)
+                ||
+                (vsI[WBC-1] < 6000 && Age > 0 && Age <= 3)
+                )
+            {
+                Diagnosis.Add("Viral disease");
+                Recommendation.Add("Rest at home");
+            }
+            if(
+                (vsI[AP-1] > 120 && Eastern)
+                ||
+                (vsI[AP-1] > 90)
+                )
+            {
+                Diagnosis.Add("Diseases of the biliary tract");
+                Recommendation.Add("Referral to surgical treatment");
+            }
+            if(
+                (vsI[HDL-1] < 29 && Gender == "Male")
+                ||
+                (vsI[HDL-1] < 34 && Gender == "Female")
+                ||
+                (vsI[HDL-1] < 34.8 && Gender == "Male" && Ethiopian)
+                ||
+                (vsI[HDL-1] < 40.8 && Gender == "Female" && Ethiopian)
+                )
+            {
+                Diagnosis.Add("Heart disease");
+                Recommendation.Add("Schedule an appointment with a nutritionist");
+            }
+            if(
+                (vsI[WBC-1] > 11000 && Age >= 18)
+                ||
+                (vsI[WBC-1] > 15500 && Age <= 17 && Age >= 4)
+                ||
+                (vsI[WBC-1] > 17500 && Age > 0 && Age <= 3)
+                )
+            {
+                Diagnosis.Add("Blood disease");
+                Recommendation.Add("A combination of cyclophosphamide and corticosteroids");
+            }
+            if(
+                (vsI[Urea-1] < 17)
+                ||
+                (vsI[Urea-1] < 18.7 && Eastern)
+                ||
+                (vsI[AP-1] > 120 && Eastern)
+                ||
+                (vsI[AP-1] > 90)
+                )
+            {
+                Diagnosis.Add("Liver disease");
+                Recommendation.Add("Referral to a specific diagnosis for the purpose of determining treatment");
+            }
+            if(
+                (vsI[Urea-1] > 43)
+                ||
+                (vsI[Urea-1] > 47.3 && Eastern)
+                ||
+                (vsI[Crtn-1]>0.5 && Age > 0 && Age <= 2 )
+                ||
+                (vsI[Crtn-1] > 1 && Age >= 3 && Age <= 17)
+                ||
+                (vsI[Crtn-1] > 1 && Age >= 18 && Age <= 59)
+                ||
+                (vsI[Crtn-1] > 1.2 && Age >= 60)
+                )
+            {
+                Diagnosis.Add("Kidney disease");
+                Recommendation.Add("Balancing blood sugar levels");
+            }
+            if(
+                (vsI[Hb-1] < 12 && Age > 17)
+                ||
+                (vsI[Hb-1] < 11.5 && Age <= 17)
+                )
+            {
+                Diagnosis.Add("Iron deficiency");
+                Recommendation.Add("Two 10 mg B12 pills a day for a month");
+            }
+            if(
+                (vsI[Crtn-1] > 0.5 && Age > 0 && Age <= 2)
+                ||
+                (vsI[Crtn-1] > 1 && Age >= 3 && Age <= 17)
+                ||
+                (vsI[Crtn-1] > 1 && Age >= 18 && Age <= 59)
+                ||
+                (vsI[Crtn-1] > 1.2 && Age >= 60)
+                )
+            {
+                Diagnosis.Add("Muscle diseases");
+                Recommendation.Add("Two 5 mg pills of Altman c3 turmeric a day for a month");
+            }
+            if(Smokers)
+            {
+                Diagnosis.Add("Smokers");
+                Recommendation.Add("Stop smoking");
+            }
+            if(
+               (Smokers)
+               ||
+               (vsI[RBC-1] > 6)
+                )
+            {
+                Diagnosis.Add("Lung disease");
+                Recommendation.Add("Stop smoking / Refer to an X-ray of the lungs");
+            }
+            if(
+                (vsI[AP - 1] > 120 && Eastern)
+                ||
+                (vsI[AP - 1] > 90)
+                )
+            {
+                Diagnosis.Add("Thyroid overactivity");
+                Recommendation.Add("Propylthiouracil to reduce thyroid activity");
+            }
+            if(
+                (vsI[HDL - 1] < 29 && Gender == "Male")
+                ||
+                (vsI[HDL - 1] < 34 && Gender == "Female")
+                ||
+                (vsI[HDL - 1] < 34.8 && Gender == "Male" && Ethiopian)
+                ||
+                (vsI[HDL - 1] < 40.8 && Gender == "Female" && Ethiopian)
+                )
+            {
+                Diagnosis.Add("Adult diabetes");
+                Recommendation.Add("Insulin adjustment for the patient");
+            }
+            if(
+                (vsI[WBC - 1] > 11000 && Age >= 18)
+                ||
+                (vsI[WBC - 1] > 15500 && Age <= 17 && Age >= 4)
+                ||
+                (vsI[WBC - 1] > 17500 && Age > 0 && Age <= 3)
+                ||
+                (vsI[WBC - 1] < 4500 && Age > 18)
+                ||
+                (vsI[WBC - 1] < 5500 && Age <= 17 && Age >= 4)
+                ||
+                (vsI[WBC - 1] < 6000 && Age > 0 && Age <= 3)
+                ||
+                (vsI[Neut - 1] < (vsI[WBC] * 0.28))
+                ||
+                (vsI[Neut - 1] > (vsI[WBC] * 0.54))
+                )
+            {
+                Diagnosis.Add("Cancer");
+                Recommendation.Add("Antarctinib - E");
+            }
+            if(
+                (vsI[Crtn - 1] > 0.5 && Age > 0 && Age <= 2)
+                ||
+                (vsI[Crtn - 1] > 1 && Age >= 3 && Age <= 17)
+                ||
+                (vsI[Crtn - 1] > 1 && Age >= 18 && Age <= 59)
+                ||
+                (vsI[Crtn - 1] > 1.2 && Age >= 60)
+                )
+            {
+                Diagnosis.Add("Increased meat intake");
+                Recommendation.Add("Coordinate an appointment with a nutritionist");
+            }
+            if(
+                (vsI[AP - 1] > 120 && Eastern)
+                ||
+                (vsI[AP - 1] > 90)
+                )
+            {
+                Diagnosis.Add("Use of various medications");
+                Recommendation.Add("Referral to a family doctor for a match between medications");
+            }
+            if(
+                (vsI[Urea - 1] < 17)
+                ||
+                (vsI[Urea - 1] < 18.7 && Eastern)
+                )
+            {
+                Diagnosis.Add("Malnutrition");
+                Recommendation.Add("Coordinate an appointment with a nutritionist");
+            }
+
+
+
+
+
+
+            List<string> Allinfo = new List<string> { this.TextBoxFname.Text, this.TextboxLname.Text, this.TextboxID.Text, this.TextboxAge.Text, this.TextboxHeight.Text, this.TextboxWeight.Text, this.TextboxFever.Text, this.TextboxHeartBeat.Text, this.TextboxBloodPre.Text, this.Gender };          
+            string[] allInfo = { this.TextBoxFname.Text, this.TextboxLname.Text, this.TextboxID.Text, this.TextboxAge.Text, this.TextboxHeight.Text, this.TextboxWeight.Text, this.TextboxFever.Text, this.TextboxHeartBeat.Text, this.TextboxBloodPre.Text,this.Gender};
+            string[] vs = manual.GetVsString();
+            for (int i = 0; i < vs.Length; i++)
+                Allinfo.Add(vs[i]);
+            Excel Paitient = new Excel(PaitientForm,1);
+            Paitient.WriteRangeInExcelList(21, Allinfo);
+            for (int i = 0; i < Diagnosis.Count; i++)
+            {
+                string[] vs1 = { Diagnosis[i], Recommendation[i] };
+                ListViewItem employee = new ListViewItem(vs1);
+                ListviewRecommendation.Items.Add(employee);
+                Paitient.WriteInExcel(22, i + 2, Diagnosis[i]);
+                Paitient.WriteInExcel(23, i + 2, Recommendation[i]);
+            }
+            Paitient.Saveas(path + "patients\\" + TextboxID.Text + ".xlsx");
+            Paitient.Close();
+        }
+
+        private string radioButtonM_CheckedChanged()
+        {
+            throw new NotImplementedException();
+        }
+
+        //A function which converts a string of age to int
+        private void TextboxAge_OnValueChanged(object sender, EventArgs e)
+        {
+            Age = Convert.ToInt32(this.TextboxAge.Text);
+        }
+
+        //From line 425 to line 483 Functions that return true or false according to what the user clicks on the radiobutton in the diagnostic questions
+        private void radioButtonM_CheckedChanged(object sender, EventArgs e)
+        {
+            Gender = "Male";
+        }
+
+        private void radioButtonF_CheckedChanged(object sender, EventArgs e)
+        {
+            Gender = "Female";
+        }
+
+        private void radioButtonYQ2_CheckedChanged(object sender, EventArgs e)
+        {
+            Eastern = true;
+        }
+        private void radioButtonNQ2_CheckedChanged(object sender, EventArgs e)
+        {
+            Eastern = false;
+        }
+
+        private void radioButtonYQ5_CheckedChanged(object sender, EventArgs e)
+        {
+            Ethiopian = true;
+        }
+
+        private void radioButtonNQ5_CheckedChanged(object sender, EventArgs e)
+        {
+            Ethiopian = false;
+        }
+
+        private void radioButtonYQ4_CheckedChanged(object sender, EventArgs e)
+        {
+            Smokers = true;
+        }
+
+        private void radioButtonYQ1_CheckedChanged(object sender, EventArgs e)
+        {
+            Diarrhea = true;
+        }
+
+        private void radioButtonNQ1_CheckedChanged(object sender, EventArgs e)
+        {
+            Diarrhea = false;
+        }
+
+        private void radioButtonYQ3_CheckedChanged(object sender, EventArgs e)
+        {
+            Pregnant = true;
+        }
+
+        private void radioButtonNQ3_CheckedChanged(object sender, EventArgs e)
+        {
+            Pregnant = false;
+        }
+
+        private void radioButtonNQ4_CheckedChanged(object sender, EventArgs e)
+        {
+            Smokers = false;
         }
 
         private void buttonExistingPatient_Click(object sender, EventArgs e)
@@ -111,66 +483,13 @@ namespace QA_Projects
 
         }
 
-        private void buttonDiagnose_Click(object sender, EventArgs e)
+        //Function When the user presses the close button it closes the FORM and closes the program.
+        private void ExitButton_Click(object sender, EventArgs e)
         {
-            string[] Diagnosis = { };
-            string[] Recommendation = { };
-            double[] vsI = manual.GetVsdouble();
-            if (
-                (vsI[RBC] < 4.5)
-                ||
-                (vsI[HCT] < 37 && groupBoxGender.Text == "Male")
-                ||
-                (vsI[HCT] < 33 && groupBoxGender.Text == "Female")
-                ||
-                (vsI[Hb]<12 && Age > 17)
-                || 
-                (vsI[Hb] < 11.5 && Age < 17)
-                )
-            {
-                Diagnosis.Append("Anemia");
-                Recommendation.Append("Two 10 mg B12 pills a day for a month");
-            }
-            
-
-
-
-
-
-            string[] allInfo = { this.TextBoxFname.Text, this.TextboxLname.Text, this.TextboxID.Text, this.TextboxAge.Text, this.TextboxHeight.Text, this.TextboxWeight.Text, this.TextboxFever.Text, this.TextboxHeartBeat.Text, this.TextboxBloodPre.Text, this.groupBoxGender.Text };
-            string[] vs = manual.GetVsString();
-            for (int i = 0; i < vs.Length; i++)
-                allInfo.Append(vs[i]);
-            Excel Paitient = new Excel(PaitientForm,1);
-            Paitient.WriteRangeInExcel(21, allInfo);
-            for (int i = 0; i < Diagnosis.Length; i++)
-            {
-                Paitient.WriteInExcel(22, i + 1, Diagnosis[i]);
-                bunifuCustomDataGrid1.Rows[i].Cells[0].Value = Diagnosis[i];
-
-            }
-            for (int i = 0; i < Recommendation.Length; i++)
-            {
-                Paitient.WriteInExcel(23, i + 1, Recommendation[i]);
-                bunifuCustomDataGrid1.Rows[i].Cells[1].Value = Recommendation[i];
-            }
-            Paitient.Saveas(path + "patients\\" + TextboxID.Text + ".xlsx");
-            Paitient.Close();
-        }
-
-        private void TextboxHeartBeat_OnValueChanged(object sender, EventArgs e)
-        {
+            Close();
+            login.Close();
 
         }
 
-        private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void TextboxAge_OnValueChanged(object sender, EventArgs e)
-        {
-            Age = Convert.ToInt32(this.TextboxAge.Text);
-        }
     }
 }

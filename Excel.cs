@@ -73,6 +73,13 @@ namespace QA_Projects
             range.Value2 = names;
             lastRow++;
         }
+        public void WriteRangeInExcelList(int col, List<string> names)
+        {
+            string[] vs = { };
+            Range range = (Range)ws.Range[ws.Cells[lastRow, 1], ws.Cells[lastRow, col]];
+            range.Value2 = names.ToArray();
+            lastRow++;
+        }
         public string ReadExcel(int col, int row)
         {                        
             if (ws.Cells[row, col].Value.GetType() != typeof(string))

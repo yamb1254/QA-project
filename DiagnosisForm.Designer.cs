@@ -31,10 +31,6 @@ namespace QA_Projects
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiagnosisForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.LabelFirst = new System.Windows.Forms.Label();
             this.LabelWeight = new System.Windows.Forms.Label();
@@ -89,9 +85,9 @@ namespace QA_Projects
             this.TextboxTestBlood = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.ButtonManual = new System.Windows.Forms.Button();
             this.buttonExistingPatient = new System.Windows.Forms.Button();
-            this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Diagnosis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Recommendation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ListviewRecommendation = new System.Windows.Forms.ListView();
+            this.Diagnosis = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Recommendation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.ExitButton)).BeginInit();
             this.groupBoxGender.SuspendLayout();
             this.groupBoxQ1.SuspendLayout();
@@ -99,7 +95,6 @@ namespace QA_Projects
             this.groupBoxQ5.SuspendLayout();
             this.groupBoxQ4.SuspendLayout();
             this.groupBoxQ3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -107,10 +102,9 @@ namespace QA_Projects
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(9, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 19);
+            this.label1.Size = new System.Drawing.Size(135, 21);
             this.label1.TabIndex = 3;
             this.label1.Text = "Patient details:";
             // 
@@ -118,10 +112,9 @@ namespace QA_Projects
             // 
             this.LabelFirst.AutoSize = true;
             this.LabelFirst.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelFirst.Location = new System.Drawing.Point(10, 73);
-            this.LabelFirst.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelFirst.Location = new System.Drawing.Point(13, 90);
             this.LabelFirst.Name = "LabelFirst";
-            this.LabelFirst.Size = new System.Drawing.Size(83, 17);
+            this.LabelFirst.Size = new System.Drawing.Size(99, 19);
             this.LabelFirst.TabIndex = 4;
             this.LabelFirst.Text = "First Name:";
             // 
@@ -129,10 +122,9 @@ namespace QA_Projects
             // 
             this.LabelWeight.AutoSize = true;
             this.LabelWeight.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelWeight.Location = new System.Drawing.Point(10, 236);
-            this.LabelWeight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelWeight.Location = new System.Drawing.Point(13, 290);
             this.LabelWeight.Name = "LabelWeight";
-            this.LabelWeight.Size = new System.Drawing.Size(59, 17);
+            this.LabelWeight.Size = new System.Drawing.Size(69, 19);
             this.LabelWeight.TabIndex = 5;
             this.LabelWeight.Text = "Weight:";
             // 
@@ -140,10 +132,9 @@ namespace QA_Projects
             // 
             this.LabelHeight.AutoSize = true;
             this.LabelHeight.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelHeight.Location = new System.Drawing.Point(10, 203);
-            this.LabelHeight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelHeight.Location = new System.Drawing.Point(13, 250);
             this.LabelHeight.Name = "LabelHeight";
-            this.LabelHeight.Size = new System.Drawing.Size(56, 17);
+            this.LabelHeight.Size = new System.Drawing.Size(66, 19);
             this.LabelHeight.TabIndex = 6;
             this.LabelHeight.Text = "Height:";
             // 
@@ -151,10 +142,9 @@ namespace QA_Projects
             // 
             this.LabelAge.AutoSize = true;
             this.LabelAge.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelAge.Location = new System.Drawing.Point(10, 171);
-            this.LabelAge.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelAge.Location = new System.Drawing.Point(13, 210);
             this.LabelAge.Name = "LabelAge";
-            this.LabelAge.Size = new System.Drawing.Size(40, 17);
+            this.LabelAge.Size = new System.Drawing.Size(49, 19);
             this.LabelAge.TabIndex = 7;
             this.LabelAge.Text = "Age:";
             // 
@@ -162,10 +152,9 @@ namespace QA_Projects
             // 
             this.LabelId.AutoSize = true;
             this.LabelId.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelId.Location = new System.Drawing.Point(10, 138);
-            this.LabelId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelId.Location = new System.Drawing.Point(13, 170);
             this.LabelId.Name = "LabelId";
-            this.LabelId.Size = new System.Drawing.Size(26, 17);
+            this.LabelId.Size = new System.Drawing.Size(31, 19);
             this.LabelId.TabIndex = 8;
             this.LabelId.Text = "ID:";
             // 
@@ -173,22 +162,19 @@ namespace QA_Projects
             // 
             this.LabelGender.AutoSize = true;
             this.LabelGender.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelGender.Location = new System.Drawing.Point(10, 366);
-            this.LabelGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelGender.Location = new System.Drawing.Point(13, 450);
             this.LabelGender.Name = "LabelGender";
-            this.LabelGender.Size = new System.Drawing.Size(63, 17);
+            this.LabelGender.Size = new System.Drawing.Size(76, 19);
             this.LabelGender.TabIndex = 9;
             this.LabelGender.Text = "Gender:";
-            this.LabelGender.Click += new System.EventHandler(this.LabelGender_Click);
             // 
             // LabelBlood
             // 
             this.LabelBlood.AutoSize = true;
             this.LabelBlood.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelBlood.Location = new System.Drawing.Point(10, 333);
-            this.LabelBlood.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelBlood.Location = new System.Drawing.Point(13, 410);
             this.LabelBlood.Name = "LabelBlood";
-            this.LabelBlood.Size = new System.Drawing.Size(109, 17);
+            this.LabelBlood.Size = new System.Drawing.Size(134, 19);
             this.LabelBlood.TabIndex = 10;
             this.LabelBlood.Text = "Blood Pressure:";
             // 
@@ -196,10 +182,9 @@ namespace QA_Projects
             // 
             this.LabelHeart.AutoSize = true;
             this.LabelHeart.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelHeart.Location = new System.Drawing.Point(10, 301);
-            this.LabelHeart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelHeart.Location = new System.Drawing.Point(13, 370);
             this.LabelHeart.Name = "LabelHeart";
-            this.LabelHeart.Size = new System.Drawing.Size(78, 17);
+            this.LabelHeart.Size = new System.Drawing.Size(93, 19);
             this.LabelHeart.TabIndex = 11;
             this.LabelHeart.Text = "HeartBeat:";
             // 
@@ -207,10 +192,9 @@ namespace QA_Projects
             // 
             this.LabelFever.AutoSize = true;
             this.LabelFever.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelFever.Location = new System.Drawing.Point(10, 268);
-            this.LabelFever.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelFever.Location = new System.Drawing.Point(13, 330);
             this.LabelFever.Name = "LabelFever";
-            this.LabelFever.Size = new System.Drawing.Size(48, 17);
+            this.LabelFever.Size = new System.Drawing.Size(59, 19);
             this.LabelFever.TabIndex = 12;
             this.LabelFever.Text = "Fever:";
             // 
@@ -218,36 +202,37 @@ namespace QA_Projects
             // 
             this.LabelLastN.AutoSize = true;
             this.LabelLastN.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelLastN.Location = new System.Drawing.Point(10, 106);
-            this.LabelLastN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelLastN.Location = new System.Drawing.Point(13, 130);
             this.LabelLastN.Name = "LabelLastN";
-            this.LabelLastN.Size = new System.Drawing.Size(83, 17);
+            this.LabelLastN.Size = new System.Drawing.Size(100, 19);
             this.LabelLastN.TabIndex = 13;
             this.LabelLastN.Text = "Last Name:";
             // 
             // radioButtonM
             // 
             this.radioButtonM.AutoSize = true;
-            this.radioButtonM.Location = new System.Drawing.Point(9, 6);
-            this.radioButtonM.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonM.Location = new System.Drawing.Point(12, 7);
+            this.radioButtonM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonM.Name = "radioButtonM";
-            this.radioButtonM.Size = new System.Drawing.Size(48, 17);
+            this.radioButtonM.Size = new System.Drawing.Size(59, 21);
             this.radioButtonM.TabIndex = 24;
             this.radioButtonM.TabStop = true;
             this.radioButtonM.Text = "Male";
             this.radioButtonM.UseVisualStyleBackColor = true;
+            this.radioButtonM.CheckedChanged += new System.EventHandler(this.radioButtonM_CheckedChanged);
             // 
             // radioButtonF
             // 
             this.radioButtonF.AutoSize = true;
-            this.radioButtonF.Location = new System.Drawing.Point(74, 6);
-            this.radioButtonF.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonF.Location = new System.Drawing.Point(99, 7);
+            this.radioButtonF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonF.Name = "radioButtonF";
-            this.radioButtonF.Size = new System.Drawing.Size(59, 17);
+            this.radioButtonF.Size = new System.Drawing.Size(75, 21);
             this.radioButtonF.TabIndex = 25;
             this.radioButtonF.TabStop = true;
             this.radioButtonF.Text = "Female";
             this.radioButtonF.UseVisualStyleBackColor = true;
+            this.radioButtonF.CheckedChanged += new System.EventHandler(this.radioButtonF_CheckedChanged);
             // 
             // TextboxBloodPre
             // 
@@ -261,10 +246,10 @@ namespace QA_Projects
             this.TextboxBloodPre.LineIdleColor = System.Drawing.Color.Gray;
             this.TextboxBloodPre.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxBloodPre.LineThickness = 3;
-            this.TextboxBloodPre.Location = new System.Drawing.Point(115, 322);
-            this.TextboxBloodPre.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxBloodPre.Location = new System.Drawing.Point(153, 396);
+            this.TextboxBloodPre.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxBloodPre.Name = "TextboxBloodPre";
-            this.TextboxBloodPre.Size = new System.Drawing.Size(152, 27);
+            this.TextboxBloodPre.Size = new System.Drawing.Size(203, 33);
             this.TextboxBloodPre.TabIndex = 38;
             this.TextboxBloodPre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -280,10 +265,10 @@ namespace QA_Projects
             this.TextboxID.LineIdleColor = System.Drawing.Color.Gray;
             this.TextboxID.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxID.LineThickness = 3;
-            this.TextboxID.Location = new System.Drawing.Point(115, 127);
-            this.TextboxID.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxID.Location = new System.Drawing.Point(153, 156);
+            this.TextboxID.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxID.Name = "TextboxID";
-            this.TextboxID.Size = new System.Drawing.Size(152, 27);
+            this.TextboxID.Size = new System.Drawing.Size(203, 33);
             this.TextboxID.TabIndex = 32;
             this.TextboxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -299,10 +284,10 @@ namespace QA_Projects
             this.TextBoxFname.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBoxFname.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextBoxFname.LineThickness = 3;
-            this.TextBoxFname.Location = new System.Drawing.Point(115, 62);
-            this.TextBoxFname.Margin = new System.Windows.Forms.Padding(4);
+            this.TextBoxFname.Location = new System.Drawing.Point(153, 76);
+            this.TextBoxFname.Margin = new System.Windows.Forms.Padding(5);
             this.TextBoxFname.Name = "TextBoxFname";
-            this.TextBoxFname.Size = new System.Drawing.Size(152, 27);
+            this.TextBoxFname.Size = new System.Drawing.Size(203, 33);
             this.TextBoxFname.TabIndex = 30;
             this.TextBoxFname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -318,10 +303,10 @@ namespace QA_Projects
             this.TextboxLname.LineIdleColor = System.Drawing.Color.Gray;
             this.TextboxLname.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxLname.LineThickness = 3;
-            this.TextboxLname.Location = new System.Drawing.Point(115, 93);
-            this.TextboxLname.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxLname.Location = new System.Drawing.Point(153, 114);
+            this.TextboxLname.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxLname.Name = "TextboxLname";
-            this.TextboxLname.Size = new System.Drawing.Size(152, 27);
+            this.TextboxLname.Size = new System.Drawing.Size(203, 33);
             this.TextboxLname.TabIndex = 31;
             this.TextboxLname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -337,10 +322,10 @@ namespace QA_Projects
             this.TextboxAge.LineIdleColor = System.Drawing.Color.Gray;
             this.TextboxAge.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxAge.LineThickness = 3;
-            this.TextboxAge.Location = new System.Drawing.Point(115, 159);
-            this.TextboxAge.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxAge.Location = new System.Drawing.Point(153, 196);
+            this.TextboxAge.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxAge.Name = "TextboxAge";
-            this.TextboxAge.Size = new System.Drawing.Size(152, 27);
+            this.TextboxAge.Size = new System.Drawing.Size(203, 33);
             this.TextboxAge.TabIndex = 33;
             this.TextboxAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TextboxAge.OnValueChanged += new System.EventHandler(this.TextboxAge_OnValueChanged);
@@ -357,10 +342,10 @@ namespace QA_Projects
             this.TextboxHeight.LineIdleColor = System.Drawing.Color.Gray;
             this.TextboxHeight.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxHeight.LineThickness = 3;
-            this.TextboxHeight.Location = new System.Drawing.Point(115, 192);
-            this.TextboxHeight.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxHeight.Location = new System.Drawing.Point(153, 236);
+            this.TextboxHeight.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxHeight.Name = "TextboxHeight";
-            this.TextboxHeight.Size = new System.Drawing.Size(152, 27);
+            this.TextboxHeight.Size = new System.Drawing.Size(203, 33);
             this.TextboxHeight.TabIndex = 34;
             this.TextboxHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -376,10 +361,10 @@ namespace QA_Projects
             this.TextboxWeight.LineIdleColor = System.Drawing.Color.Gray;
             this.TextboxWeight.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxWeight.LineThickness = 3;
-            this.TextboxWeight.Location = new System.Drawing.Point(115, 224);
-            this.TextboxWeight.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxWeight.Location = new System.Drawing.Point(153, 276);
+            this.TextboxWeight.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxWeight.Name = "TextboxWeight";
-            this.TextboxWeight.Size = new System.Drawing.Size(152, 27);
+            this.TextboxWeight.Size = new System.Drawing.Size(203, 33);
             this.TextboxWeight.TabIndex = 35;
             this.TextboxWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -395,10 +380,10 @@ namespace QA_Projects
             this.TextboxFever.LineIdleColor = System.Drawing.Color.Gray;
             this.TextboxFever.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxFever.LineThickness = 3;
-            this.TextboxFever.Location = new System.Drawing.Point(115, 257);
-            this.TextboxFever.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxFever.Location = new System.Drawing.Point(153, 316);
+            this.TextboxFever.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxFever.Name = "TextboxFever";
-            this.TextboxFever.Size = new System.Drawing.Size(152, 27);
+            this.TextboxFever.Size = new System.Drawing.Size(203, 33);
             this.TextboxFever.TabIndex = 36;
             this.TextboxFever.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -414,13 +399,12 @@ namespace QA_Projects
             this.TextboxHeartBeat.LineIdleColor = System.Drawing.Color.Gray;
             this.TextboxHeartBeat.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxHeartBeat.LineThickness = 3;
-            this.TextboxHeartBeat.Location = new System.Drawing.Point(115, 289);
-            this.TextboxHeartBeat.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxHeartBeat.Location = new System.Drawing.Point(153, 356);
+            this.TextboxHeartBeat.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxHeartBeat.Name = "TextboxHeartBeat";
-            this.TextboxHeartBeat.Size = new System.Drawing.Size(152, 27);
+            this.TextboxHeartBeat.Size = new System.Drawing.Size(203, 33);
             this.TextboxHeartBeat.TabIndex = 37;
             this.TextboxHeartBeat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TextboxHeartBeat.OnValueChanged += new System.EventHandler(this.TextboxHeartBeat_OnValueChanged);
             // 
             // buttonTestBlood
             // 
@@ -429,10 +413,10 @@ namespace QA_Projects
             this.buttonTestBlood.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonTestBlood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTestBlood.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTestBlood.Location = new System.Drawing.Point(211, 394);
-            this.buttonTestBlood.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonTestBlood.Location = new System.Drawing.Point(281, 485);
+            this.buttonTestBlood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonTestBlood.Name = "buttonTestBlood";
-            this.buttonTestBlood.Size = new System.Drawing.Size(90, 31);
+            this.buttonTestBlood.Size = new System.Drawing.Size(120, 38);
             this.buttonTestBlood.TabIndex = 40;
             this.buttonTestBlood.Text = "Upload";
             this.buttonTestBlood.UseVisualStyleBackColor = false;
@@ -442,10 +426,9 @@ namespace QA_Projects
             // 
             this.LabelTestBlood.AutoSize = true;
             this.LabelTestBlood.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTestBlood.Location = new System.Drawing.Point(9, 398);
-            this.LabelTestBlood.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelTestBlood.Location = new System.Drawing.Point(12, 490);
             this.LabelTestBlood.Name = "LabelTestBlood";
-            this.LabelTestBlood.Size = new System.Drawing.Size(80, 17);
+            this.LabelTestBlood.Size = new System.Drawing.Size(96, 19);
             this.LabelTestBlood.TabIndex = 37;
             this.LabelTestBlood.Text = "Test Blood:";
             // 
@@ -453,10 +436,9 @@ namespace QA_Projects
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(319, 73);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(425, 316);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 17);
+            this.label2.Size = new System.Drawing.Size(139, 19);
             this.label2.TabIndex = 38;
             this.label2.Text = "Do you smoke?";
             // 
@@ -465,45 +447,45 @@ namespace QA_Projects
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(319, 34);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(425, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 19);
+            this.label3.Size = new System.Drawing.Size(161, 21);
             this.label3.TabIndex = 40;
             this.label3.Text = "Patient Questions:";
             // 
             // radioButtonYQ1
             // 
             this.radioButtonYQ1.AutoSize = true;
-            this.radioButtonYQ1.Location = new System.Drawing.Point(5, 13);
-            this.radioButtonYQ1.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonYQ1.Location = new System.Drawing.Point(7, 16);
+            this.radioButtonYQ1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonYQ1.Name = "radioButtonYQ1";
-            this.radioButtonYQ1.Size = new System.Drawing.Size(43, 17);
+            this.radioButtonYQ1.Size = new System.Drawing.Size(53, 21);
             this.radioButtonYQ1.TabIndex = 41;
             this.radioButtonYQ1.TabStop = true;
             this.radioButtonYQ1.Text = "Yes";
             this.radioButtonYQ1.UseVisualStyleBackColor = true;
+            this.radioButtonYQ1.CheckedChanged += new System.EventHandler(this.radioButtonYQ1_CheckedChanged);
             // 
             // radioButtonNQ1
             // 
             this.radioButtonNQ1.AutoSize = true;
-            this.radioButtonNQ1.Location = new System.Drawing.Point(50, 13);
-            this.radioButtonNQ1.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonNQ1.Location = new System.Drawing.Point(67, 16);
+            this.radioButtonNQ1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonNQ1.Name = "radioButtonNQ1";
-            this.radioButtonNQ1.Size = new System.Drawing.Size(39, 17);
+            this.radioButtonNQ1.Size = new System.Drawing.Size(47, 21);
             this.radioButtonNQ1.TabIndex = 42;
             this.radioButtonNQ1.TabStop = true;
             this.radioButtonNQ1.Text = "No";
             this.radioButtonNQ1.UseVisualStyleBackColor = true;
+            this.radioButtonNQ1.CheckedChanged += new System.EventHandler(this.radioButtonNQ1_CheckedChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(319, 138);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(425, 156);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(288, 17);
+            this.label4.Size = new System.Drawing.Size(350, 19);
             this.label4.TabIndex = 43;
             this.label4.Text = "Do you come from the Eastern testimony?";
             // 
@@ -511,10 +493,9 @@ namespace QA_Projects
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(319, 333);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(425, 396);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(160, 17);
+            this.label5.Size = new System.Drawing.Size(195, 19);
             this.label5.TabIndex = 44;
             this.label5.Text = "Are you from Ethiopia?";
             // 
@@ -522,10 +503,9 @@ namespace QA_Projects
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(319, 268);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(425, 76);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(380, 17);
+            this.label6.Size = new System.Drawing.Size(467, 19);
             this.label6.TabIndex = 45;
             this.label6.Text = "Are you having diarrhea / vomiting in the last few days?";
             // 
@@ -533,10 +513,9 @@ namespace QA_Projects
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(319, 203);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(426, 236);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(260, 17);
+            this.label7.Size = new System.Drawing.Size(319, 19);
             this.label7.TabIndex = 46;
             this.label7.Text = "Are you pregnant?(For male press no)";
             // 
@@ -545,13 +524,11 @@ namespace QA_Projects
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(25)))), ((int)(((byte)(38)))));
-            this.label8.Location = new System.Drawing.Point(319, 397);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(425, 489);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(248, 23);
+            this.label8.Size = new System.Drawing.Size(315, 28);
             this.label8.TabIndex = 55;
             this.label8.Text = "**Please fill in all the fields";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // buttonDiagnose
             // 
@@ -560,10 +537,10 @@ namespace QA_Projects
             this.buttonDiagnose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDiagnose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDiagnose.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDiagnose.Location = new System.Drawing.Point(322, 436);
-            this.buttonDiagnose.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonDiagnose.Location = new System.Drawing.Point(429, 537);
+            this.buttonDiagnose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDiagnose.Name = "buttonDiagnose";
-            this.buttonDiagnose.Size = new System.Drawing.Size(90, 31);
+            this.buttonDiagnose.Size = new System.Drawing.Size(120, 38);
             this.buttonDiagnose.TabIndex = 41;
             this.buttonDiagnose.Text = "Diagnose";
             this.buttonDiagnose.UseVisualStyleBackColor = false;
@@ -574,10 +551,10 @@ namespace QA_Projects
             this.ExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
             this.ExitButton.Image = ((System.Drawing.Image)(resources.GetObject("ExitButton.Image")));
             this.ExitButton.ImageActive = ((System.Drawing.Image)(resources.GetObject("ExitButton.ImageActive")));
-            this.ExitButton.Location = new System.Drawing.Point(889, 10);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ExitButton.Location = new System.Drawing.Point(1185, 12);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(49, 26);
+            this.ExitButton.Size = new System.Drawing.Size(65, 32);
             this.ExitButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ExitButton.TabIndex = 57;
             this.ExitButton.TabStop = false;
@@ -593,11 +570,11 @@ namespace QA_Projects
             // 
             this.groupBoxGender.Controls.Add(this.radioButtonF);
             this.groupBoxGender.Controls.Add(this.radioButtonM);
-            this.groupBoxGender.Location = new System.Drawing.Point(115, 360);
-            this.groupBoxGender.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxGender.Location = new System.Drawing.Point(153, 443);
+            this.groupBoxGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxGender.Name = "groupBoxGender";
-            this.groupBoxGender.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxGender.Size = new System.Drawing.Size(150, 32);
+            this.groupBoxGender.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxGender.Size = new System.Drawing.Size(200, 39);
             this.groupBoxGender.TabIndex = 58;
             this.groupBoxGender.TabStop = false;
             // 
@@ -605,11 +582,11 @@ namespace QA_Projects
             // 
             this.groupBoxQ1.Controls.Add(this.radioButtonNQ1);
             this.groupBoxQ1.Controls.Add(this.radioButtonYQ1);
-            this.groupBoxQ1.Location = new System.Drawing.Point(322, 94);
-            this.groupBoxQ1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxQ1.Location = new System.Drawing.Point(429, 106);
+            this.groupBoxQ1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxQ1.Name = "groupBoxQ1";
-            this.groupBoxQ1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxQ1.Size = new System.Drawing.Size(99, 35);
+            this.groupBoxQ1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxQ1.Size = new System.Drawing.Size(132, 43);
             this.groupBoxQ1.TabIndex = 59;
             this.groupBoxQ1.TabStop = false;
             // 
@@ -617,146 +594,153 @@ namespace QA_Projects
             // 
             this.groupBoxQ2.Controls.Add(this.radioButtonNQ2);
             this.groupBoxQ2.Controls.Add(this.radioButtonYQ2);
-            this.groupBoxQ2.Location = new System.Drawing.Point(322, 159);
-            this.groupBoxQ2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxQ2.Location = new System.Drawing.Point(429, 186);
+            this.groupBoxQ2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxQ2.Name = "groupBoxQ2";
-            this.groupBoxQ2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxQ2.Size = new System.Drawing.Size(99, 35);
+            this.groupBoxQ2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxQ2.Size = new System.Drawing.Size(132, 43);
             this.groupBoxQ2.TabIndex = 60;
             this.groupBoxQ2.TabStop = false;
             // 
             // radioButtonNQ2
             // 
             this.radioButtonNQ2.AutoSize = true;
-            this.radioButtonNQ2.Location = new System.Drawing.Point(50, 13);
-            this.radioButtonNQ2.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonNQ2.Location = new System.Drawing.Point(67, 16);
+            this.radioButtonNQ2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonNQ2.Name = "radioButtonNQ2";
-            this.radioButtonNQ2.Size = new System.Drawing.Size(39, 17);
+            this.radioButtonNQ2.Size = new System.Drawing.Size(47, 21);
             this.radioButtonNQ2.TabIndex = 42;
             this.radioButtonNQ2.TabStop = true;
             this.radioButtonNQ2.Text = "No";
             this.radioButtonNQ2.UseVisualStyleBackColor = true;
+            this.radioButtonNQ2.CheckedChanged += new System.EventHandler(this.radioButtonNQ2_CheckedChanged);
             // 
             // radioButtonYQ2
             // 
             this.radioButtonYQ2.AutoSize = true;
-            this.radioButtonYQ2.Location = new System.Drawing.Point(5, 13);
-            this.radioButtonYQ2.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonYQ2.Location = new System.Drawing.Point(7, 16);
+            this.radioButtonYQ2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonYQ2.Name = "radioButtonYQ2";
-            this.radioButtonYQ2.Size = new System.Drawing.Size(43, 17);
+            this.radioButtonYQ2.Size = new System.Drawing.Size(53, 21);
             this.radioButtonYQ2.TabIndex = 41;
             this.radioButtonYQ2.TabStop = true;
             this.radioButtonYQ2.Text = "Yes";
             this.radioButtonYQ2.UseVisualStyleBackColor = true;
+            this.radioButtonYQ2.CheckedChanged += new System.EventHandler(this.radioButtonYQ2_CheckedChanged);
             // 
             // groupBoxQ5
             // 
             this.groupBoxQ5.Controls.Add(this.radioButtonNQ5);
             this.groupBoxQ5.Controls.Add(this.radioButtonYQ5);
-            this.groupBoxQ5.Location = new System.Drawing.Point(322, 354);
-            this.groupBoxQ5.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxQ5.Location = new System.Drawing.Point(429, 426);
+            this.groupBoxQ5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxQ5.Name = "groupBoxQ5";
-            this.groupBoxQ5.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxQ5.Size = new System.Drawing.Size(99, 35);
+            this.groupBoxQ5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxQ5.Size = new System.Drawing.Size(132, 43);
             this.groupBoxQ5.TabIndex = 61;
             this.groupBoxQ5.TabStop = false;
             // 
             // radioButtonNQ5
             // 
             this.radioButtonNQ5.AutoSize = true;
-            this.radioButtonNQ5.Location = new System.Drawing.Point(50, 13);
-            this.radioButtonNQ5.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonNQ5.Location = new System.Drawing.Point(67, 16);
+            this.radioButtonNQ5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonNQ5.Name = "radioButtonNQ5";
-            this.radioButtonNQ5.Size = new System.Drawing.Size(39, 17);
+            this.radioButtonNQ5.Size = new System.Drawing.Size(47, 21);
             this.radioButtonNQ5.TabIndex = 42;
             this.radioButtonNQ5.TabStop = true;
             this.radioButtonNQ5.Text = "No";
             this.radioButtonNQ5.UseVisualStyleBackColor = true;
+            this.radioButtonNQ5.CheckedChanged += new System.EventHandler(this.radioButtonNQ5_CheckedChanged);
             // 
             // radioButtonYQ5
             // 
             this.radioButtonYQ5.AutoSize = true;
-            this.radioButtonYQ5.Location = new System.Drawing.Point(5, 13);
-            this.radioButtonYQ5.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonYQ5.Location = new System.Drawing.Point(7, 16);
+            this.radioButtonYQ5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonYQ5.Name = "radioButtonYQ5";
-            this.radioButtonYQ5.Size = new System.Drawing.Size(43, 17);
+            this.radioButtonYQ5.Size = new System.Drawing.Size(53, 21);
             this.radioButtonYQ5.TabIndex = 41;
             this.radioButtonYQ5.TabStop = true;
             this.radioButtonYQ5.Text = "Yes";
             this.radioButtonYQ5.UseVisualStyleBackColor = true;
+            this.radioButtonYQ5.CheckedChanged += new System.EventHandler(this.radioButtonYQ5_CheckedChanged);
             // 
             // groupBoxQ4
             // 
             this.groupBoxQ4.Controls.Add(this.radioButtonNQ4);
             this.groupBoxQ4.Controls.Add(this.radioButtonYQ4);
-            this.groupBoxQ4.Location = new System.Drawing.Point(322, 289);
-            this.groupBoxQ4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxQ4.Location = new System.Drawing.Point(429, 346);
+            this.groupBoxQ4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxQ4.Name = "groupBoxQ4";
-            this.groupBoxQ4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxQ4.Size = new System.Drawing.Size(99, 35);
+            this.groupBoxQ4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxQ4.Size = new System.Drawing.Size(132, 43);
             this.groupBoxQ4.TabIndex = 60;
             this.groupBoxQ4.TabStop = false;
             // 
             // radioButtonNQ4
             // 
             this.radioButtonNQ4.AutoSize = true;
-            this.radioButtonNQ4.Location = new System.Drawing.Point(50, 13);
-            this.radioButtonNQ4.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonNQ4.Location = new System.Drawing.Point(67, 16);
+            this.radioButtonNQ4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonNQ4.Name = "radioButtonNQ4";
-            this.radioButtonNQ4.Size = new System.Drawing.Size(39, 17);
+            this.radioButtonNQ4.Size = new System.Drawing.Size(47, 21);
             this.radioButtonNQ4.TabIndex = 42;
             this.radioButtonNQ4.TabStop = true;
             this.radioButtonNQ4.Text = "No";
             this.radioButtonNQ4.UseVisualStyleBackColor = true;
-            this.radioButtonNQ4.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
+            this.radioButtonNQ4.CheckedChanged += new System.EventHandler(this.radioButtonNQ4_CheckedChanged);
             // 
             // radioButtonYQ4
             // 
             this.radioButtonYQ4.AutoSize = true;
-            this.radioButtonYQ4.Location = new System.Drawing.Point(5, 13);
-            this.radioButtonYQ4.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonYQ4.Location = new System.Drawing.Point(7, 16);
+            this.radioButtonYQ4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonYQ4.Name = "radioButtonYQ4";
-            this.radioButtonYQ4.Size = new System.Drawing.Size(43, 17);
+            this.radioButtonYQ4.Size = new System.Drawing.Size(53, 21);
             this.radioButtonYQ4.TabIndex = 41;
             this.radioButtonYQ4.TabStop = true;
             this.radioButtonYQ4.Text = "Yes";
             this.radioButtonYQ4.UseVisualStyleBackColor = true;
+            this.radioButtonYQ4.CheckedChanged += new System.EventHandler(this.radioButtonYQ4_CheckedChanged);
             // 
             // groupBoxQ3
             // 
             this.groupBoxQ3.Controls.Add(this.radioButtonNQ3);
             this.groupBoxQ3.Controls.Add(this.radioButtonYQ3);
-            this.groupBoxQ3.Location = new System.Drawing.Point(322, 224);
-            this.groupBoxQ3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxQ3.Location = new System.Drawing.Point(429, 266);
+            this.groupBoxQ3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxQ3.Name = "groupBoxQ3";
-            this.groupBoxQ3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxQ3.Size = new System.Drawing.Size(99, 35);
+            this.groupBoxQ3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxQ3.Size = new System.Drawing.Size(132, 43);
             this.groupBoxQ3.TabIndex = 60;
             this.groupBoxQ3.TabStop = false;
             // 
             // radioButtonNQ3
             // 
             this.radioButtonNQ3.AutoSize = true;
-            this.radioButtonNQ3.Location = new System.Drawing.Point(50, 13);
-            this.radioButtonNQ3.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonNQ3.Location = new System.Drawing.Point(67, 16);
+            this.radioButtonNQ3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonNQ3.Name = "radioButtonNQ3";
-            this.radioButtonNQ3.Size = new System.Drawing.Size(39, 17);
+            this.radioButtonNQ3.Size = new System.Drawing.Size(47, 21);
             this.radioButtonNQ3.TabIndex = 42;
             this.radioButtonNQ3.TabStop = true;
             this.radioButtonNQ3.Text = "No";
             this.radioButtonNQ3.UseVisualStyleBackColor = true;
+            this.radioButtonNQ3.CheckedChanged += new System.EventHandler(this.radioButtonNQ3_CheckedChanged);
             // 
             // radioButtonYQ3
             // 
             this.radioButtonYQ3.AutoSize = true;
-            this.radioButtonYQ3.Location = new System.Drawing.Point(5, 13);
-            this.radioButtonYQ3.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonYQ3.Location = new System.Drawing.Point(7, 16);
+            this.radioButtonYQ3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonYQ3.Name = "radioButtonYQ3";
-            this.radioButtonYQ3.Size = new System.Drawing.Size(43, 17);
+            this.radioButtonYQ3.Size = new System.Drawing.Size(53, 21);
             this.radioButtonYQ3.TabIndex = 41;
             this.radioButtonYQ3.TabStop = true;
             this.radioButtonYQ3.Text = "Yes";
             this.radioButtonYQ3.UseVisualStyleBackColor = true;
+            this.radioButtonYQ3.CheckedChanged += new System.EventHandler(this.radioButtonYQ3_CheckedChanged);
             // 
             // TextboxTestBlood
             // 
@@ -770,10 +754,10 @@ namespace QA_Projects
             this.TextboxTestBlood.LineIdleColor = System.Drawing.Color.Gray;
             this.TextboxTestBlood.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxTestBlood.LineThickness = 3;
-            this.TextboxTestBlood.Location = new System.Drawing.Point(86, 393);
-            this.TextboxTestBlood.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxTestBlood.Location = new System.Drawing.Point(115, 484);
+            this.TextboxTestBlood.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxTestBlood.Name = "TextboxTestBlood";
-            this.TextboxTestBlood.Size = new System.Drawing.Size(119, 27);
+            this.TextboxTestBlood.Size = new System.Drawing.Size(159, 33);
             this.TextboxTestBlood.TabIndex = 39;
             this.TextboxTestBlood.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -784,10 +768,10 @@ namespace QA_Projects
             this.ButtonManual.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonManual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonManual.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonManual.Location = new System.Drawing.Point(211, 430);
-            this.ButtonManual.Margin = new System.Windows.Forms.Padding(2);
+            this.ButtonManual.Location = new System.Drawing.Point(281, 529);
+            this.ButtonManual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ButtonManual.Name = "ButtonManual";
-            this.ButtonManual.Size = new System.Drawing.Size(90, 31);
+            this.ButtonManual.Size = new System.Drawing.Size(120, 38);
             this.ButtonManual.TabIndex = 62;
             this.ButtonManual.Text = "Manual";
             this.ButtonManual.UseVisualStyleBackColor = false;
@@ -801,79 +785,51 @@ namespace QA_Projects
             this.buttonExistingPatient.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonExistingPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExistingPatient.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExistingPatient.Location = new System.Drawing.Point(703, 34);
-            this.buttonExistingPatient.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonExistingPatient.Location = new System.Drawing.Point(937, 42);
+            this.buttonExistingPatient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExistingPatient.Name = "buttonExistingPatient";
-            this.buttonExistingPatient.Size = new System.Drawing.Size(134, 31);
+            this.buttonExistingPatient.Size = new System.Drawing.Size(179, 38);
             this.buttonExistingPatient.TabIndex = 65;
             this.buttonExistingPatient.Text = "Existing Patient";
             this.buttonExistingPatient.UseVisualStyleBackColor = false;
             this.buttonExistingPatient.Click += new System.EventHandler(this.buttonExistingPatient_Click);
             // 
-            // bunifuCustomDataGrid1
+            // ListviewRecommendation
             // 
-            this.bunifuCustomDataGrid1.AllowUserToAddRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
-            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(129)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ListviewRecommendation.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid;
+            this.ListviewRecommendation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
+            this.ListviewRecommendation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ListviewRecommendation.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Diagnosis,
             this.Recommendation});
-            this.bunifuCustomDataGrid1.DoubleBuffered = true;
-            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
-            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(129)))), ((int)(((byte)(137)))));
-            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(697, 93);
-            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
-            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(241, 417);
-            this.bunifuCustomDataGrid1.TabIndex = 66;
-            this.bunifuCustomDataGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellContentClick);
+            this.ListviewRecommendation.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListviewRecommendation.ForeColor = System.Drawing.Color.Black;
+            this.ListviewRecommendation.GridLines = true;
+            this.ListviewRecommendation.HideSelection = false;
+            this.ListviewRecommendation.Location = new System.Drawing.Point(826, 103);
+            this.ListviewRecommendation.Name = "ListviewRecommendation";
+            this.ListviewRecommendation.Size = new System.Drawing.Size(424, 513);
+            this.ListviewRecommendation.TabIndex = 66;
+            this.ListviewRecommendation.UseCompatibleStateImageBehavior = false;
+            this.ListviewRecommendation.View = System.Windows.Forms.View.Details;
             // 
             // Diagnosis
             // 
-            this.Diagnosis.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(172)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(25)))), ((int)(((byte)(38)))));
-            this.Diagnosis.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Diagnosis.HeaderText = "Diagnosis";
-            this.Diagnosis.Name = "Diagnosis";
-            this.Diagnosis.ReadOnly = true;
-            this.Diagnosis.Width = 87;
+            this.Diagnosis.Text = "Diagnosis";
+            this.Diagnosis.Width = 150;
             // 
             // Recommendation
             // 
-            this.Recommendation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(172)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(25)))), ((int)(((byte)(38)))));
-            this.Recommendation.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Recommendation.HeaderText = "Recommendation";
-            this.Recommendation.Name = "Recommendation";
-            this.Recommendation.Width = 138;
+            this.Recommendation.Text = "Recommendation";
+            this.Recommendation.Width = 274;
             // 
             // DiagnosisForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(233)))), ((int)(((byte)(205)))));
-            this.ClientSize = new System.Drawing.Size(946, 547);
-            this.Controls.Add(this.bunifuCustomDataGrid1);
+            this.ClientSize = new System.Drawing.Size(1261, 673);
+            this.Controls.Add(this.ListviewRecommendation);
             this.Controls.Add(this.buttonExistingPatient);
             this.Controls.Add(this.ButtonManual);
             this.Controls.Add(this.TextboxTestBlood);
@@ -915,7 +871,7 @@ namespace QA_Projects
             this.Controls.Add(this.LabelFirst);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DiagnosisForm";
             this.Text = "DiagnosisForm";
             this.TopMost = true;
@@ -932,7 +888,6 @@ namespace QA_Projects
             this.groupBoxQ4.PerformLayout();
             this.groupBoxQ3.ResumeLayout(false);
             this.groupBoxQ3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -994,8 +949,8 @@ namespace QA_Projects
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextboxTestBlood;
         private System.Windows.Forms.Button ButtonManual;
         private System.Windows.Forms.Button buttonExistingPatient;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Diagnosis;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Recommendation;
+        private System.Windows.Forms.ListView ListviewRecommendation;
+        private System.Windows.Forms.ColumnHeader Diagnosis;
+        private System.Windows.Forms.ColumnHeader Recommendation;
     }
 }

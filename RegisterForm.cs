@@ -17,6 +17,8 @@ namespace QA_Projects
         LoginForm login;
         const int UsernameCol = 2, PasswordCol = 4 ,Namecol = 1, Emailcol = 3;
         string FileName = System.IO.Path.GetFullPath("LoginInfo.xlsx");
+        //A builder who gets an object to be linked to the same user page.
+        //In addition a variable is created which keeps the details ready to be adapted to that user
         public RegisterForm(LoginForm login)
         {
             FileName = FileName.Substring(0, FileName.Length - 24);
@@ -24,25 +26,23 @@ namespace QA_Projects
             this.login = login;
             InitializeComponent();
         }
-
+        //A function that returns the user to the login page if it already exists in the system
         private void LinkLabelHaveAcc_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             login.Show();
             this.Hide();
            
         }
-
+        //Function When the user presses the close button it closes the FORM and closes the program.
         private void ExitButtonReg_Click(object sender, EventArgs e)
         {
            this.Close();
             this.login.Close();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //A function works when the user clicks on the register button and within it there is a construction of the user and conditions if the details he entered match the requirements of the system
+        //If no appropriate message is uploaded and the user will need to fix accordingly
+        //If so, the system will save the user's details and return them to the login page
+        //In addition the excel file which is used as a database will close
         private void ButtonRegister_Click(object sender, EventArgs e)
         {
             string username = TextboxUser.Text;
@@ -56,9 +56,9 @@ namespace QA_Projects
             {
                 MessageBox.Show("The fields are empty please fill");
             }
-            else if(username.Length < 8 || username.Length > 10)
+            else if(username.Length < 6 || username.Length > 8)
             {
-                MessageBox.Show("The username must have between 8-16 characters and max two numbers");
+                MessageBox.Show("The username must have between 6-8 characters and max two numbers");
             }
             else if (checkUsername(username) == false)
             {
@@ -66,7 +66,7 @@ namespace QA_Projects
             }
             else if (passw.Length > 10 || passw.Length < 8)
             {
-                MessageBox.Show("The password must have between 8-16 characters");
+                MessageBox.Show("The password must have between 8-10 characters");
             }
            else if(checkPassword(passw) == false)
             {
@@ -90,21 +90,7 @@ namespace QA_Projects
             excel.Save();
             excel.Close();
         }
-
-        private void TextboxCpass_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextboxPassword_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LabelUsername_Click(object sender, EventArgs e)
-        {
-
-        }
+        //A help function that checks if the terms of the password are correct so that the user can continue registering
         public Boolean checkPassword(string password)
         {
           
@@ -131,6 +117,7 @@ namespace QA_Projects
             }
             return true;
         }
+        //A help function that checks if the terms of the username are correct so that the user can continue registering
         public Boolean checkUsername(string username)
         {
             

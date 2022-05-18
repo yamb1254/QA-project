@@ -17,10 +17,24 @@ namespace QA_Projects
         string[] vs;
         double[] vsi;
         double WBC, Neut, Lymph, RBC, HCT, Urea, Hb, Crtn, Iron, HDL, AP;
-
+        //A Department constructor who receives a diagnostic object to link the pages to the current user
+        public ManualTestBlood(DiagnosisForm diagnosisForm)
+        {
+            this.Diagnosis = diagnosisForm;
+            InitializeComponent();
+        }
+        //From row 26 to row 85 functions which convert variables from string to double.
         private void TextboxRBC_OnValueChanged(object sender, EventArgs e)
         {
-            RBC = Convert.ToDouble(this.TextboxRBC.Text);
+            if(TextboxRBC.Text == null)
+            {
+                RBC = 0;
+            }
+            else
+            {
+                RBC = Convert.ToDouble(this.TextboxRBC.Text);
+            }
+           
         }
 
         private void TextboxUrea_OnValueChanged(object sender, EventArgs e)
@@ -62,13 +76,17 @@ namespace QA_Projects
         {
             Neut = Convert.ToDouble(this.TextBoxNeut.Text);
         }
-
-        public ManualTestBlood(DiagnosisForm diagnosisForm)
+        private void TextBoxHCT_OnValueChanged(object sender, EventArgs e)
         {
-            this.Diagnosis = diagnosisForm;
-             InitializeComponent();
+            HCT = Convert.ToDouble(this.TextBoxHCT.Text);
         }
-
+        private void TextboxWBC_OnValueChanged(object sender, EventArgs e)
+        {
+            WBC = Convert.ToInt32(this.TextboxWBC.Text);
+        }
+        //A function that creates string variables and checks that all cells are not empty because everything should be full.
+        //If you do not get an error message to fix
+        //If so the user / doctor will return to the diagnostic page
         private void ButtonUplodTestBlood_Click(object sender, EventArgs e)
         {
             string WBC = TextboxWBC.Text;
@@ -92,18 +110,7 @@ namespace QA_Projects
                 this.Hide();
             }
         }
-
-        private void ExitButtonManualTest_Click(object sender, EventArgs e)
-        {
-            Diagnosis.Show();
-            this.Hide();
-            
-        }
-
-        private void TextboxWBC_OnValueChanged(object sender, EventArgs e)
-        {
-            WBC = Convert.ToInt32(this.TextboxWBC.Text);
-        }
+        //A function that fills the cells automatically when the user / doctor uploads a blood test file
         public void Filltextbox(string WBC, string Neut ,string Lymph ,string RBC ,string HCT ,string Urea,string Hb ,string Crtn,string Iron,string HDL,string AP)
         {
             this.TextboxWBC.Text = WBC;
@@ -118,6 +125,7 @@ namespace QA_Projects
             this.TextboxHDL.Text = HDL; 
             this.TextboxAP.Text = AP;  
         }
+        //String array function and return the array.
         public string[] GetVsString()
         {
             string WBC = TextboxWBC.Text;
@@ -134,15 +142,18 @@ namespace QA_Projects
             vs = new string[] { WBC, Neut, Lymph, RBC, HCT, Urea, Hb, Crtn, Iron, HDL, AP };
             return vs;
         }
+        ////Double array function and return the array.
         public double[] GetVsdouble()
         {
             vsi = new double[] { WBC, Neut, Lymph, RBC, HCT, Urea, Hb, Crtn, Iron, HDL, AP };
             return vsi;
         }
-
-        private void TextBoxHCT_OnValueChanged(object sender, EventArgs e)
+        // Function When a user presses the close button he closes the FORM and returns the user to the diagnostic page
+        private void ExitButtonManualTest_Click(object sender, EventArgs e)
         {
-            HCT = Convert.ToDouble(this.TextBoxHCT.Text);
+            Diagnosis.Show();
+            this.Hide();
+
         }
     }
 }
