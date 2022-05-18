@@ -26,63 +26,89 @@ namespace QA_Projects
         //From row 26 to row 85 functions which convert variables from string to double.
         private void TextboxRBC_OnValueChanged(object sender, EventArgs e)
         {
-            if(TextboxRBC.Text == null)
-            {
-                RBC = 0;
-            }
-            else
-            {
+            if (!double.TryParse(this.TextboxRBC.Text, out double n))
+                this.TextboxRBC.Text = "";
+            if (this.TextboxRBC.Text != "")
                 RBC = Convert.ToDouble(this.TextboxRBC.Text);
-            }
            
         }
 
         private void TextboxUrea_OnValueChanged(object sender, EventArgs e)
         {
-            Urea = Convert.ToDouble(this.TextboxUrea.Text);
+            if (!double.TryParse(this.TextboxUrea.Text, out double n))
+                this.TextboxUrea.Text = "";
+            else if (this.TextboxUrea.Text != "")
+                Urea = Convert.ToDouble(this.TextboxUrea.Text);
         }
 
         private void TextboxHb_OnValueChanged(object sender, EventArgs e)
         {
-            Hb = Convert.ToDouble(this.TextboxHb.Text);
+            if (!double.TryParse(this.TextboxHb.Text, out double n))
+                this.TextboxHb.Text = "";
+            if (this.TextboxHb.Text != "")
+                Hb = Convert.ToDouble(this.TextboxHb.Text);
         }
 
         private void TextboxCrtn_OnValueChanged(object sender, EventArgs e)
         {
-            Crtn = Convert.ToDouble(this.TextboxCrtn.Text);
+            if (!double.TryParse(this.TextboxCrtn.Text, out double n))
+                this.TextboxCrtn.Text = "";
+            if (this.TextboxCrtn.Text != "")
+                Crtn = Convert.ToDouble(this.TextboxCrtn.Text);
         }
 
         private void TextBoxIron_OnValueChanged(object sender, EventArgs e)
         {
-            Iron = Convert.ToDouble(this.TextBoxIron.Text);
+            if (!double.TryParse(this.TextBoxIron.Text, out double n))
+                this.TextBoxIron.Text = "";
+            if (this.TextBoxIron.Text != "")
+                Iron = Convert.ToDouble(this.TextBoxIron.Text);
         }
 
         private void TextboxHDL_OnValueChanged(object sender, EventArgs e)
         {
-            HDL = Convert.ToDouble(this.TextboxHDL.Text);
+            if (!double.TryParse(this.TextboxHDL.Text, out double n))
+                this.TextboxHDL.Text = "";
+            if (this.TextboxHDL.Text != "")
+                HDL = Convert.ToDouble(this.TextboxHDL.Text);
         }
 
         private void TextboxAP_OnValueChanged(object sender, EventArgs e)
         {
-            AP = Convert.ToDouble(this.TextboxAP.Text);
+            if (!double.TryParse(this.TextboxAP.Text, out double n))
+                this.TextboxAP.Text = "";
+            if (this.TextboxAP.Text != "")
+                AP = Convert.ToDouble(this.TextboxAP.Text);
         }
 
         private void TextboxLymph_OnValueChanged(object sender, EventArgs e)
         {
-            Lymph = Convert.ToDouble(this.TextboxLymph.Text);
+            if (!double.TryParse(this.TextboxLymph.Text, out double n))
+                this.TextboxLymph.Text = "";
+            if (this.TextboxLymph.Text != "")
+                Lymph = Convert.ToDouble(this.TextboxLymph.Text);
         }
 
         private void TextBoxNeut_OnValueChanged(object sender, EventArgs e)
         {
-            Neut = Convert.ToDouble(this.TextBoxNeut.Text);
+            if (!double.TryParse(this.TextBoxNeut.Text, out double n))
+                this.TextBoxNeut.Text = "";
+            if (this.TextBoxNeut.Text != "")
+                Neut = Convert.ToDouble(this.TextBoxNeut.Text);
         }
         private void TextBoxHCT_OnValueChanged(object sender, EventArgs e)
         {
-            HCT = Convert.ToDouble(this.TextBoxHCT.Text);
+            if (!double.TryParse(this.TextBoxHCT.Text, out double n))
+                this.TextBoxHCT.Text = "";
+            if (this.TextBoxHCT.Text != "")
+                HCT = Convert.ToDouble(this.TextBoxHCT.Text);
         }
         private void TextboxWBC_OnValueChanged(object sender, EventArgs e)
         {
-            WBC = Convert.ToInt32(this.TextboxWBC.Text);
+            if (!double.TryParse(this.TextboxWBC.Text, out double n))
+                this.TextboxWBC.Text = "";
+            if (this.TextboxWBC.Text != "")
+                WBC = Convert.ToInt32(this.TextboxWBC.Text);
         }
         //A function that creates string variables and checks that all cells are not empty because everything should be full.
         //If you do not get an error message to fix
