@@ -26,9 +26,10 @@ namespace QA_Projects
         const int AP = 11;
         int Age;
         string PaitientForm = System.IO.Path.GetFullPath("PaitientForm.xlsx");
-        string path;
+        string path,existPath;
         LoginForm login;
         ManualTestBlood manual;
+        Excel Paitient;
         string userName;
         string Gender;
         bool Eastern, Ethiopian,Smokers, Pregnant, Diarrhea;
@@ -48,13 +49,21 @@ namespace QA_Projects
         private void buttonTestBlood_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            if(openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            openFileDialog.InitialDirectory= path + "patients\\";
+            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 this.TextboxTestBlood.Text = openFileDialog.FileName;
             }
-            Excel test = new Excel(this.TextboxTestBlood.Text,1);
-            manual.Filltextbox(test.ReadExcel(WBC,2), test.ReadExcel(Neut, 2), test.ReadExcel(Lymph, 2), test.ReadExcel(RBC, 2),test.ReadExcel(HCT, 2), test.ReadExcel(Urea, 2), test.ReadExcel(Hb, 2), test.ReadExcel(Crtn, 2), test.ReadExcel(Iron, 2), test.ReadExcel(HDL, 2), test.ReadExcel(AP, 2));
-            test.Close();
+            try
+            {
+                Excel test = new Excel(this.TextboxTestBlood.Text, 1);
+                manual.Filltextbox(test.ReadExcel(WBC, 2), test.ReadExcel(Neut, 2), test.ReadExcel(Lymph, 2), test.ReadExcel(RBC, 2), test.ReadExcel(HCT, 2), test.ReadExcel(Urea, 2), test.ReadExcel(Hb, 2), test.ReadExcel(Crtn, 2), test.ReadExcel(Iron, 2), test.ReadExcel(HDL, 2), test.ReadExcel(AP, 2));
+                test.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("You dont choose a Test Blood file");
+            }
         }
         //A function that asks the user if he wants to enter blood tests manually in case the user gets wet he will be taken to the details page.
         //If not the message will be closed
@@ -71,9 +80,20 @@ namespace QA_Projects
 
         private void buttonDiagnose_Click(object sender, EventArgs e)
         {
+            ListviewRecommendation.Items.Clear();
             List<string> Diagnosis = new List<string> { };
             List<string> Recommendation = new List<string> { };
             double[] vsI = manual.GetVsdouble();
+            if(TextBoxFname.Text == "" || TextboxLname.Text == "" || TextboxID.Text == "" || TextboxAge.Text == "" || TextboxHeight.Text == "" || TextboxWeight.Text == "" || TextboxFever.Text == "" || TextboxHeartBeat.Text == "" || TextboxBloodPre.Text == "" || Gender == null || Diarrhea == null || Eastern == null || Pregnant == null || Smokers == null || Ethiopian == null)
+            {
+                MessageBox.Show("Please fill in all the fields");
+                return;
+            }
+            if(TextboxID.Text.Length != 9) 
+            {
+                MessageBox.Show("Please insert correct ID");
+                return;
+            }
             if (
                 (vsI[RBC-1] < 4.5)
                 ||
@@ -210,9 +230,9 @@ namespace QA_Projects
                 Recommendation.Add("Rest at home");
             }
             if(
-                (vsI[AP-1] > 120 && Eastern)
+                (vsI[AP-1] > 120 && Eastern && (!Pregnant))
                 ||
-                (vsI[AP-1] > 90)
+                (vsI[AP-1] > 90 && (!Pregnant))
                 )
             {
                 Diagnosis.Add("Diseases of the biliary tract");
@@ -247,9 +267,9 @@ namespace QA_Projects
                 ||
                 (vsI[Urea-1] < 18.7 && Eastern)
                 ||
-                (vsI[AP-1] > 120 && Eastern)
+                (vsI[AP-1] > 120 && Eastern && (!Pregnant))
                 ||
-                (vsI[AP-1] > 90)
+                (vsI[AP-1] > 90 && (!Pregnant))
                 )
             {
                 Diagnosis.Add("Liver disease");
@@ -309,9 +329,9 @@ namespace QA_Projects
                 Recommendation.Add("Stop smoking / Refer to an X-ray of the lungs");
             }
             if(
-                (vsI[AP - 1] > 120 && Eastern)
+                (vsI[AP - 1] > 120 && Eastern && (!Pregnant))
                 ||
-                (vsI[AP - 1] > 90)
+                (vsI[AP - 1] > 90 && (!Pregnant))
                 )
             {
                 Diagnosis.Add("Thyroid overactivity");
@@ -365,9 +385,9 @@ namespace QA_Projects
                 Recommendation.Add("Coordinate an appointment with a nutritionist");
             }
             if(
-                (vsI[AP - 1] > 120 && Eastern)
+                (vsI[AP - 1] > 120 && Eastern && (!Pregnant))
                 ||
-                (vsI[AP - 1] > 90)
+                (vsI[AP - 1] > 90 && (!Pregnant))
                 )
             {
                 Diagnosis.Add("Use of various medications");
@@ -382,29 +402,64 @@ namespace QA_Projects
                 Diagnosis.Add("Malnutrition");
                 Recommendation.Add("Coordinate an appointment with a nutritionist");
             }
-
-
-
-
-
+            if (Pregnant)
+            {
+                Diagnosis.Add("Pregnant");
+                Recommendation.Add("Please consult gynecologist about AP values");
+            }
 
             List<string> Allinfo = new List<string> { this.TextBoxFname.Text, this.TextboxLname.Text, this.TextboxID.Text, this.TextboxAge.Text, this.TextboxHeight.Text, this.TextboxWeight.Text, this.TextboxFever.Text, this.TextboxHeartBeat.Text, this.TextboxBloodPre.Text, this.Gender };          
             string[] allInfo = { this.TextBoxFname.Text, this.TextboxLname.Text, this.TextboxID.Text, this.TextboxAge.Text, this.TextboxHeight.Text, this.TextboxWeight.Text, this.TextboxFever.Text, this.TextboxHeartBeat.Text, this.TextboxBloodPre.Text,this.Gender};
             string[] vs = manual.GetVsString();
             for (int i = 0; i < vs.Length; i++)
                 Allinfo.Add(vs[i]);
-            Excel Paitient = new Excel(PaitientForm,1);
-            Paitient.WriteRangeInExcelList(21, Allinfo);
-            for (int i = 0; i < Diagnosis.Count; i++)
+            if (Paitient != null)
             {
-                string[] vs1 = { Diagnosis[i], Recommendation[i] };
-                ListViewItem employee = new ListViewItem(vs1);
-                ListviewRecommendation.Items.Add(employee);
-                Paitient.WriteInExcel(22, i + 2, Diagnosis[i]);
-                Paitient.WriteInExcel(23, i + 2, Recommendation[i]);
+                if (Paitient.getIsOpen())
+                {
+                    Paitient.WriteRangeInExcelList(21, Allinfo);
+                    for (int i = 0; i < Diagnosis.Count; i++)
+                    {
+                        string[] vs1 = { Diagnosis[i], Recommendation[i] };
+                        ListViewItem employee = new ListViewItem(vs1);
+                        ListviewRecommendation.Items.Add(employee);
+                        Paitient.WriteInExcel(22, i + 2, Diagnosis[i]);
+                        Paitient.WriteInExcel(23, i + 2, Recommendation[i]);
+                    }
+                    Paitient.Save();
+                }
             }
-            Paitient.Saveas(path + "patients\\" + TextboxID.Text + ".xlsx");
+            else
+            {
+                try
+                {
+                    Paitient = new Excel(PaitientForm, 1);
+                    Paitient.WriteRangeInExcelList(21, Allinfo);
+                    for (int i = 0; i < Diagnosis.Count; i++)
+                    {
+                        string[] vs1 = { Diagnosis[i], Recommendation[i] };
+                        ListViewItem employee = new ListViewItem(vs1);
+                        ListviewRecommendation.Items.Add(employee);
+                        Paitient.WriteInExcel(22, i + 2, Diagnosis[i]);
+                        Paitient.WriteInExcel(23, i + 2, Recommendation[i]);
+                    }
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "Excel|*.xlsx";
+                    saveFileDialog.Title = "Save the Form in Excel";
+                    saveFileDialog.FileName = TextboxID.Text + ".xlsx";
+                    if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        existPath = saveFileDialog.FileName;
+                    }
+                    Paitient.Saveas(existPath);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Error , the Excel PaitientForm open plese close it");
+                }
+            }
             Paitient.Close();
+
         }
 
         private string radioButtonM_CheckedChanged()
@@ -468,6 +523,11 @@ namespace QA_Projects
             Pregnant = true;
         }
 
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void radioButtonNQ3_CheckedChanged(object sender, EventArgs e)
         {
             Pregnant = false;
@@ -480,13 +540,39 @@ namespace QA_Projects
 
         private void buttonExistingPatient_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                existPath=openFileDialog.FileName;
+            }
+            try
+            {
+                Paitient = new Excel(existPath, 1);
+                manual.Filltextbox(Paitient.ReadExcel(WBC + 10, 2), Paitient.ReadExcel(Neut + 10, 2), Paitient.ReadExcel(Lymph + 10, 2), Paitient.ReadExcel(RBC + 10, 2), Paitient.ReadExcel(HCT + 10, 2), Paitient.ReadExcel(Urea + 10, 2), Paitient.ReadExcel(Hb + 10, 2), Paitient.ReadExcel(Crtn + 10, 2), Paitient.ReadExcel(Iron + 10, 2), Paitient.ReadExcel(HDL + 10, 2), Paitient.ReadExcel(AP + 10, 2));
+                TextBoxFname.Text = Paitient.ReadExcel(1, 2);
+                TextboxLname.Text = Paitient.ReadExcel(2, 2);
+                TextboxID.Text = Paitient.ReadExcel(3, 2);
+                TextboxAge.Text = Paitient.ReadExcel(4, 2);
+                TextboxHeight.Text = Paitient.ReadExcel(5, 2);
+                TextboxWeight.Text = Paitient.ReadExcel(6, 2);
+                TextboxFever.Text = Paitient.ReadExcel(7, 2);
+                TextboxHeartBeat.Text = Paitient.ReadExcel(8, 2);
+                TextboxBloodPre.Text = Paitient.ReadExcel(9, 2);
+                ListviewRecommendation.Items.Clear();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("You dont choose a patient");
 
+            }
         }
 
         //Function When the user presses the close button it closes the FORM and closes the program.
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Close();
+            if (Paitient.getIsOpen())
+                Paitient.Close();
             login.Close();
 
         }
