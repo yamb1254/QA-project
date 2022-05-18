@@ -19,6 +19,7 @@ namespace QA_Projects
         _Excel.Application excel = new _Excel.Application();
         Workbook wb;
         Worksheet ws;
+        bool isOpen;
         public Excel(string path, int sheet)
         {
             this.path = path;
@@ -27,6 +28,7 @@ namespace QA_Projects
             xlRange = (Range)ws.Cells[ws.Rows.Count, 1];
             lastRow = (long)xlRange.get_End(XlDirection.xlUp).Row;
             lastRow++;
+            isOpen = true;
         }
         public bool CheckInExcel(int col, string name)
         {
@@ -92,12 +94,13 @@ namespace QA_Projects
 
         public void Close()
         {
-            wb.Save();
             wb.Close();
+            isOpen = false;
         }
         public void Open()
         {
             wb = excel.Workbooks.Open(path);
+            isOpen = true;
         }
         public void Save()
         {
@@ -105,7 +108,18 @@ namespace QA_Projects
         }
         public void Saveas(string path)
         {
-            wb.SaveAs(path);
+            try
+            {
+                wb.SaveAs(path);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error , the file not saved");
+            }
+        }
+        public bool getIsOpen()
+        {
+            return isOpen;
         }
 
     }
