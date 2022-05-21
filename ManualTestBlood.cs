@@ -86,7 +86,15 @@ namespace QA_Projects
             if (!double.TryParse(this.TextboxLymph.Text, out double n))
                 this.TextboxLymph.Text = "";
             if (this.TextboxLymph.Text != "")
+            {
                 Lymph = Convert.ToDouble(this.TextboxLymph.Text);
+                if (Lymph > 100 || Lymph < 0)
+                {
+                    MessageBox.Show("Lymph values must be in percent between 0 and 100");
+                    this.TextboxLymph.Text = "";
+                }
+            }
+                
         }
 
         private void TextBoxNeut_OnValueChanged(object sender, EventArgs e)
@@ -94,14 +102,32 @@ namespace QA_Projects
             if (!double.TryParse(this.TextBoxNeut.Text, out double n))
                 this.TextBoxNeut.Text = "";
             if (this.TextBoxNeut.Text != "")
+            {
                 Neut = Convert.ToDouble(this.TextBoxNeut.Text);
+                if (Neut > 100 || Neut < 0)
+                {
+                    MessageBox.Show("Neut values must be in percent between 0 and 100");
+                    this.TextBoxNeut.Text = "";
+                }
+            }
+                
         }
         private void TextBoxHCT_OnValueChanged(object sender, EventArgs e)
         {
             if (!double.TryParse(this.TextBoxHCT.Text, out double n))
                 this.TextBoxHCT.Text = "";
             if (this.TextBoxHCT.Text != "")
+            {
                 HCT = Convert.ToDouble(this.TextBoxHCT.Text);
+                if(HCT > 100 || HCT < 0)
+                {
+                    MessageBox.Show("HCT values must be in percent between 0 and 100");
+                    this.TextBoxHCT.Text = "";
+                }
+            }
+               
+
+            
         }
         private void TextboxWBC_OnValueChanged(object sender, EventArgs e)
         {
