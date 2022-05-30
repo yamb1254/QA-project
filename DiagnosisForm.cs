@@ -592,8 +592,6 @@ namespace QA_Projects
         //Function When the user presses the close button it closes the FORM and closes the program.
         private void ExitButton_Click(object sender, EventArgs e)
         {
-          
-            
             Close();
             try
             {
@@ -602,8 +600,7 @@ namespace QA_Projects
             }
             catch(NullReferenceException)
             {
-
-            }
+			}
             login.Close();
 
         }
