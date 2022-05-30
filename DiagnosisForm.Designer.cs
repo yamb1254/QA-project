@@ -247,7 +247,7 @@ namespace QA_Projects
             this.TextboxBloodPre.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxBloodPre.LineThickness = 3;
             this.TextboxBloodPre.Location = new System.Drawing.Point(153, 396);
-            this.TextboxBloodPre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextboxBloodPre.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxBloodPre.Name = "TextboxBloodPre";
             this.TextboxBloodPre.Size = new System.Drawing.Size(203, 33);
             this.TextboxBloodPre.TabIndex = 38;
@@ -266,11 +266,12 @@ namespace QA_Projects
             this.TextboxID.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxID.LineThickness = 3;
             this.TextboxID.Location = new System.Drawing.Point(153, 156);
-            this.TextboxID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextboxID.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxID.Name = "TextboxID";
             this.TextboxID.Size = new System.Drawing.Size(203, 33);
             this.TextboxID.TabIndex = 32;
             this.TextboxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxID.OnValueChanged += new System.EventHandler(this.TextboxID_OnValueChanged);
             // 
             // TextBoxFname
             // 
@@ -285,7 +286,7 @@ namespace QA_Projects
             this.TextBoxFname.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextBoxFname.LineThickness = 3;
             this.TextBoxFname.Location = new System.Drawing.Point(153, 76);
-            this.TextBoxFname.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextBoxFname.Margin = new System.Windows.Forms.Padding(5);
             this.TextBoxFname.Name = "TextBoxFname";
             this.TextBoxFname.Size = new System.Drawing.Size(203, 33);
             this.TextBoxFname.TabIndex = 30;
@@ -304,7 +305,7 @@ namespace QA_Projects
             this.TextboxLname.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxLname.LineThickness = 3;
             this.TextboxLname.Location = new System.Drawing.Point(153, 114);
-            this.TextboxLname.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextboxLname.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxLname.Name = "TextboxLname";
             this.TextboxLname.Size = new System.Drawing.Size(203, 33);
             this.TextboxLname.TabIndex = 31;
@@ -323,7 +324,7 @@ namespace QA_Projects
             this.TextboxAge.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxAge.LineThickness = 3;
             this.TextboxAge.Location = new System.Drawing.Point(153, 196);
-            this.TextboxAge.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextboxAge.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxAge.Name = "TextboxAge";
             this.TextboxAge.Size = new System.Drawing.Size(203, 33);
             this.TextboxAge.TabIndex = 33;
@@ -343,7 +344,7 @@ namespace QA_Projects
             this.TextboxHeight.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxHeight.LineThickness = 3;
             this.TextboxHeight.Location = new System.Drawing.Point(153, 236);
-            this.TextboxHeight.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextboxHeight.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxHeight.Name = "TextboxHeight";
             this.TextboxHeight.Size = new System.Drawing.Size(203, 33);
             this.TextboxHeight.TabIndex = 34;
@@ -362,7 +363,7 @@ namespace QA_Projects
             this.TextboxWeight.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxWeight.LineThickness = 3;
             this.TextboxWeight.Location = new System.Drawing.Point(153, 276);
-            this.TextboxWeight.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextboxWeight.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxWeight.Name = "TextboxWeight";
             this.TextboxWeight.Size = new System.Drawing.Size(203, 33);
             this.TextboxWeight.TabIndex = 35;
@@ -381,7 +382,7 @@ namespace QA_Projects
             this.TextboxFever.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxFever.LineThickness = 3;
             this.TextboxFever.Location = new System.Drawing.Point(153, 316);
-            this.TextboxFever.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextboxFever.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxFever.Name = "TextboxFever";
             this.TextboxFever.Size = new System.Drawing.Size(203, 33);
             this.TextboxFever.TabIndex = 36;
@@ -400,7 +401,7 @@ namespace QA_Projects
             this.TextboxHeartBeat.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxHeartBeat.LineThickness = 3;
             this.TextboxHeartBeat.Location = new System.Drawing.Point(153, 356);
-            this.TextboxHeartBeat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextboxHeartBeat.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxHeartBeat.Name = "TextboxHeartBeat";
             this.TextboxHeartBeat.Size = new System.Drawing.Size(203, 33);
             this.TextboxHeartBeat.TabIndex = 37;
@@ -756,7 +757,7 @@ namespace QA_Projects
             this.TextboxTestBlood.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
             this.TextboxTestBlood.LineThickness = 3;
             this.TextboxTestBlood.Location = new System.Drawing.Point(115, 484);
-            this.TextboxTestBlood.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextboxTestBlood.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxTestBlood.Name = "TextboxTestBlood";
             this.TextboxTestBlood.Size = new System.Drawing.Size(159, 33);
             this.TextboxTestBlood.TabIndex = 39;

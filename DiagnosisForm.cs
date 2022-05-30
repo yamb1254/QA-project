@@ -470,7 +470,15 @@ namespace QA_Projects
         //A function which converts a string of age to int
         private void TextboxAge_OnValueChanged(object sender, EventArgs e)
         {
-            Age = Convert.ToInt32(this.TextboxAge.Text);
+            
+            if (!double.TryParse(this.TextboxAge.Text, out double n))
+            {
+                this.TextboxAge.Text = "";
+                if (this.TextboxAge.Text != "")
+                {
+                    Age = Convert.ToInt32(this.TextboxAge.Text);
+                }
+            }
         }
 
         //From line 425 to line 483 Functions that return true or false according to what the user clicks on the radiobutton in the diagnostic questions
@@ -523,6 +531,20 @@ namespace QA_Projects
             Pregnant = true;
         }
 
+        private void TextboxID_OnValueChanged(object sender, EventArgs e)
+        {
+
+            if (!double.TryParse(this.TextboxID.Text, out double n))
+            {
+                this.TextboxID.Text = "";
+                if (this.TextboxID.Text != "")
+                {
+
+                    this.TextboxID.Text = "";
+                }
+            }
+        }
+
         private void label8_Click(object sender, EventArgs e)
         {
 
@@ -570,9 +592,18 @@ namespace QA_Projects
         //Function When the user presses the close button it closes the FORM and closes the program.
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
-            if (Paitient.getIsOpen())
-                Paitient.Close();
+          
+            
+            Close();
+            try
+            {
+                if (Paitient.getIsOpen())
+                    Paitient.Close();
+            }
+            catch(NullReferenceException)
+            {
+
+            }
             login.Close();
 
         }
