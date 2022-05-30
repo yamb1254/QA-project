@@ -592,15 +592,34 @@ namespace QA_Projects
         //Function When the user presses the close button it closes the FORM and closes the program.
         private void ExitButton_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+          
+            
+=======
+<<<<<<< Updated upstream
+            this.Close();
+            if (Paitient.getIsOpen())
+                Paitient.Close();
+=======
+>>>>>>> 6d3aa2e45371815475c167225a906cf14d0404f7
             Close();
             try
             {
                 if (Paitient.getIsOpen())
                     Paitient.Close();
             }
+<<<<<<< HEAD
             catch(NullReferenceException)
             {
-			}
+
+            }
+=======
+            catch (NullReferenceException)
+            {
+
+            }
+>>>>>>> Stashed changes
+>>>>>>> 6d3aa2e45371815475c167225a906cf14d0404f7
             login.Close();
 
         }
